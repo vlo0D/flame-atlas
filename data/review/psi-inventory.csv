@@ -1,0 +1,308 @@
+investigation,acronym,folder,subfolder,file_name,extension,bytes,version,restricted,need,reason
+PSI-10,ACME/Flame Design,Reports,,PSI-10_Reports_FinalRpt_ACMEFlameDesign.pdf,.pdf,4152310,1,False,maybe,"final report: card texts, findings"
+PSI-10,ACME/Flame Design,Reports,,PSI-10_Reports_TaskbookRpts.pdf,.pdf,284417,1,False,maybe,report
+PSI-10,ACME/Flame Design,Reports,,PSI-10_Reports_TaskbookPubsList_Feb2023.pdf,.pdf,97986,1,False,maybe,report
+PSI-10,ACME/Flame Design,Science Documents,,PSI-10_Science Documents_SRD_ACMEFlameDesign.pdf,.pdf,471072,1,False,maybe,science document
+PSI-10,ACME/Flame Design,Science Documents,,PSI-10_Science Documents_ACME_SORD.pdf,.pdf,300262,1,False,maybe,science document
+PSI-10,ACME/Flame Design,Science Documents,,PSI-10_Science Documents_ACME_ISRD.pdf,.pdf,1860945,1,False,maybe,science document
+PSI-10,ACME/Flame Design,Experimental table,,PSI-10_Experimental table_Flame Design_Normal Flame.csv,.csv,26933,1,False,need,experimental table
+PSI-10,ACME/Flame Design,Experimental table,,PSI-10_Experimental table_Flame Design_Inverse Flame.csv,.csv,17314,1,False,need,experimental table
+PSI-20,ACME BRE,Reports,,PSI-20_Reports_Final_20220201.pdf,.pdf,5957884,1,False,maybe,report
+PSI-20,ACME BRE,Reports,,PSI-20_Reports_Dissertation-PD-revised_.pdf,.pdf,12433641,1,False,maybe,report
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME-BRE_Test_Summary.docx,.docx,127529,1,False,need,test summary: conditions per test
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME_non-imaging_data_file_description.pdf,.pdf,377001,1,False,need,column dictionary (data file description)
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_BRE_data_interpretation_20220804.pdf,.pdf,731305,1,False,need,column dictionary (data interpretation)
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME_fact_sheet_20180519.pdf,.pdf,437766,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME_fact_sheet_20180820.pdf,.pdf,1132230,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ISS_Researchers_Guide_-_Combustion_In_Reduced_Gravity.pdf,.pdf,1532064,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_PS_00538__Unlocking_Mysteries.pdf,.pdf,2658200,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_PS-01548_ACME_info_sheet.pdf,.pdf,874049,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_PS-02788_ACME_info_sheet.pdf,.pdf,4839732,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_PS-03055_ACME_info_sheet.pdf,.pdf,3782346,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_PS-03403_ACME_on_the_ISS.pdf,.pdf,9090639,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_FLEX A Decisive Step Forward in NASAs Combustion Research Program.pdf,.pdf,3693275,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME_Integrated_Science_Requirements_Definition_Review_20100505.pdf,.pdf,3119886,1,False,maybe,science requirements: planned conditions
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME_Integrated_Science_Requirements_RevB.pdf,.pdf,1878639,1,False,maybe,science requirements: planned conditions
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME_Science_Operation_Requirements_revA_20111018.pdf,.pdf,300262,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_BRE_science_concept_RDR_201306.pdf,.pdf,6096986,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_BRE_science_concept_SCR_201208.pdf,.pdf,2780782,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_BRE_SRD_201208.pdf,.pdf,1799909,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_BRE_SRD_201306.pdf,.pdf,11494240,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME CDR Presentation Package.pdf,.pdf,13232481,1,False,maybe,science document
+PSI-20,ACME BRE,Science Documents,,PSI-20_Science Documents_ACME_BRE_Readme.docx,.docx,134101,1,False,need,column dictionary (ReadMe)
+PSI-20,ACME BRE,Experimental table,,PSI-20_Experimental table_ACME BRE.csv,.csv,1113,1,False,need,experimental table
+PSI-21,ACME CLD Flame,Experimental table,,PSI-21_Experimental table_CLD Flame.csv,.csv,2454,1,False,need,experimental table
+PSI-22,ACME E-FIELD Flames,Experimental table,,PSI-22_Experimental table_ACME E-FIELD Flames.csv,.csv,2475,2,False,need,experimental table
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_E-FIELD_Flames_SRD_20100402.pdf,.pdf,9895960,1,False,maybe,science document
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_ACME_Integrated_Science_Requirements_RevB.pdf,.pdf,1878639,1,False,maybe,science requirements: planned conditions
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_E-FIELD Flames SCR 200802.pdf,.pdf,2965401,1,False,maybe,science document
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_ACME_Integrated_Science_Requirements_Definition_Review_20100505.pdf,.pdf,3119886,1,False,maybe,science requirements: planned conditions
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_ACME_Science_Operation_Requirements_revA_20111018.pdf,.pdf,300262,1,False,maybe,science document
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_ISS Researchers Guide - Combustion In Reduced Gravity.pdf,.pdf,1532064,1,False,maybe,science document
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_ACME non-imaging data file description.pdf,.pdf,377001,1,False,need,column dictionary (data file description)
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_E-FIELD Flames data interpretation document.pdf,.pdf,909422,1,False,need,column dictionary (data interpretation)
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_ACME E-FIELD Flames DoD.pdf,.pdf,168744,1,False,need,column dictionary (Description of Data)
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_E-FIELD_Flames_procedure_20200723.pdf,.pdf,747718,1,False,maybe,science document
+PSI-22,ACME E-FIELD Flames,Science Documents,,PSI-22_Science Documents_E-FIELD_Flames_benefits_20200518.pdf,.pdf,144248,1,False,maybe,science document
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_2018 - E-FIELD Flames 30-day Operation Accomplishments Report for ISS Increments 55 and 56 20181115.pdf,.pdf,793069,1,False,maybe,report
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_2019 - E-FIELD Flames 30-Day Operation Accomplishments Report for ISS Increments 57 and 58 20190601.pdf,.pdf,660479,1,False,maybe,report
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_ACME fact sheet 20180820.pdf,.pdf,1132230,1,False,maybe,report
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_ACME fact sheet 20180519.pdf,.pdf,437766,1,False,maybe,report
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_PS-02788 ACME info sheet.pdf,.pdf,4839732,1,False,maybe,report
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_PS_00538  Unlocking Mysteries.pdf,.pdf,2658200,1,False,maybe,report
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_PS-03055 ACME info sheet.pdf,.pdf,3782346,1,False,maybe,report
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_PS-01548 ACME info sheet.pdf,.pdf,874049,1,False,maybe,report
+PSI-22,ACME E-FIELD Flames,Reports,,PSI-22_Reports_E-FIELD Flames Final Report.pdf,.pdf,3529827,1,False,maybe,"final report: card texts, findings"
+PSI-22,ACME E-FIELD Flames,Reference Data,,PSI-22_Reference Data_ACME-DOC-010_D.pdf,.pdf,2151284,1,False,maybe,reference document
+PSI-22,ACME E-FIELD Flames,Reference Data,,PSI-22_Reference Data_ACME-DOC-010_D Software Interface Design Description1.pdf,.pdf,1700304,1,False,maybe,reference document
+PSI-23,ACME s-Flame,Reference Data,,PSI-23_Reference Data_ACME-DOC-010_D.pdf,.pdf,2151284,1,False,maybe,reference document
+PSI-23,ACME s-Flame,Reference Data,,PSI-23_Reference Data_ACME-DOC-010_D Software Interface Design Description.pdf,.pdf,2151284,1,False,maybe,reference document
+PSI-23,ACME s-Flame,Science Documents,,PSI-23_Science Documents_ACME non-imaging data file description.pdf,.pdf,377001,1,False,need,column dictionary (data file description)
+PSI-23,ACME s-Flame,Science Documents,,PSI-23_Science Documents_ACME_Integrated_Science_Requirements_RevB.pdf,.pdf,1878639,1,False,maybe,science requirements: planned conditions
+PSI-23,ACME s-Flame,Science Documents,,PSI-23_Science Documents_ACME Science Operation Requirements revA 20111018.pdf,.pdf,300262,1,False,maybe,science document
+PSI-23,ACME s-Flame,Science Documents,,PSI-23_Science Documents_ACME Integrated Science Requirements Definition Review 20100505.pdf,.pdf,3119886,1,False,maybe,science requirements: planned conditions
+PSI-23,ACME s-Flame,Science Documents,,PSI-23_Science Documents_s-Flame SCR 200802.pdf,.pdf,2382728,1,False,maybe,science document
+PSI-23,ACME s-Flame,Science Documents,,PSI-23_Science Documents_s-Flame_SRD_20100125.pdf,.pdf,946359,1,False,maybe,science document
+PSI-23,ACME s-Flame,Science Documents,,PSI-23_Science Documents_ACME s-Flame  DoD.pdf,.pdf,801605,1,False,need,column dictionary (Description of Data)
+PSI-23,ACME s-Flame,Engineering Documents,,PSI-23_Engineering Documents_s-Flame_data_interpretation_20210920.pdf,.pdf,721288,1,False,need,column dictionary (data interpretation)
+PSI-23,ACME s-Flame,Reports,,PSI-23_Reports_s-Flame 30-day report Inc 63 20201216.pdf,.pdf,301047,1,False,maybe,report
+PSI-23,ACME s-Flame,Reports,,PSI-23_Reports_s_Flame_final_report_20210729.pdf,.pdf,3182281,1,False,maybe,"final report: card texts, findings"
+PSI-23,ACME s-Flame,Experimental table,,PSI-23_Experimental table_ACME s-Flame.csv,.csv,2456,1,False,need,experimental table
+PSI-25,BASS-II,Reference Data,,PSI-25_Reference Data_Fan calibration data.xlsx,.xlsx,23973,2,False,maybe,reference document
+PSI-25,BASS-II,Science Documents,,PSI-25_Science Documents_BASS-II_Test.Matrices.xlsx,.xlsx,28956,2,False,need,test matrix: conditions missing from the table
+PSI-25,BASS-II,Science Documents,,PSI-25_Science Documents_BASS-II_ReadMe.docx,.docx,21538,2,False,need,column dictionary (ReadMe)
+PSI-25,BASS-II,Science Documents,,PSI-25_Science Documents_BASS-II_SRD.pdf,.pdf,1108340,2,False,maybe,science document
+PSI-25,BASS-II,Reports,,PSI-25_Reports_BASS-II Summary Report.pdf,.pdf,48972416,2,False,maybe,"final report: card texts, findings"
+PSI-25,BASS-II,Experimental table,,PSI-25_Experimental table_BASS-II.csv,.csv,16590,1,False,need,experimental table
+PSI-26,BASS,Science Documents,,PSI-26_Science Documents_FlammabilityAspectsofFabric_USNationalCombustion.2013.docx,.docx,8837026,2,False,maybe,science document
+PSI-26,BASS,Science Documents,,PSI-26_Science Documents_Planned_Test Matrix.xlsx,.xlsx,20976,2,False,need,test matrix: conditions missing from the table
+PSI-26,BASS,Science Documents,,PSI-26_Science Documents_SRD_BASS.pdf,.pdf,884257,2,False,maybe,science document
+PSI-26,BASS,Science Documents,,PSI-26_Science Documents_DLD_BASS.pdf,.pdf,69653,2,False,maybe,science document
+PSI-26,BASS,Science Documents,,PSI-26_Science Documents_As Run_Test Matrix.xlsx,.xlsx,111886,2,False,need,test matrix: conditions missing from the table
+PSI-26,BASS,Experimental table,,PSI-26_Experimental table_BASS.csv,.csv,4726,1,False,need,experimental table
+PSI-39,CFI,Reports,,PSI-39_Reports_CFI Science Final Report.pdf,.pdf,811459,2,False,maybe,"final report: card texts, findings"
+PSI-39,CFI,Science Documents,,PSI-39_Science Documents_CFI_DataSummary_Spreadsheet_Jan2021.xlsx,.xlsx,208743,2,False,need,test summary: conditions per test
+PSI-39,CFI,Science Documents,,PSI-39_Science Documents_SRD_CFI.pdf,.pdf,12260561,2,False,maybe,science document
+PSI-39,CFI,Science Documents,,PSI-39_Science Documents_CFI_SCR.pdf,.pdf,3630234,2,False,maybe,science document
+PSI-39,CFI,Experimental table,,PSI-39_Experimental table_CFI.csv,.csv,7792,1,False,need,experimental table
+PSI-47,DAFT / DAFT-2,Reports,,PSI-47_Reports_DAFT_FinalReport.doc,.doc,8844800,4,False,maybe,"final report: card texts, findings"
+PSI-47,DAFT / DAFT-2,Reports,,PSI-47_Reports_DAFT_30Day.PostFlightReport.pdf,.pdf,185648,4,False,maybe,report
+PSI-47,DAFT / DAFT-2,Reports,,PSI-47_Reports_DAFT_1YearReport.doc,.doc,4919296,4,False,maybe,report
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity,PSI-47_Analyzed Data_DAFT Flight Data GMT053.xls,.xls,129024,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity,PSI-47_Analyzed Data_flight data 063.xls,.xls,268288,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity,PSI-47_Analyzed Data_flight data 063_TIMING.xls,.xls,283648,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity,PSI-47_Analyzed Data_ISS_Daft_Aug21_06 urban.xls,.xls,29696,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity,PSI-47_Analyzed Data_ISS_Daft_Aug21_0611zgy time hist.xls,.xls,38400,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity,PSI-47_Analyzed Data_DAFT Retrieved Data Summary.xls,.xls,1004032,4,False,need,test summary: conditions per test
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity/P-TRAK,PSI-47_Analyzed Data_flight data 063_PTrk0003.xls,.xls,283648,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity/P-TRAK,PSI-47_Analyzed Data_flight data 063_PTrk0002.xls,.xls,283648,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity/P-TRAK,PSI-47_Analyzed Data_flight data 063_PTrk0004.xls,.xls,283648,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity/DustTrak,PSI-47_Analyzed Data_flight data 063_DTrk0003.xls,.xls,283648,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity/DustTrak,PSI-47_Analyzed Data_flight data 063_DTrk0002.xls,.xls,283648,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Analyzed Data,Reduced Gravity/DustTrak,PSI-47_Analyzed Data_flight data 063_DTrk0004.xls,.xls,283648,4,False,maybe,analyzed data table
+PSI-47,DAFT / DAFT-2,Experimental table,,PSI-47_Experimental table_DAFT.csv,.csv,518,2,False,need,experimental table
+PSI-68,FLEX-2,Experimental table,,PSI-68_Experimental table_Flex2.csv,.csv,1029,1,False,need,experimental table
+PSI-68,FLEX-2,Science Documents,,PSI-68_Science Documents_FLEX-2 SRD Final _ No Hypertext .pdf,.pdf,673636,1,False,maybe,science requirements: planned conditions
+PSI-68,FLEX-2,Science Documents,,PSI-68_Science Documents_FLEX-2 SRD Final.pdf,.pdf,1001814,1,False,maybe,science requirements: planned conditions
+PSI-68,FLEX-2,Science Documents,,PSI-68_Science Documents_FLEX-2 DoD.docx,.docx,19354,1,False,need,column dictionary (Description of Data)
+PSI-69,FLEX,Experimental table,,PSI-69_Experimental table_FLEX.csv,.csv,24776,1,False,need,experimental table
+PSI-69,FLEX,Science Documents,,PSI-69_Science Documents_FLEX DoD.docx,.docx,18758,1,False,need,column dictionary (Description of Data)
+PSI-69,FLEX,Science Documents,,PSI-69_Science Documents_FLEX_Test_Plan.pdf,.pdf,185799,1,False,maybe,science document
+PSI-98,SAFFIRE-I,Science Documents,,PSI-98_Science Documents_SAFFIRE-I Image Directory Nomenclature.pdf,.pdf,262860,1,False,maybe,science document
+PSI-98,SAFFIRE-I,Science Documents,,PSI-98_Science Documents_SAFFIRE-1_MergeResult-jpeg_Update_Final_v2.xlsx,.xlsx,12325177,1,False,maybe,science document
+PSI-98,SAFFIRE-I,Science Documents,,"PSI-98_Science Documents_SAFFIRE Objectives, Development and Status.pdf",.pdf,186259,1,False,maybe,science document
+PSI-98,SAFFIRE-I,Science Documents,,PSI-98_Science Documents_SAFFIRE-I and SAFFIRE-III Readme.docx,.docx,65426,1,False,need,column dictionary (ReadMe)
+PSI-98,SAFFIRE-I,Experimental table,,PSI-98_Experimental table_SAFFIRE-1.csv,.csv,469,1,False,need,experimental table
+PSI-99,SAFFIRE-II,Experimental table,,PSI-99_Experimental table_SAFFIRE-2.csv,.csv,1973,1,False,need,experimental table
+PSI-99,SAFFIRE-II,Science Documents,,PSI-99_Science Documents_SAFFIRE-II_Image_Directory_Nomenclature_v3.0.pdf,.pdf,755236,1,False,maybe,science document
+PSI-99,SAFFIRE-II,Science Documents,,PSI-99_Science Documents_SAFFIRE-II_MergeResult-jpeg_v5_Final.xlsx,.xlsx,20820425,1,False,maybe,science document
+PSI-99,SAFFIRE-II,Science Documents,,"PSI-99_Science Documents_SAFFIRE Objectives, Development and Status.pdf",.pdf,186259,1,False,maybe,science document
+PSI-99,SAFFIRE-II,Science Documents,,PSI-99_Science Documents_SAFFIRE-II Readme.docx,.docx,134425,1,False,need,column dictionary (ReadMe)
+PSI-100,SAFFIRE-III,Science Documents,,PSI-100_Science Documents_SAFFIRE-III Image Directory Nomenclature_v3.0.pdf,.pdf,273485,1,False,maybe,science document
+PSI-100,SAFFIRE-III,Science Documents,,PSI-100_Science Documents_SAFFIRE-III_MergeResult-raw_Final.xlsx,.xlsx,7701589,1,False,maybe,science document
+PSI-100,SAFFIRE-III,Science Documents,,PSI-100_Science Documents_SAFFIRE-III_MergeResult-jpeg_Final.xlsx,.xlsx,7879404,1,False,maybe,science document
+PSI-100,SAFFIRE-III,Science Documents,,"PSI-100_Science Documents_SAFFIRE Objectives, Development and Status.pdf",.pdf,186259,1,False,maybe,science document
+PSI-100,SAFFIRE-III,Science Documents,,PSI-100_Science Documents_SAFFIRE-I and SAFFIRE-III Readme.docx,.docx,65426,1,False,need,column dictionary (ReadMe)
+PSI-100,SAFFIRE-III,Experimental table,,PSI-100_Experimental table_SAFFIRE-3.csv,.csv,239,1,False,need,experimental table
+PSI-101,SAME-R,Reports,,PSI-101_Reports_SAME-R_Final Report.pdf,.pdf,4578437,1,False,maybe,"final report: card texts, findings"
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity,"PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx",.xlsx,4061669,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 054,PSI-101_Analyzed Data_54 lampwick binneddatacorr from GWM.xlsx,.xlsx,241661,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 054,PSI-101_Analyzed Data_TEMflowvsnoflow.xls,.xls,39936,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 054,PSI-101_Analyzed Data_thermal precipitator map updated.xlsx,.xlsx,17138,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 054,PSI-101_Analyzed Data_2010_210_10_lampwick_run54.xls,.xls,7128576,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 055,PSI-101_Analyzed Data_55 Lampwick.xlsx,.xlsx,690112,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 055,PSI-101_Analyzed Data_2010_210_10_lampwick_run55.xls,.xls,2990080,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 049,PSI-101_Analyzed Data_2010_200_12_lampwick_run49.xls,.xls,4892160,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 057,PSI-101_Analyzed Data_2010_210_10_lampwick_run57_a.xlsx,.xlsx,539444,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 057,PSI-101_Analyzed Data_2010_210_10_lampwick_run57.xls,.xls,5050880,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 078,PSI-101_Analyzed Data_2010_239_13_lampwick_run78.xls,.xls,6881280,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 080,PSI-101_Analyzed Data_2010_239_15_lampwick_run80.xls,.xls,6142464,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 082,PSI-101_Analyzed Data_2010_239_16_lampwick_run82.xls,.xls,6536192,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 068,PSI-101_Analyzed Data_2010_236_10_lampwick_run68.xls,.xls,6075904,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 088,PSI-101_Analyzed Data_2010_242_14_lampwick_run88.xls,.xls,8515584,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 096,PSI-101_Analyzed Data_2010_250_15_lampwick_run96.xls,.xls,6966784,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 098,PSI-101_Analyzed Data_2010_251_11_lampwick_run98.xls,.xls,6456320,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 106,PSI-101_Analyzed Data_2010_252_14_lampwick_run106.xls,.xls,8719872,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 110,PSI-101_Analyzed Data_2010_253_13_lampwick_run110.xls,.xls,6128128,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 060,PSI-101_Analyzed Data_60 silicone.xlsx,.xlsx,423378,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 060,PSI-101_Analyzed Data_2010_211_14_silicon_run60.xls,.xls,5135360,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 060,PSI-101_Analyzed Data_2010_211_14_silicon_run60 a.xls,.xls,6913024,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 048,PSI-101_Analyzed Data_2010_197_13_silicon_run48.xls,.xls,5797888,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 053,PSI-101_Analyzed Data_2010_202_14_silcon_run53.xls,.xls,5819904,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 059,PSI-101_Analyzed Data_2010_211_13_silcon_run59.xls,.xls,6681600,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 065,PSI-101_Analyzed Data_2010_235_10_silicone_run65.xls,.xls,7300096,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 065,PSI-101_Analyzed Data_2010_235_10_silicone_run65a.xls,.xls,7281664,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 066,PSI-101_Analyzed Data_2010_235_10_silicone_run66.xls,.xls,6486016,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 066,PSI-101_Analyzed Data_Copy of 2010_235_10_silicone_run66 test.xls,.xls,6486016,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 067,PSI-101_Analyzed Data_2010_236_9_silicone_run67.xls,.xls,6136320,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 072,PSI-101_Analyzed Data_2010_237_14_silcone_run72.xls,.xls,5757440,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 086,PSI-101_Analyzed Data_2010_242_14_silicone_run86.xls,.xls,6390784,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 091,PSI-101_Analyzed Data_2010_250_12_silicone_run91.xls,.xls,5535744,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 099,PSI-101_Analyzed Data_2010_251_12_silicone_run99.xls,.xls,6533632,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 104,PSI-101_Analyzed Data_2010_252_12_silicone_run104.xls,.xls,8724992,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 103,PSI-101_Analyzed Data_2010_252_15_silicone_run103.xls,.xls,8713216,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Silicone/Run 109,PSI-101_Analyzed Data_2010_253_13_silicone_run109.xls,.xls,6092800,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 062,PSI-101_Analyzed Data_62 Kapton unaged.xlsx,.xlsx,425564,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 062,PSI-101_Analyzed Data_62 Kapton aged issue with bins.xlsx,.xlsx,426012,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 062,PSI-101_Analyzed Data_2010_214_10_kapton_run62.xls,.xls,6525440,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 094,PSI-101_Analyzed Data_94 Kapton aged- results.xlsx,.xlsx,415552,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 094,PSI-101_Analyzed Data_2010_250_13_kapton_run94.xls,.xls,6554112,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 061,PSI-101_Analyzed Data_2010_214_10_kapton_run61.xls,.xls,6652416,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 073,PSI-101_Analyzed Data_2010_238_17_kapton_run73.xls,.xls,6193152,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 075,PSI-101_Analyzed Data_2010_238_18_kapton_run75.xls,.xls,6082048,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 077,PSI-101_Analyzed Data_2010_238_19_kapton_run77.xls,.xls,6254080,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 070,PSI-101_Analyzed Data_2010_237_12_kapton_run70.xls,.xls,6429184,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 085,PSI-101_Analyzed Data_2010_242_12_kapton_run85.xls,.xls,6240768,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 090,PSI-101_Analyzed Data_2010_242_15_kapton_run90.xls,.xls,6123008,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 093,PSI-101_Analyzed Data_2010_250_13_kapton_run93.xls,.xls,6305792,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 092,PSI-101_Analyzed Data_2010_250_16_kapton_run92.xls,.xls,5737472,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 101,PSI-101_Analyzed Data_2010_251_13_kapton_run101.xls,.xls,6484480,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 102,PSI-101_Analyzed Data_2010_251_14_kapton_run102.xls,.xls,6569472,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 108,PSI-101_Analyzed Data_2010_252_16_kapton_run108.xls,.xls,6617600,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 112,PSI-101_Analyzed Data_2010_253_14_kapton_run112.xls,.xls,5930496,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Kapton/Run 114,PSI-101_Analyzed Data_2010_253_15_kapton_run114.xls,.xls,5825024,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 063,PSI-101_Analyzed Data_63 Pyrell aged.xlsx,.xlsx,711060,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 063,PSI-101_Analyzed Data_63 Pyrell unaged.xlsx,.xlsx,853799,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 063,PSI-101_Analyzed Data_2010_235_9_pyrell_run63.xls,.xls,6210560,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 063,PSI-101_Analyzed Data_2010_235_9_pyrell_run63a.xls,.xls,6212608,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 064,PSI-101_Analyzed Data_64 Pyrell aged.xlsx,.xlsx,475108,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 064,PSI-101_Analyzed Data_64 Pyrell unaged.xlsx,.xlsx,516572,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 064,PSI-101_Analyzed Data_2010_235_11_pyrell_run64.xls,.xls,6659072,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 064,PSI-101_Analyzed Data_2010_235_11_pyrell_run64a.xls,.xls,6657536,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 052,PSI-101_Analyzed Data_2010_202_13_pyrell_run52.xls,.xls,5827072,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 074,PSI-101_Analyzed Data_2010_238_17_pyrell_run74.xls,.xls,6240256,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 076,PSI-101_Analyzed Data_2010_238_18_pyrell_run76.xls,.xls,6396416,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 071,PSI-101_Analyzed Data_2010_237_13_pyrell_run71.xls,.xls,7195648,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 087,PSI-101_Analyzed Data_2010_242_13_pyrell_run87.xls,.xls,5726720,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 084,PSI-101_Analyzed Data_2010_2342_11_pyrell_run84.xls,.xls,6522368,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 095,PSI-101_Analyzed Data_2010_250_14_pyrell_run95.xls,.xls,6855680,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 097,PSI-101_Analyzed Data_2010_251_10_pyrell_run97.xls,.xls,6767616,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 107,PSI-101_Analyzed Data_2010_252_13_pyrell_run107.xls,.xls,8727552,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Pyrell/Run 113,PSI-101_Analyzed Data_2010_253_14_pyrell_run113.xls,.xls,6268928,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 050,PSI-101_Analyzed Data_2010_201_12_teflon_run50.xls,.xls,6471168,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 056,PSI-101_Analyzed Data_2010_210_10_teflon_run56.xls,.xls,4087296,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 058,PSI-101_Analyzed Data_2010_211_12_teflon_run58.xls,.xls,6683648,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 079,PSI-101_Analyzed Data_2010_239_14_teflon_run79.xls,.xls,6196224,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 081,PSI-101_Analyzed Data_2010_239_16_teflon_run81.xls,.xls,6152704,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 083,PSI-101_Analyzed Data_2010_239_17_teflon_run83.xls,.xls,6318592,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 069,PSI-101_Analyzed Data_2010_236_10_teflon_run69.xls,.xls,6508032,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 089,PSI-101_Analyzed Data_2010_242_15_teflon_run89.xls,.xls,5803008,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 100,PSI-101_Analyzed Data_2010_251_11_teflon_run100.xls,.xls,6501888,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 105,PSI-101_Analyzed Data_2010_252_14_teflon_run105.xls,.xls,8713216,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Analyzed Data,Reduced Gravity/Teflon/Run 111,PSI-101_Analyzed Data_2010_253_13_teflon_run111.xls,.xls,6220800,1,False,maybe,analyzed data table
+PSI-101,SAME-R,Science Documents,,PSI-101_Science Documents_SAME_Baseline Concept Description Document_001 Rev A.pdf,.pdf,247315,1,False,maybe,science document
+PSI-101,SAME-R,Science Documents,,PSI-101_Science Documents_SAME_Operations Manual_007.pdf,.pdf,699811,1,False,maybe,science document
+PSI-101,SAME-R,Reference Data,,PSI-101_Reference Data_SAME_Software Description Document_003 Rev A.pdf,.pdf,270540,1,False,maybe,reference document
+PSI-101,SAME-R,Reference Data,,PSI-101_Reference Data_SAME_Software Requirement Document_004 Rev D.pdf,.pdf,400833,1,False,maybe,reference document
+PSI-101,SAME-R,Experimental table,,PSI-101_Experimental table_SAME-R.csv,.csv,5674,1,False,need,experimental table
+PSI-102,SAME,Reports,,PSI-102_Reports_SAME_Final Science Report.pdf,.pdf,3712845,2,False,maybe,"final report: card texts, findings"
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 01,PSI-102_Analyzed Data_GMT252run1testhkp with plots.xls,.xls,3121152,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 01,PSI-102_Analyzed Data_GMT252run1testhkp with plotszgy average.xls,.xls,3315200,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 01,PSI-102_Analyzed Data_Run 1 GMT252 testlog.xls,.xls,26112,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 05,PSI-102_Analyzed Data_Silicone GMT255hkp run 5s.xls,.xls,11481088,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 05,PSI-102_Analyzed Data_Silicone GMT255hkp run 5s zgy average.xls,.xls,12931072,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 23,PSI-102_Analyzed Data_GMT267silicon23hkp.xls,.xls,11317248,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 23,PSI-102_Analyzed Data_GMT267silicon test 23 and 24 log.xlsx,.xlsx,32397,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 24,PSI-102_Analyzed Data_GMT267silicon24hkp.xls,.xls,9249792,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 27,PSI-102_Analyzed Data_GMT269silicon27.xls,.xls,2311168,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Silicone/Run 35,PSI-102_Analyzed Data_GMT276silicone35.xls,.xls,3540992,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 02,PSI-102_Analyzed Data_Run 2 DBP GMT 254 with averages.xls,.xls,2917376,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 02,PSI-102_Analyzed Data_GMT254HKPandLOGmultiple runs.xls,.xls,10293248,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 02,PSI-102_Analyzed Data_Run 2 GMT254 testlog.xlsx,.xlsx,20970,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 03,PSI-102_Analyzed Data_GMT254run2btesthkp with zgy average.xls,.xls,1851904,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 03,PSI-102_Analyzed Data_Run 2 GMT254 testlog b.xlsx,.xlsx,20866,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 04,PSI-102_Analyzed Data_DBP run 4 GMT255hkp with zgy average.xls,.xls,5205504,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 04,PSI-102_Analyzed Data_GMT255 log.xlsx,.xlsx,18763,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 04,PSI-102_Analyzed Data_GMT255hkp.xlsx,.xlsx,1563904,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 09,PSI-102_Analyzed Data_DBP  GMT257hkp.xls,.xls,1202176,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 09,PSI-102_Analyzed Data_dbpGMT257hkp zgy average.xls,.xls,1257984,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 11,PSI-102_Analyzed Data_GMT262 Run 11 DBP hkp.xls,.xls,1875456,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 12,PSI-102_Analyzed Data_GMT262 Run 12 dbp.xls,.xls,1707520,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 15,PSI-102_Analyzed Data_GMT263 Run 15 DBP.xls,.xls,645120,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 16,PSI-102_Analyzed Data_GMT263 Run 16 DBP.xls,.xls,713728,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 18,PSI-102_Analyzed Data_GMT264 Run 18 DBP.xls,.xls,4993024,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,"Reduced Gravity/Dibutyl Phthalate/Run 19, 20",PSI-102_Analyzed Data_GMT264dbptest19and20hkp.xls,.xls,4012032,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,"Reduced Gravity/Dibutyl Phthalate/Run 21, 22",PSI-102_Analyzed Data_GMT264 Run 22 DBP.xls,.xls,5331968,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,"Reduced Gravity/Dibutyl Phthalate/Run 21, 22",PSI-102_Analyzed Data_GMT264 Run 21 DBP.xls,.xls,5327872,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 36,PSI-102_Analyzed Data_GMT276dbp36hkp.xls,.xls,5863936,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 37,PSI-102_Analyzed Data_GMT276dbp37.xls,.xls,1187328,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 38,PSI-102_Analyzed Data_GMT276dbp38.xls,.xls,6122496,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 39,PSI-102_Analyzed Data_GMT276dbp39hkp.xls,.xls,2551296,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 40,PSI-102_Analyzed Data_GMT276dbp40hkp.xls,.xls,4268544,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 42,PSI-102_Analyzed Data_GMT277dbp42hkp peak 1.xls,.xls,4574720,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 42,PSI-102_Analyzed Data_GMT277dbp42hkp peak 2.xls,.xls,6299136,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 43,PSI-102_Analyzed Data_GMT277DBP43hkp.xls,.xls,3217408,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 43,PSI-102_Analyzed Data_GMT277dbp43hkpa.xls,.xls,6428672,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 44,PSI-102_Analyzed Data_GMT277DBPTest44.xls,.xls,11580928,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Dibutyl Phthalate/Run 45,PSI-102_Analyzed Data_GMT278DBP45.xls,.xls,6271488,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Kapton/Run 08,PSI-102_Analyzed Data_kaptonGMT257 zgy average.xls,.xls,2234368,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Kapton/Run 08,PSI-102_Analyzed Data_kaptonGMT257.xls,.xls,2120704,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Kapton/Run 14,PSI-102_Analyzed Data_GMT263 run 14 kapton avg.xls,.xls,1066496,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Kapton/Run 29,PSI-102_Analyzed Data_GMT271kapton29.xls,.xls,5160960,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Kapton/Run 30,PSI-102_Analyzed Data_GMT272kapton30.xls,.xls,2646528,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Kapton/Run 33,PSI-102_Analyzed Data_GMT273kapton33.xls,.xls,5982720,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 34,PSI-102_Analyzed Data_GMT273lampwick34.xls,.xls,3213312,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,"Reduced Gravity/Cotton Lamp wick/Run 06, 07",PSI-102_Analyzed Data_GMT256HKP.xls,.xls,4460544,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,"Reduced Gravity/Cotton Lamp wick/Run 06, 07",PSI-102_Analyzed Data_GMT256HKP zgy average.xls,.xls,4487680,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,"Reduced Gravity/Cotton Lamp wick/Run 06, 07",PSI-102_Analyzed Data_GMT256LOG.xlsx,.xlsx,28778,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 17,PSI-102_Analyzed Data_GMT264 Run 17 lampwick.xls,.xls,1867776,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 31,PSI-102_Analyzed Data_GMT272lampwick31.xls,.xls,1492480,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 32,PSI-102_Analyzed Data_GMT272lampwick32.xls,.xls,5031936,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Cotton Lamp wick/Run 46,PSI-102_Analyzed Data_GMT278Lampwick46.xls,.xls,4929024,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Teflon/Run 10,PSI-102_Analyzed Data_TeflonGMT257hkp.xls,.xls,2551808,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Teflon/Run 10,PSI-102_Analyzed Data_TeflonGMT257hkp zgy average.xls,.xls,2576896,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Teflon/Run 13,PSI-102_Analyzed Data_GMT262 RUN 13 teflon.xls,.xls,897536,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Teflon/Run 25,PSI-102_Analyzed Data_GMT268teflon25.xls,.xls,5562880,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Teflon/Run 26,PSI-102_Analyzed Data_GMT268teflon26.xls,.xls,3776512,2,False,maybe,analyzed data table
+PSI-102,SAME,Analyzed Data,Reduced Gravity/Teflon/Run 28,PSI-102_Analyzed Data_GMT269teflon28hkp.xls,.xls,3369472,2,False,maybe,analyzed data table
+PSI-102,SAME,Science Documents,,PSI-102_Science Documents_SAME_Baseline Concept Description Doc.pdf,.pdf,247315,2,False,maybe,science document
+PSI-102,SAME,Science Documents,,PSI-102_Science Documents_SAME_Operations Manual_007.pdf,.pdf,699811,2,False,maybe,science document
+PSI-102,SAME,Reference Data,,PSI-102_Reference Data_SAME_Crew Interface Description.pdf,.pdf,694482,2,False,maybe,reference document
+PSI-102,SAME,Reference Data,,PSI-102_Reference Data_SAME_Software Description Document.pdf,.pdf,270540,2,False,maybe,reference document
+PSI-102,SAME,Reference Data,,PSI-102_Reference Data_SAME_Software Req Document.pdf,.pdf,400833,2,False,maybe,reference document
+PSI-102,SAME,Experimental table,,PSI-102_Experimental table_SAME.csv,.csv,331,1,False,need,experimental table
+PSI-106,SLICE,Experimental table,,PSI-106_Experimental table_Slice.csv,.csv,734,1,False,need,experimental table
+PSI-107,SPICE,Reports,,PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf,.pdf,2227738,1,False,maybe,report
+PSI-107,SPICE,Reports,,PSI-107_Reports_SPICE_30-DayPostFlightReport.pdf,.pdf,160909,1,False,maybe,report
+PSI-107,SPICE,Reports,,PSI-107_Reports_SPICE_FinalReport.pdf,.pdf,601754,1,False,maybe,"final report: card texts, findings"
+PSI-107,SPICE,Science Documents,,PSI-107_Science Documents_SPICE_SRD.doc,.doc,1112064,1,False,maybe,science document
+PSI-107,SPICE,Reference Data,,PSI-107_Reference Data_SPICE_VIDEO OVERLAY RESET.pdf,.pdf,1060135,1,False,maybe,reference document
+PSI-107,SPICE,Experimental table,,PSI-107_Experimental table_Spice.csv,.csv,31205,1,False,need,experimental table
+PSI-115,,Reports,,PSI-115_Reports_NNX17AF08A_FinalReport.pdf,.pdf,10617514,2,False,maybe,"final report: card texts, findings"
+PSI-115,,Science Documents,,PSI-115_Science Documents_DataOrganizationDocument.pdf,.pdf,96899,2,False,need,column dictionary (data organization)
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation,PSI-117_Analyzed Data_ReadMe_List_of_Data.xlsx,.xlsx,11059,1,False,need,column dictionary (ReadMe)
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/PROC1,PSI-117_Analyzed Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv,.csv,745,1,False,maybe,analyzed data table
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/PROC1,PSI-117_Analyzed Data_PROCI_2019_Oscillatory_Cool_Flame.csv,.csv,37138,1,False,maybe,analyzed data table
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/PROC1,PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv,.csv,449,1,False,maybe,analyzed data table
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/PROC1,PSI-117_Analyzed Data_PROCI_2019_Stable_Cool.csv,.csv,15477,1,False,maybe,analyzed data table
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/PROC1,PSI-117_Analyzed Data_PROCI_C12_2019_Three_Stage.csv,.csv,89130,1,False,maybe,analyzed data table
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/MST,PSI-117_Analyzed Data_MST_2024_Burning_history_Flame_diameter.csv,.csv,44107,1,False,maybe,analyzed data table
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/MST,PSI-117_Analyzed Data_MST_2024_Kavg.csv,.csv,518,1,False,maybe,analyzed data table
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/MST,PSI-117_Analyzed Data_MST_2024_Dext.csv,.csv,372,1,False,maybe,analyzed data table
+PSI-117,,Analyzed Data,Reduced Gravity/Simulation/MST,PSI-117_Analyzed Data_MST_2024_Radiance_Flame_Diameter.csv,.csv,82277,1,False,maybe,analyzed data table
+PSI-117,,Reports,,PSI-117_Reports_Dissertation_Combustion Behavior Of Sub-Millimeter Sized Oxygenated And N-Alka.pdf,.pdf,8072629,1,False,maybe,report
+PSI-142,,Analyzed Data,Modeling Data,PSI-142_Analyzed Data_PSI data summary Princeton with links.xlsx,.xlsx,735232,1,False,need,test summary: conditions per test
+PSI-142,,Experimental table,,PSI-142_Experimental table_Data Summary Table.csv,.csv,727,1,False,need,experimental table
+PSI-159,ACME CFI-G,Reports,,PSI-159_Reports_FinalRpt_ACME.CFI-G.pdf,.pdf,3894907,1,False,maybe,"final report: card texts, findings"
+PSI-159,ACME CFI-G,Experimental table,,PSI-159_Experimental table_CFI-G_Normal Flames.csv,.csv,22166,1,False,need,experimental table
+PSI-159,ACME CFI-G,Experimental table,,PSI-159_Experimental table_CFI-G_Inverse Flames.csv,.csv,39422,1,False,need,experimental table

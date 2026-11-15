@@ -23,7 +23,8 @@
 |---|---|
 | Список досліджень | `GET /geode-py/ws/repo/search?term=&source=psi&type=investigation&size=300` — 133 дослідження, фільтруємо Research Area = Combustion Science |
 | Деталі дослідження | `GET /geode-py/ws/repo/investigations/PSI-25` |
-| Посилання на файл | `GET /geode-py/ws/studies/PSI-25/download?file=<encodeURIComponent(file_name)>&version=<version>&redirect=false` — повертає тимчасове посилання на `psi-repo-prod.s3.amazonaws.com`, файл качаємо другим запитом |
+| Повне дерево файлів | `POST /geode-py/ws/files/v2`, тіло `{"folder": "", "fileType": "study", "studyId": "PSI-25", "version": <version>}` — усі файли з папками, розмірами й версією кожного файла. Інвентар: `docs/11-psi-inventory.md` |
+| Посилання на файл | `GET /geode-py/ws/studies/PSI-25/download?file=<encodeURIComponent(file_name)>&version=<version файла>&redirect=false` — повертає тимчасове посилання на `psi-repo-prod.s3.amazonaws.com` (буває простим текстом, а не JSON), файл качаємо другим запитом |
 
 Поля відповіді «деталі», які нам потрібні:
 
@@ -37,11 +38,9 @@
 
 ### Підводні камені
 
-1. **`added[]` буває порожнім.** У PSI-99 (SAFFIRE-II), PSI-69 (FLEX), PSI-68 (FLEX-2), PSI-22 (E-FIELD)
-   список порожній, у PSI-106, PSI-20, PSI-21, PSI-62, PSI-60 в ньому один файл, хоча документи на сайті є.
-   На кроці 1 відкриваємо сторінку такого дослідження в браузері, дивимось у DevTools → Network,
-   яким запитом сайт отримує дерево файлів, і додаємо цей запит в ingest. Запасний шлях: вручну завантажити
-   1–2 ключові документи на кожне таке дослідження.
+1. **`added[]` — не список файлів.** Це різниця з попередньою версією дослідження, тому в PSI-99, PSI-69,
+   PSI-68, PSI-22 вона порожня. Повне дерево віддає `POST /geode-py/ws/files/v2` (знайдено 15.11 у DevTools
+   на вкладці «Data files and documents»). Що в ньому є і що нам треба: `docs/11-psi-inventory.md`.
 2. **Документи бувають великі й старих форматів.** BASS-II Summary Report — PDF на 46.7 МБ.
    У DAFT звіти в `.doc` і `.ppt`. Ставимо ліміт 60 МБ на файл, старі формати конвертуємо через
    LibreOffice (`soffice --headless --convert-to pdf`) або пропускаємо із записом у журнал.
