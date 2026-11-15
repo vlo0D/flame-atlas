@@ -14,6 +14,7 @@ import { Findings } from "./findings";
 import { RankList } from "./rank-list";
 import { ScenarioForm } from "./scenario-form";
 import { ScoreExplainer } from "./score-explainer";
+import { SiBrief } from "./si-brief";
 
 /** The Scenario screen for one environment. Where the environment comes from is the caller's business. */
 export function ScenarioView({
@@ -42,6 +43,8 @@ export function ScenarioView({
 
         <div className="min-w-0 space-y-8">
         <Findings gaps={gaps} scenario={scenario} />
+
+        <SiBrief scenario={scenario} preset={activePreset} />
 
         <section aria-labelledby="ranked-heading" className="min-w-0 space-y-3">
           <div>

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { conditionReporting, countRows, isTestRow } from "./rows";
+import { conditionReporting, countRows, countSiReadTests, hasSiReading, isTestRow, resultReporting } from "./rows";
 import { testRow } from "./test-helpers";
 
 describe("isTestRow", () => {
@@ -43,5 +43,35 @@ describe("conditionReporting", () => {
       pressure: { reported: 1, fromDocuments: 1 },
       airflow: { reported: 0, fromDocuments: 0 },
     });
+  });
+});
+
+describe("resultReporting", () => {
+  it("counts tests that report ignition, outcome and burn time, and those not read from a table column", () => {
+    const rows = [
+      testRow({ ignited: true, outcome: "self-extinguished", burnTimeS: 40, inferred: ["ignited", "outcome"] }),
+      testRow({ ignited: false, outcome: "not-ignited" }),
+      testRow({}),
+      testRow({ granularity: "test-day", ignited: true, inferred: ["ignited"] }),
+    ];
+    expect(resultReporting(rows)).toEqual({
+      ignition: { reported: 2, fromDocuments: 1 },
+      outcome: { reported: 2, fromDocuments: 1 },
+      burnTime: { reported: 1, fromDocuments: 0 },
+    });
+  });
+});
+
+describe("rows read by SI", () => {
+  const note = 'Taken from the matrix. Read by SI (Some Model) from the operator\'s note: outcome = burned-out ("burned out").';
+
+  it("recognises the sentence the pipeline writes into the notes", () => {
+    expect(hasSiReading({ notes: note })).toBe(true);
+    expect(hasSiReading({ notes: "Taken from the matrix." })).toBe(false);
+    expect(hasSiReading({ notes: null })).toBe(false);
+  });
+
+  it("counts individual tests only", () => {
+    expect(countSiReadTests([testRow({ notes: note }), testRow({ notes: note, granularity: "test-day" }), testRow({})])).toBe(1);
   });
 });

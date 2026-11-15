@@ -42,3 +42,6 @@ next-env.d.ts
 
 # data and contract types copied in by scripts/sync-data.mjs
 /src/generated/
+
+# input for the SI briefs, written by `npm run brief-facts`
+/brief-facts.json

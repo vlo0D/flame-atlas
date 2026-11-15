@@ -242,7 +242,15 @@ export function testedConditions(scenario: ScenarioInput, tests: readonly TestRe
   };
 }
 
-export const findGaps: FindGaps = (scenario, tests) => {
+/**
+ * The numbers behind every gap, with the rows each one counted, in the order the gaps are shown.
+ * findGaps turns them into sentences; the SI brief (src/domain/brief.ts) reads the same numbers,
+ * so a count is computed in one place only.
+ */
+export function collectGapFacts(
+  scenario: ScenarioInput,
+  tests: readonly TestRecord[],
+): { facts: GapFacts; rows: readonly TestRecord[] }[] {
   const allTests = tests.filter(isTestRow);
 
   // 1. Tests with the environment's fuel, near its oxygen and pressure.
@@ -309,8 +317,8 @@ export const findGaps: FindGaps = (scenario, tests) => {
   ).length;
 
   return [
-    gap(
-      {
+    {
+      facts: {
         kind: "near-scenario",
         count: near.length,
         total: withFuel.length,
@@ -319,20 +327,20 @@ export const findGaps: FindGaps = (scenario, tests) => {
         comparable: comparable.length,
         unknownPressure: nearUnknownPressure,
       },
-      near.length > 0 ? near : nearest ? [nearest] : [],
-    ),
-    gap(
-      {
+      rows: near.length > 0 ? near : nearest ? [nearest] : [],
+    },
+    {
+      facts: {
         kind: "exploration-solids",
         count: exploration.length,
         total: solids.length,
         scenario,
         unknownPressure,
       },
-      exploration,
-    ),
-    gap(
-      {
+      rows: exploration,
+    },
+    {
+      facts: {
         kind: "burner-oxygen",
         count: burner.length,
         total: null,
@@ -340,10 +348,10 @@ export const findGaps: FindGaps = (scenario, tests) => {
         maxPct: burnerMax,
         atExplorationOxygen: burnerRich,
       },
-      burner,
-    ),
-    gap(
-      {
+      rows: burner,
+    },
+    {
+      facts: {
         kind: "partial-gravity",
         count: 0,
         total: allTests.length,
@@ -351,17 +359,20 @@ export const findGaps: FindGaps = (scenario, tests) => {
         simulated: simulated.length,
         simulatedSummaryRows,
       },
-      simulated,
-    ),
-    gap(
-      {
+      rows: simulated,
+    },
+    {
+      facts: {
         kind: "not-reported",
         count: withoutPressure.length,
         total: allTests.length,
         scenario,
         withoutFlow,
       },
-      withoutPressure,
-    ),
+      rows: withoutPressure,
+    },
   ];
 };
+
+export const findGaps: FindGaps = (scenario, tests) =>
+  collectGapFacts(scenario, tests).map(({ facts, rows }) => gap(facts, rows));

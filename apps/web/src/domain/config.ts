@@ -113,6 +113,14 @@ export const GRAVITY_SHORTCUTS = [
   { label: "Earth", gravityG: 1 },
 ] as const;
 
+/**
+ * How the pipeline starts the sentence of a row's notes that quotes what a language model read
+ * from an operator's free-text note (pipeline/normalize/engine.py). The data contract has no field
+ * for it yet, so this text is the only way to count such rows; a structured field is proposed
+ * to the contract owner (docs/decisions.md).
+ */
+export const SI_NOTE_MARKER = "Read by SI (";
+
 /** How many of an investigation's closest rows a ranked result lists. */
 export const NEAREST_ROWS_LIMIT = 3;
 

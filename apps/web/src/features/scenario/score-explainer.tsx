@@ -37,7 +37,8 @@ export function ScoreExplainer() {
       <div className="mt-3 space-y-3 text-fg-muted">
         <p>
           Each investigation gets seven values from 0 to 1. Each is multiplied by its weight and the sum is scaled to
-          100. The same code computes every score in the browser; no AI is involved.
+          100. The same code computes every score in the browser. SI does not set or adjust a score: it only words
+          the brief above this list, from these numbers.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[32rem] text-left">

@@ -118,6 +118,65 @@ export interface VariableSummary {
   distinctValues: number;
 }
 
+/** One computed fact about an environment: a count, a measured value, a name, or null when there is none. */
+export type FactValue = number | string | null;
+
+/** Everything the SI brief may talk about, keyed by a stable name such as "near.count" or "rank.1.score". */
+export type BriefFacts = Record<string, FactValue>;
+
+/** One sentence of an SI brief and the facts it rests on. Written by a language model, checked by verifyBrief. */
+export interface BriefSentence {
+  text: string;
+  /** Keys of BriefFacts. Every number and investigation name in `text` must match one of them. */
+  facts: string[];
+}
+
+/** The SI brief of one preset environment. */
+export interface Brief {
+  scenarioId: string;
+  sentences: BriefSentence[];
+}
+
+/** The file of briefs shipped with the site (src/content/briefs.json). */
+export interface BriefFile {
+  /** The language model that wrote the sentences. */
+  model: string;
+  /** How the model was run, in a few words. */
+  method: string;
+  /** Version of the instructions in src/content/briefs.prompt.md. */
+  promptVersion: string;
+  /** ISO date. */
+  writtenAt: string;
+  briefs: Brief[];
+}
+
+export interface BriefSentenceCheck {
+  ok: boolean;
+  /** Numbers in the sentence that matched a cited fact. */
+  numbers: number;
+  /** Investigation names in the sentence that matched a cited fact. */
+  names: number;
+  /** Why the sentence failed, in plain English. Empty when ok. */
+  problems: string[];
+}
+
+export interface BriefCheck {
+  /** True when every sentence passed. */
+  ok: boolean;
+  sentences: BriefSentenceCheck[];
+  numbersChecked: number;
+  namesChecked: number;
+}
+
+export type BuildBriefFacts = (
+  scenario: ScenarioInput,
+  investigations: readonly Investigation[],
+  tests: readonly TestRecord[],
+) => BriefFacts;
+
+/** `knownNames` are all investigation names and ids the site knows; a sentence may use only the ones it cites. */
+export type VerifyBrief = (brief: Brief, facts: BriefFacts, knownNames: readonly string[]) => BriefCheck;
+
 export type RankInvestigations = (
   scenario: ScenarioInput,
   investigations: readonly Investigation[],

@@ -36,6 +36,7 @@ Everyone adds a line when they bring something in; roles B and E clean it up on 
 | Tool / model | Purpose |
 |---|---|
 | Claude Code (Claude Fable 5.2, Claude Opus 5.5) | writing the web app, the data pipeline, the table mappings and their tests; checked by unit tests, contract validation and review |
+| Claude Fable 5.2, in a Claude Code session | in the product: wrote the SI brief of each preset environment (`apps/web/src/content/briefs.json`) and read the BASS operators' notes for ignition, outcome and burn time (`pipeline/mappings/si/PSI-26_BASS-notes.json`); code checks every number, name and quote against the data |
 | BMAD Method 6.12.4 | structure for the architecture document of the web app |
 | Spec Kit (document structure only) | structure for the pipeline specification in `specs/001-psi-ingest` |
 

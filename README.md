@@ -6,7 +6,9 @@ Flame Atlas is a web dashboard for the NASA Space Apps Challenge 2026 challenge
 *Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data*.
 It turns the 24 combustion investigations in NASA Physical Sciences Informatics (PSI) into one
 searchable table of tests, ranks the investigations for a crew environment you describe, and
-shows where the data has gaps.
+shows where the data has gaps. A language model (SI) reads NASA's tables, test matrices and operator
+notes into that table and writes a short brief for each preset environment; code checks every value it
+reads and every number it writes against the NASA source.
 
 **Live app:** <https://vlo0d.github.io/flame-atlas/>
 
@@ -14,11 +16,11 @@ shows where the data has gaps.
 
 | Screen | What you get |
 |---|---|
-| **Scenario** | Pick a preset (ISS cabin, lunar or Mars habitat, pressurized rover, EVA suit) or type your own oxygen, pressure, gravity, airflow and fuel. See how many NASA tests were run near that environment, the environment set beside what was actually tested, and all 24 investigations ranked by how close their test conditions are, with a breakdown of every score. |
-| **Tests** | One table of 1,989 rows from 22 NASA experiment tables, in common fields and units. Filter by investigation, fuel, oxygen, pressure, airflow, row type and outcome; export the filtered rows to CSV or JSON. Every row opens its source file, row number and original cells. |
+| **Scenario** | Pick a preset (ISS cabin, lunar or Mars habitat, pressurized rover, EVA suit) or type your own oxygen, pressure, gravity, airflow and fuel. See how many NASA tests were run near that environment, the environment set beside what was actually tested, and all 24 investigations ranked by how close their test conditions are, with a breakdown of every score. For a preset, an SI brief puts those numbers into words; every number and name in it is checked by code, and you can open the facts behind each sentence. |
+| **Tests** | One table of 1,989 rows from 22 NASA experiment tables, in common fields and units. Filter by investigation, fuel, oxygen, pressure, airflow, row type and outcome; export the filtered rows to CSV or JSON. Every row opens its source file, row number, original cells and the notes that quote any NASA document a value came from. |
 | **Coverage** | A grid of oxygen against pressure or airflow: how many individual tests sit in each cell, where the exploration atmosphere is, and the data gaps. Every count links to exactly the rows it counted. |
 | **Investigations** | A card for each investigation: objective, setup, conditions, fuels and publications, with a word-for-word quote and link for every statement. |
-| **Methodology** | Where the data comes from, how complete each condition is, how the numbers are computed, how it was checked, and its limits. |
+| **Methodology** | Where the data comes from, how complete each condition and result is, how the numbers are computed, how it was checked, how SI powers the dashboard, and its limits. |
 
 ## What the data shows
 
@@ -45,10 +47,13 @@ NASA PSI API ──> Python pipeline ──> 4 JSON files ──> static web app
   explain them; maps each table to common fields and units with a JSON mapping applied by code; fills a
   condition from another NASA document of the same investigation only when the table leaves it out (for
   example the BASS As Run Test Matrix, or the pressure logged by the SAFFIRE and SAME-R sensors), marking
-  the value and quoting the source; writes and validates the four files of the data contract.
+  the value and quoting the source; takes the ignition, outcome and burn time of the BASS tests from the
+  operator's free-text notes as a language model read them, keeping a value only when the quoted words are
+  in the NASA cell character for character; writes and validates the four files of the data contract.
 - **Data contract** (`contracts/`): JSON schemas, TypeScript types and a dependency-free validator.
 - **Site** (`apps/web/`): Next.js static export with TypeScript and Tailwind. Ranking, coverage and gaps are
-  pure functions with unit tests; the site makes no network calls and runs no AI model.
+  pure functions with unit tests. The SI brief of each preset was written ahead of time and is checked
+  against the data in the browser; the site makes no network calls and calls no AI model while it runs.
 
 ### Rules the data follows
 
@@ -100,5 +105,5 @@ python3 contracts/validate.py data/processed    # check the data against the con
 
 All data comes from [NASA Physical Sciences Informatics, Combustion Science](https://psi.nasa.gov/physci/repo/search?q=combustion),
 published under CC0-1.0. Libraries, tools and other references are listed in
-[submission/references.md](submission/references.md). How AI tools were used is described on the
-Methodology screen and in [docs/si-usage-log.md](docs/si-usage-log.md).
+[submission/references.md](submission/references.md). How SI (AI) is used in the product and in building
+it is described on the Methodology screen and in [docs/si-usage-log.md](docs/si-usage-log.md).

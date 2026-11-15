@@ -10,6 +10,7 @@
     "build": "next build",
     "pretest": "node scripts/sync-data.mjs",
     "test": "vitest run",
+    "brief-facts": "node scripts/sync-data.mjs && BRIEF_FACTS_OUT=brief-facts.json vitest run src/lib/briefs.test.ts -t \"writes the facts\"",
     "pretypecheck": "node scripts/sync-data.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint"

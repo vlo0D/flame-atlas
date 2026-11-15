@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useMemo, useRef } from "react";
 import { PageHeader } from "@/components/page-parts";
 import { RowSource } from "@/components/row-source";
+import { SiBadge } from "@/components/si-badge";
 import { filterTests, hasActiveFilters } from "@/domain/filters";
 import { formatGranularity, formatPressure, formatRange, formatText } from "@/domain/format";
-import { countRows } from "@/domain/rows";
+import { countRows, hasSiReading } from "@/domain/rows";
 import type { TestFilters } from "@/domain/types";
 import { getInvestigation, tests } from "@/lib/data";
 import { investigationHref } from "@/lib/paths";
@@ -119,7 +120,14 @@ export function TestsView({
                           <span className="text-fg-subtle">, {row.flowDirection}</span>
                         ) : null}
                       </td>
-                      <td className="whitespace-nowrap px-3 py-2">{formatText(row.outcome)}</td>
+                      <td className="whitespace-nowrap px-3 py-2">
+                        {formatText(row.outcome)}
+                        {row.outcome !== null && hasSiReading(row) && row.inferred.includes("outcome") ? (
+                          <span className="ml-1.5 align-middle">
+                            <SiBadge title="Read by a language model from the operator's note; the quote is in the row's source" />
+                          </span>
+                        ) : null}
+                      </td>
                       <td className="min-w-48 px-3 py-2">
                         <RowSource row={row} />
                       </td>

@@ -18,15 +18,17 @@ Use the dark or light theme consistently. Do not add images or music without a l
 
 ## 3. The solution: Scenario
 
-- Screenshot: Scenario with the lunar habitat preset (findings card and the top of the ranking).
+- Screenshot: Scenario with the lunar habitat preset (findings card, the SI brief and the top of the ranking).
 - Describe the environment → see the tests near it, what was actually tested, and the 24 investigations
   ranked with an open, seven-part score.
+- The SI brief says it in plain words; every number and name in it is checked by code against the data.
 
 ## 4. The data: one table from 22
 
 - 1,989 rows → 1,872 individual tests, one schema, converted units.
 - Every value leads to its NASA file, row and original cell; missing values stay "not reported".
-- Screenshot: Tests table with an open row source; mention CSV and JSON export.
+- SI read the BASS operators' notes: ignition for 113 tests, outcome for 75, each with a word-for-word quote.
+- Screenshot: Tests table with an open row source (a BASS row with the SI mark); mention CSV and JSON export.
 
 ## 5. The finding
 
@@ -36,13 +38,15 @@ Use the dark or light theme consistently. Do not add images or music without a l
 - No real partial-gravity test exists.
 - Screenshot: Coverage grid, oxygen against pressure, exploration atmosphere marked.
 
-## 6. Why you can trust it
+## 6. SI you can check
 
-- AI helped write code and mappings; code applies the mappings, keeps original cells, and the site runs no
-  AI model: every number is computed by tested code.
-- Quotes on cards are checked against the source by code.
-- Over 2,100 converted values compared with their source cells; TODO: the 40-value hand check.
-- Methodology screen shows how complete each condition is and where each value came from.
+- SI reads and writes; code checks. A language model mapped 22 tables into one, read 121 operator notes and
+  wrote a brief for each of the 5 preset environments.
+- A value read from a note is kept only when the quoted words are in the NASA cell: 205 kept, 0 rejected.
+- A brief sentence is shown only when every number and name matches the data: 26 of 26 pass, 98 numbers checked.
+- SI never sets a score: ranking, coverage and gaps are open, tested code. No model is called while the site runs.
+- Over 2,100 converted values compared with their source cells; TODO: the 40-value and 20-value hand checks.
+- Screenshot: the SI brief with "What was checked" open.
 
 ## 7. What next
 

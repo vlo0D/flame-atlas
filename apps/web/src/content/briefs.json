@@ -1,0 +1,137 @@
+{
+  "model": "Claude Fable 5.2",
+  "method": "written ahead of time in a Claude Code session from the facts printed by `npm run brief-facts`, following src/content/briefs.prompt.md",
+  "promptVersion": "1",
+  "writtenAt": "2026-11-15",
+  "briefs": [
+    {
+      "scenarioId": "iss",
+      "sentences": [
+        {
+          "text": "154 of the 379 individual tests with solid fuel were run within 5 points of oxygen and 15 kPa of this environment (21 % oxygen at 101.3 kPa, 14.7 psi).",
+          "facts": ["near.count", "near.total", "near.o2Window", "near.pressureWindowKpa", "scenario.o2Pct", "scenario.pressureKpa", "scenario.pressurePsi", "scenario.fuel"]
+        },
+        {
+          "text": "They come from BASS-II, BASS, SAFFIRE-I, SAFFIRE-II and SAFFIRE-III; another 91 tests are that close in oxygen but do not report pressure, so they cannot be placed.",
+          "facts": ["near.investigations", "near.unknownPressure"]
+        },
+        {
+          "text": "Where the tables report them, solid-fuel tests span 13.6 to 22.7 % oxygen and 98.3 to 103.6 kPa, all in microgravity, so this environment lies inside what was tested.",
+          "facts": ["tested.o2Min", "tested.o2Max", "tested.pressureKpaMin", "tested.pressureKpaMax", "tested.gravity", "scenario.gravityG"]
+        },
+        {
+          "text": "BASS (99.1), BASS-II (99) and SAFFIRE-II (96.3) rank highest, and for each of them all 100 points of the score could be checked against reported values.",
+          "facts": ["rank.1.name", "rank.1.score", "rank.2.name", "rank.2.score", "rank.3.name", "rank.3.score", "rank.1.checkedPoints", "rank.2.checkedPoints", "rank.3.checkedPoints"]
+        },
+        {
+          "text": "The same data holds no solid-fuel test at 30 % oxygen or more and 70.3 kPa (10.2 psi) or less, the exploration atmosphere described on the challenge page.",
+          "facts": ["exploration.solidTests", "exploration.minO2Pct", "exploration.maxPressureKpa", "exploration.maxPressurePsi"]
+        }
+      ]
+    },
+    {
+      "scenarioId": "lunar-habitat",
+      "sentences": [
+        {
+          "text": "None of the 379 individual tests with solid fuel was run within 5 points of oxygen and 15 kPa of this environment (34 % oxygen at 56.5 kPa, 8.2 psi).",
+          "facts": ["near.count", "near.total", "near.o2Window", "near.pressureWindowKpa", "scenario.o2Pct", "scenario.pressureKpa", "scenario.pressurePsi", "scenario.fuel"]
+        },
+        {
+          "text": "Where the tables report them, solid-fuel tests span 13.6 to 22.7 % oxygen and 98.3 to 103.6 kPa, all in microgravity, so this environment lies outside what was tested in oxygen, pressure and gravity (0.165 g).",
+          "facts": ["tested.o2Min", "tested.o2Max", "tested.pressureKpaMin", "tested.pressureKpaMax", "tested.gravity", "scenario.gravityG"]
+        },
+        {
+          "text": "The closest solid-fuel test, from BASS, was run at 22.7 % oxygen and 100.8 kPa.",
+          "facts": ["near.closest.investigation", "near.closest.o2Max", "near.closest.pressureKpaMin"]
+        },
+        {
+          "text": "BASS (61.9) and BASS-II (61.3) rank highest: both burned solid fuels and have prevention as their main pillar, but their oxygen does not go above 22.7 %.",
+          "facts": ["rank.1.name", "rank.1.score", "rank.2.name", "rank.2.score", "rank.1.fuelStates", "rank.2.fuelStates", "rank.1.pillar", "rank.2.pillar", "rank.1.o2Max"]
+        },
+        {
+          "text": "ACME BRE follows with 60.6: its gas burner stands in for solid and liquid fuels and reached 40 % oxygen, but its table has 18 summary rows and no individual tests and does not report pressure or airflow, so only 75 of the 100 points of the score could be checked against reported values.",
+          "facts": ["rank.3.name", "rank.3.score", "rank.3.fuelStates", "rank.3.standsInFor", "rank.3.o2Max", "rank.3.rows", "rank.3.tests", "rank.3.notReported", "rank.3.checkedPoints", "score.max"]
+        },
+        {
+          "text": "Across all fuels, 20 tests were run at 30 % oxygen or more and 70.3 kPa (10.2 psi) or less, all of them gas flames from ACME CFI-G, and no test was run at real partial gravity.",
+          "facts": ["exploration.allTests", "exploration.minO2Pct", "exploration.maxPressureKpa", "exploration.maxPressurePsi", "exploration.allFuelStates", "exploration.allInvestigations", "partial.realTests"]
+        }
+      ]
+    },
+    {
+      "scenarioId": "mars-habitat",
+      "sentences": [
+        {
+          "text": "None of the 379 individual tests with solid fuel was run within 5 points of oxygen and 15 kPa of this environment (34 % oxygen at 56.5 kPa, 8.2 psi).",
+          "facts": ["near.count", "near.total", "near.o2Window", "near.pressureWindowKpa", "scenario.o2Pct", "scenario.pressureKpa", "scenario.pressurePsi", "scenario.fuel"]
+        },
+        {
+          "text": "Solid fuels were tested only in microgravity, between 13.6 and 22.7 % oxygen and between 98.3 and 103.6 kPa where the tables report them; this environment has 0.38 g and lies outside that span in oxygen and pressure too.",
+          "facts": ["tested.gravity", "tested.o2Min", "tested.o2Max", "tested.pressureKpaMin", "tested.pressureKpaMax", "scenario.gravityG"]
+        },
+        {
+          "text": "No test in the data was run at real partial gravity; 21 summary rows, which are test days and not individual tests, simulated it.",
+          "facts": ["partial.realTests", "partial.simulatedTests", "partial.simulatedSummaryRows"]
+        },
+        {
+          "text": "BASS (61.9) and BASS-II (61.3) rank highest: both burned solid fuels and have prevention as their main pillar, but their oxygen does not go above 22.7 %.",
+          "facts": ["rank.1.name", "rank.1.score", "rank.2.name", "rank.2.score", "rank.1.fuelStates", "rank.2.fuelStates", "rank.1.pillar", "rank.2.pillar", "rank.1.o2Max"]
+        },
+        {
+          "text": "ACME BRE follows with 60.6: its gas burner stands in for solid and liquid fuels and reached 40 % oxygen, but its table does not report pressure or airflow, so only 75 of the 100 points of the score could be checked against reported values.",
+          "facts": ["rank.3.name", "rank.3.score", "rank.3.fuelStates", "rank.3.standsInFor", "rank.3.o2Max", "rank.3.notReported", "rank.3.checkedPoints", "score.max"]
+        }
+      ]
+    },
+    {
+      "scenarioId": "rover",
+      "sentences": [
+        {
+          "text": "7 of the 741 individual tests with solid or liquid fuel were run within 5 points of oxygen and 15 kPa of this environment (34 % oxygen at 56.5 kPa, 8.2 psi).",
+          "facts": ["near.count", "near.total", "near.o2Window", "near.pressureWindowKpa", "scenario.o2Pct", "scenario.pressureKpa", "scenario.pressurePsi", "scenario.fuel"]
+        },
+        {
+          "text": "All 7 are liquid-fuel tests from FLEX; the data holds no solid-fuel test at 30 % oxygen or more and 70.3 kPa (10.2 psi) or less.",
+          "facts": ["near.count", "near.fuelStates", "near.investigations", "exploration.solidTests", "exploration.minO2Pct", "exploration.maxPressureKpa", "exploration.maxPressurePsi"]
+        },
+        {
+          "text": "Where the tables report them, tests with these fuels span 12 to 34 % oxygen and 50.7 to 506.6 kPa, all in microgravity; this environment has 0.165 g.",
+          "facts": ["tested.o2Min", "tested.o2Max", "tested.pressureKpaMin", "tested.pressureKpaMax", "tested.gravity", "scenario.gravityG"]
+        },
+        {
+          "text": "FLEX-2 (89.3) and FLEX (84.5) rank highest: both are suppression investigations that burned liquid fuel.",
+          "facts": ["rank.1.name", "rank.1.score", "rank.2.name", "rank.2.score", "rank.1.pillar", "rank.2.pillar", "rank.1.fuelStates", "rank.2.fuelStates"]
+        },
+        {
+          "text": "The table of FLEX-2 has 8 summary rows and no individual tests, and FLEX has 274 tests but does not report airflow, so 90 of the 100 points of its score could be checked against reported values.",
+          "facts": ["rank.1.name", "rank.1.rows", "rank.1.tests", "rank.2.name", "rank.2.tests", "rank.2.notReported", "rank.2.checkedPoints", "score.max"]
+        }
+      ]
+    },
+    {
+      "scenarioId": "eva-suit",
+      "sentences": [
+        {
+          "text": "None of the 379 individual tests with solid fuel was run within 5 points of oxygen and 15 kPa of this environment (100 % oxygen at 29.6 kPa, 4.3 psi).",
+          "facts": ["near.count", "near.total", "near.o2Window", "near.pressureWindowKpa", "scenario.o2Pct", "scenario.pressureKpa", "scenario.pressurePsi", "scenario.fuel"]
+        },
+        {
+          "text": "The highest oxygen reported for a solid-fuel test is 22.7 % and the lowest pressure is 98.3 kPa, so this environment lies outside what was tested on both.",
+          "facts": ["tested.o2Max", "tested.pressureKpaMin"]
+        },
+        {
+          "text": "173 inverse-flame tests fed an oxidizer with up to 85 % oxygen through a gas burner into a fuel-filled chamber; they are gas flames, not solid fuels.",
+          "facts": ["burner.maxO2Pct", "burner.tests"]
+        },
+        {
+          "text": "BASS-II and BASS share the highest score, 57.6, and SAFFIRE-II follows with 46.6; all of them burned solid fuels at 22.7 % oxygen or less.",
+          "facts": ["rank.1.name", "rank.2.name", "rank.1.score", "rank.2.score", "rank.3.name", "rank.3.score", "rank.1.fuelStates", "rank.2.fuelStates", "rank.3.fuelStates", "rank.2.o2Max"]
+        },
+        {
+          "text": "No test in the data was run at real partial gravity.",
+          "facts": ["partial.realTests"]
+        }
+      ]
+    }
+  ]
+}
