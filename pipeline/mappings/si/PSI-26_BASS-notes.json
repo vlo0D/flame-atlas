@@ -1,0 +1,1058 @@
+{
+ "comment": "Readings of the operator's free-text notes of the BASS tests, written by a language model. Rules: pipeline/mappings/si/README.md. pipeline/normalize/si_notes.py accepts a value only when its quote is in the note word for word. A key is the as-run test number and the test number of the As Run Test Matrix; a row or a field that is missing means the note does not say.",
+ "model": "Claude Fable 5.2",
+ "method": "read in a Claude Code session, following pipeline/mappings/si/README.md",
+ "promptVersion": "1",
+ "writtenAt": "2026-11-15",
+ "sourceFile": "PSI-26_Science Documents_As Run_Test Matrix.xlsx",
+ "sheet": "as run matrix",
+ "column": "Test Observations and Anomalies (ignited, spread, extinguished, burn time, color, etc.)",
+ "readings": {
+  "1 | 1": {
+   "ignited": {
+    "value": true,
+    "quote": "Nice symmetric burn"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "extinguishes at burnout"
+   }
+  },
+  "2 | 42": {
+   "ignited": {
+    "value": true,
+    "quote": "2 minute burn"
+   },
+   "burnTimeS": {
+    "value": 120,
+    "quote": "2 minute burn"
+   }
+  },
+  "3 | 18": {
+   "ignited": {
+    "value": true,
+    "quote": "Very bright sooty ball"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "Only extinguishes when all flow stops"
+   },
+   "burnTimeS": {
+    "value": 120,
+    "quote": "~ 2 minute total burn"
+   }
+  },
+  "4 | 7": {
+   "ignited": {
+    "value": true,
+    "quote": "~ 40 s burn"
+   },
+   "burnTimeS": {
+    "value": 40,
+    "quote": "~ 40 s burn"
+   }
+  },
+  "5 | 8": {
+   "ignited": {
+    "value": true,
+    "quote": "~ 60 s burn"
+   },
+   "burnTimeS": {
+    "value": 60,
+    "quote": "~ 60 s burn"
+   }
+  },
+  "8 | 45": {
+   "ignited": {
+    "value": true,
+    "quote": "Flame doesn't go out until fan goes to 38"
+   }
+  },
+  "9 | 19": {
+   "ignited": {
+    "value": true,
+    "quote": "Grew from blue flame to sooty envelope flame"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "To extinguish, turned  flow off"
+   }
+  },
+  "10 | 20": {
+   "ignited": {
+    "value": true,
+    "quote": "Still a sooty flame even at 1 cm/s"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "extinguished when fan off"
+   }
+  },
+  "11 | 21": {
+   "ignited": {
+    "value": true,
+    "quote": "Burning laminar but sooty at 42"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "fuel completely ran out"
+   }
+  },
+  "12 | 4": {
+   "ignited": {
+    "value": true,
+    "quote": "a flash right after ignition"
+   },
+   "burnTimeS": {
+    "value": 26,
+    "quote": "26 s burn"
+   }
+  },
+  "13 | 10": {
+   "ignited": {
+    "value": true,
+    "quote": "Huge ignition kernel"
+   }
+  },
+  "14 | 12": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited and burned for only 2 s"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Died when igniter turned off"
+   },
+   "burnTimeS": {
+    "value": 2,
+    "quote": "burned for only 2 s"
+   }
+  },
+  "15 | 54": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited GBX time 16:14:44"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Fan turned to 40 at 16:19:22, flame and flame went out at 16:19:34"
+   }
+  },
+  "16 | 55": {
+   "ignited": {
+    "value": true,
+    "quote": "all blue flame again"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "Fan off at 35:30 ish.  Flame extinuishes right away"
+   }
+  },
+  "17 | 56": {
+   "ignited": {
+    "value": true,
+    "quote": "flame was taking off growing around sphere"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "turned off fan, and it extinguished right away"
+   }
+  },
+  "18 | 57": {
+   "ignited": {
+    "value": true,
+    "quote": "Very dim blue flame"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "When he turned flow down to 40.5ish flame extinguished"
+   }
+  },
+  "19 | 110": {
+   "ignited": {
+    "value": true,
+    "quote": "Started out all blue, got a pimple of soot"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "Extinguished when flow turned off"
+   }
+  },
+  "20 | 30": {
+   "ignited": {
+    "value": true,
+    "quote": "Burned about 3 min"
+   },
+   "burnTimeS": {
+    "value": 180,
+    "quote": "Burned about 3 min"
+   }
+  },
+  "21 | 31": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited within 15 s"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Extinguished when pot ~ 39"
+   }
+  },
+  "22 | 32": {
+   "ignited": {
+    "value": true,
+    "quote": "All blue sphere just before extinction"
+   }
+  },
+  "23 | 33": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited at 16:05"
+   }
+  },
+  "24 | 12-r": {
+   "ignited": {
+    "value": false,
+    "quote": "did not ignite but smoked"
+   },
+   "outcome": {
+    "value": "not-ignited",
+    "quote": "did not ignite but smoked"
+   }
+  },
+  "24 | 12-r2": {
+   "ignited": {
+    "value": false,
+    "quote": "12 pulses and then on, no joy"
+   },
+   "outcome": {
+    "value": "not-ignited",
+    "quote": "12 pulses and then on, no joy"
+   }
+  },
+  "25 | 46": {
+   "ignited": {
+    "value": true,
+    "quote": "2nd ignition flame stabilized at 42 then 41"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "extinguished when flow is turned off"
+   }
+  },
+  "26 | 47": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignition at 9 cm/s (FAN 60)"
+   }
+  },
+  "27 | 48": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignition at 9 cm/s (FAN 60)"
+   }
+  },
+  "28 | 49": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignition at 9 cm/s (FAN 60)"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "shut flow off.  Flame became very dim blue before extinguishing"
+   }
+  },
+  "29 | 22": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited at 9.75 cm/s"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "At fan off, flame turns blue, and oscilates before extinction"
+   }
+  },
+  "30 | 23": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited at 10 cm/s"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "Fan off flame all blue and pulses a few times before extinguished"
+   }
+  },
+  "31 | 24": {
+   "ignited": {
+    "value": true,
+    "quote": "start at 60, ignite, fan to 42"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "N2 and air off, turned all blue, he turned lights on before flame completely out"
+   }
+  },
+  "32 | 25": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited at 43"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "fuel ran out and flame extinguished"
+   }
+  },
+  "33 | 58": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited quickly, all blue"
+   },
+   "burnTimeS": {
+    "value": 285,
+    "quote": "burned for ~ 4.75 min"
+   }
+  },
+  "34 | 59": {
+   "ignited": {
+    "value": true,
+    "quote": "4 minute burn"
+   },
+   "burnTimeS": {
+    "value": 240,
+    "quote": "4 minute burn"
+   }
+  },
+  "35 | 60": {
+   "ignited": {
+    "value": true,
+    "quote": "started all blue, got sooty tail"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "then flow off goes out"
+   }
+  },
+  "36 | 61": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited and turned flow down"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "Extinguished with flow off"
+   }
+  },
+  "37 | 5": {
+   "ignited": {
+    "value": true,
+    "quote": "ignite at 5 cm/s, reduce to 3, 1.5, 1"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Extinguished at fan 41"
+   }
+  },
+  "38 | 14": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited and left igniter on until flame spread away"
+   }
+  },
+  "39 | 66": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignition was very quick, and very sooty"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Flame extinguished all by itself"
+   }
+  },
+  "41 | 34": {
+   "ignited": {
+    "value": true,
+    "quote": "Became sooty and then vapor jetting very strongly"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "extinction when air flow off"
+   }
+  },
+  "42 | 35": {
+   "ignited": {
+    "value": true,
+    "quote": "long ignition, fully engulfed by the end"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "Burned out completely"
+   }
+  },
+  "43 | 16": {
+   "ignited": {
+    "value": false,
+    "quote": "just smoked slightly, no ignition"
+   },
+   "outcome": {
+    "value": "not-ignited",
+    "quote": "just smoked slightly, no ignition"
+   }
+  },
+  "44 | 5b": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited and spread a bit on top side only"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "seemed to quench 5 mm from the end"
+   }
+  },
+  "45 | 6": {
+   "ignited": {
+    "value": true,
+    "quote": "steady spread at 9 cm/s"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "burned out whole sample"
+   }
+  },
+  "46 | 82": {
+   "ignited": {
+    "value": true,
+    "quote": "very sooty flame"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Flame extinguished when fan set to 40"
+   }
+  },
+  "47 | 82a": {
+   "ignited": {
+    "value": true,
+    "quote": "no problem re-igniting"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Out at 40 again"
+   }
+  },
+  "48 | 82b": {
+   "ignited": {
+    "value": true,
+    "quote": "Burned to completion"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "Burned to completion"
+   }
+  },
+  "49 | 68": {
+   "ignited": {
+    "value": true,
+    "quote": "Tiny blue flame"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Self-extinguished"
+   }
+  },
+  "50 | 69": {
+   "ignited": {
+    "value": true,
+    "quote": "got a brief flame a few times, but went out"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "got a brief flame a few times, but went out"
+   }
+  },
+  "51 | 111": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited on 3rd try"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "then turned off air flow and flame went out"
+   }
+  },
+  "52 | 112": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited after a few tries"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "air off, flame out"
+   },
+   "burnTimeS": {
+    "value": 360,
+    "quote": "6 minute burn"
+   }
+  },
+  "53 | 113": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited at 62, fan up to 87 then 100"
+   },
+   "outcome": {
+    "value": "other",
+    "quote": "GN2 on max did not blow it out right away, but did eventually extinguish it"
+   }
+  },
+  "54 | 2": {
+   "ignited": {
+    "value": true,
+    "quote": "Did not blow out"
+   }
+  },
+  "55 | 3": {
+   "ignited": {
+    "value": true,
+    "quote": "Did not blow out"
+   }
+  },
+  "56 | 15": {
+   "ignited": {
+    "value": false,
+    "quote": "Did not ignite"
+   },
+   "outcome": {
+    "value": "not-ignited",
+    "quote": "Did not ignite"
+   }
+  },
+  "57 | 13": {
+   "ignited": {
+    "value": true,
+    "quote": "brief ignition and extinguished in ~ 3 s"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "brief ignition and extinguished in ~ 3 s"
+   },
+   "burnTimeS": {
+    "value": 3,
+    "quote": "brief ignition and extinguished in ~ 3 s"
+   }
+  },
+  "58 | 17": {
+   "ignited": {
+    "value": true,
+    "quote": "brief ignition and extinguished after 4 seconds"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "brief ignition and extinguished after 4 seconds"
+   },
+   "burnTimeS": {
+    "value": 4,
+    "quote": "brief ignition and extinguished after 4 seconds"
+   }
+  },
+  "60 | 62": {
+   "ignited": {
+    "value": true,
+    "quote": "flame was strong when flow turned up"
+   }
+  },
+  "61 | 63": {
+   "ignited": {
+    "value": true,
+    "quote": "blew out bottom half, but not top half"
+   }
+  },
+  "62 | 64": {
+   "ignited": {
+    "value": true,
+    "quote": "flame did blow out with GN2 at about a pot 6"
+   },
+   "outcome": {
+    "value": "other",
+    "quote": "flame did blow out with GN2 at about a pot 6"
+   }
+  },
+  "63 | 65": {
+   "ignited": {
+    "value": true,
+    "quote": "flame strong enough did not blow out at 10"
+   }
+  },
+  "65 | 11": {
+   "ignited": {
+    "value": true,
+    "quote": "nice burn, left igniter on a bit long"
+   }
+  },
+  "66 | 9": {
+   "ignited": {
+    "value": true,
+    "quote": "flame kept going"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "kept going to end of sample"
+   }
+  },
+  "67 | 102": {
+   "ignited": {
+    "value": true,
+    "quote": "Slightly non-symmetric ignition point"
+   }
+  },
+  "68 | 83a": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited and was all blue initially"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "soot persisted until 0.32 pot when soot disappeared then flame went out"
+   }
+  },
+  "69 | 83b": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited very quickly on 2nd try"
+   }
+  },
+  "70 | 83c": {
+   "ignited": {
+    "value": true,
+    "quote": "Burned out all wax"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "Burned out all wax"
+   }
+  },
+  "71 | 84a": {
+   "ignited": {
+    "value": true,
+    "quote": "Very long burn (~ 10 min)"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Consistenly goes out at pot 0.31"
+   },
+   "burnTimeS": {
+    "value": 600,
+    "quote": "Very long burn (~ 10 min)"
+   }
+  },
+  "72 | 84b": {
+   "ignited": {
+    "value": true,
+    "quote": "Extinguished/burned out at 0.31"
+   }
+  },
+  "73 | 86a": {
+   "ignited": {
+    "value": true,
+    "quote": "Got hot then stepped to 0 flow, went out"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "Got hot then stepped to 0 flow, went out"
+   }
+  },
+  "74 | 86b": {
+   "ignited": {
+    "value": true,
+    "quote": "flame persisted for a long time"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "went out when fan off (38)"
+   }
+  },
+  "75 | 86c": {
+   "ignited": {
+    "value": true,
+    "quote": "ran out of fuel too quickly"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "ran out of fuel too quickly"
+   }
+  },
+  "76 | 70": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited well and had initial sooty flame"
+   }
+  },
+  "77 | 71": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited and got immediate dim blue flame"
+   },
+   "burnTimeS": {
+    "value": 480,
+    "quote": "Let it burn for 8 minutes"
+   }
+  },
+  "78 | 74": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignited nicely"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Shrank slowly and extinguished by itself"
+   }
+  },
+  "79 | 75": {
+   "ignited": {
+    "value": true,
+    "quote": "Flame went out when igniter was retracted"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Flame went out when igniter was retracted"
+   }
+  },
+  "80 | 98": {
+   "ignited": {
+    "value": true,
+    "quote": "nice ignition, blue leading edge"
+   }
+  },
+  "81 | 99": {
+   "ignited": {
+    "value": true,
+    "quote": "Good burn"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Extinguished at very low flow"
+   }
+  },
+  "83 | 115": {
+   "ignited": {
+    "value": true,
+    "quote": "dim flame propagates upstream"
+   }
+  },
+  "84 | 116": {
+   "ignited": {
+    "value": true,
+    "quote": "started getting soot before we put it out (air off)"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "started getting soot before we put it out (air off)"
+   }
+  },
+  "85 | 117": {
+   "ignited": {
+    "value": true,
+    "quote": "Flame spread all the way upstream"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Went out at 0.32 pot"
+   }
+  },
+  "85 | 117a": {
+   "ignited": {
+    "value": true,
+    "quote": "got a very sooty tail"
+   }
+  },
+  "86 | 100": {
+   "ignited": {
+    "value": true,
+    "quote": "Flame went out when fan set to 39"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Flame went out when fan set to 39"
+   }
+  },
+  "87 | 85": {
+   "ignited": {
+    "value": true,
+    "quote": "flame was steady all blue"
+   }
+  },
+  "88 | 93": {
+   "ignited": {
+    "value": true,
+    "quote": "Got sooty pretty quickly"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "went out on its own at 18:04:30 ish"
+   }
+  },
+  "89 | 26": {
+   "ignited": {
+    "value": true,
+    "quote": "Last pic still had a flame"
+   }
+  },
+  "90 | 27": {
+   "ignited": {
+    "value": true,
+    "quote": "Igniton at 62 then turned down to 41.5"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "Out when fan off"
+   }
+  },
+  "91 | 28": {
+   "ignited": {
+    "value": true,
+    "quote": "Burned out sample"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "Burned out sample"
+   }
+  },
+  "89 | 87": {
+   "ignited": {
+    "value": true,
+    "quote": "LONG candle burn at very low flow rates"
+   }
+  },
+  "90 | 103": {
+   "ignited": {
+    "value": true,
+    "quote": "Ign took 3 min"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Extinguished on last flow change pot 0.35-0.32"
+   }
+  },
+  "91 | 104": {
+   "ignited": {
+    "value": true,
+    "quote": "Ign took 2 min, flame on top half"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "Extinguished when flow off"
+   }
+  },
+  "92 | 105": {
+   "ignited": {
+    "value": true,
+    "quote": "Ign in 1 min"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "out at 18:40 at finite extremely low flow"
+   }
+  },
+  "93 | 38": {
+   "ignited": {
+    "value": true,
+    "quote": "brief flame at 62"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "brief flame at 62 but also 'flamed out'"
+   }
+  },
+  "94 | 39": {
+   "ignited": {
+    "value": true,
+    "quote": "took about 3 min to ignite"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "flame self-extinguished"
+   }
+  },
+  "95 | 40": {
+   "ignited": {
+    "value": true,
+    "quote": "flame lit on 2nd try"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "burned out fuel"
+   }
+  },
+  "96 | 72": {
+   "ignited": {
+    "value": true,
+    "quote": "the blue flame leading edge shrinks back"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "and then winks out"
+   }
+  },
+  "97 | 73": {
+   "ignited": {
+    "value": true,
+    "quote": "Got a flame briefly"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "shrank and winked out after maybe 15 s or so"
+   },
+   "burnTimeS": {
+    "value": 15,
+    "quote": "shrank and winked out after maybe 15 s or so"
+   }
+  },
+  "98 | 118": {
+   "ignited": {
+    "value": true,
+    "quote": "got it ignited, burned just on forward stagnation region"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Went out at finite flow"
+   }
+  },
+  "99 | 119": {
+   "ignited": {
+    "value": true,
+    "quote": "radiometer increased so still growing flame"
+   },
+   "outcome": {
+    "value": "flow-terminated",
+    "quote": "we shut off flow to put flame out"
+   }
+  },
+  "100 | 89": {
+   "ignited": {
+    "value": true,
+    "quote": "ignited 'concurrent' or stagnation"
+   }
+  },
+  "101 | 95": {
+   "ignited": {
+    "value": false,
+    "quote": "no ignition, despite prolonged attempted ignition"
+   },
+   "outcome": {
+    "value": "not-ignited",
+    "quote": "no ignition, despite prolonged attempted ignition"
+   }
+  },
+  "102 | 92": {
+   "ignited": {
+    "value": true,
+    "quote": "nice blue flame with inner soot until low flows"
+   },
+   "outcome": {
+    "value": "burned-out",
+    "quote": "the flame goes out (out of wax)"
+   }
+  },
+  "103 | 78": {
+   "ignited": {
+    "value": true,
+    "quote": "Blue flame wrapped around leading edge"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Went out on its own at a flow of 0.4 after 75 seconds"
+   },
+   "burnTimeS": {
+    "value": 75,
+    "quote": "Went out on its own at a flow of 0.4 after 75 seconds"
+   }
+  },
+  "104 | 50": {
+   "ignited": {
+    "value": true,
+    "quote": "took 4 min to ignite with repeated tries and brief flames"
+   },
+   "burnTimeS": {
+    "value": 120,
+    "quote": "Short burn about 2 minutes"
+   }
+  },
+  "105 | 51": {
+   "ignited": {
+    "value": true,
+    "quote": "takes 4 min to ignite sphere at this O2"
+   }
+  },
+  "106 | 52": {
+   "ignited": {
+    "value": true,
+    "quote": "All blue with intermittent soot balls streaking back"
+   }
+  },
+  "108 | 106": {
+   "ignited": {
+    "value": true,
+    "quote": "3 min to ignite"
+   }
+  },
+  "109 | 107": {
+   "ignited": {
+    "value": true,
+    "quote": "Ignition in 1.5 min"
+   }
+  },
+  "110 | 108": {
+   "ignited": {
+    "value": true,
+    "quote": "flame ignited over lower part of sphere"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "went out when pot turned down to 0.29"
+   }
+  },
+  "111 | 109": {
+   "ignited": {
+    "value": true,
+    "quote": "got dim flame with stills during ignition"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Flame went out at pot 0.27"
+   }
+  },
+  "112 | 79": {
+   "ignited": {
+    "value": true,
+    "quote": "Sample ignited briefly"
+   },
+   "outcome": {
+    "value": "self-extinguished",
+    "quote": "Sample ignited briefly - blue curving around leading edge, but went out"
+   }
+  },
+  "113 | 80": {
+   "ignited": {
+    "value": false,
+    "quote": "No flame"
+   },
+   "outcome": {
+    "value": "not-ignited",
+    "quote": "No flame"
+   }
+  },
+  "114 | 75": {
+   "ignited": {
+    "value": false,
+    "quote": "no joy, just a puff of smoke each time"
+   },
+   "outcome": {
+    "value": "not-ignited",
+    "quote": "no joy, just a puff of smoke each time"
+   }
+  },
+  "115 | 53": {
+   "ignited": {
+    "value": true,
+    "quote": "Good ignition, good dynamics from dim blue to sooty tail"
+   }
+  }
+ }
+}

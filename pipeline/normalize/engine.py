@@ -15,6 +15,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from pipeline.extractors.base import TableRow
 from pipeline.normalize import values as V
 from pipeline.normalize.fuel import fix_autoincrement, parse_fuel
+from pipeline.normalize import si_notes
 from pipeline.normalize.join import make_key, match as join_match, table_key
 
 CONTRACT_FIELDS = [
@@ -54,6 +55,9 @@ class TableReport:
     skipped: Dict[str, int] = field(default_factory=dict)
     merged: int = 0
     filled: Dict[str, int] = field(default_factory=dict)
+    # Values read by a language model from free-text notes (mapping key `siNotes`).
+    siAccepted: int = 0
+    siRejected: List[Dict[str, Any]] = field(default_factory=list)
 
 
 class Row:
@@ -314,7 +318,8 @@ def render(template: str, row: Row) -> Optional[str]:
 # --- table level --------------------------------------------------------------------
 
 def normalize_table(mapping: Dict[str, Any], rows: List[TableRow],
-                    joined: Optional[Dict[str, Dict[str, str]]] = None) -> Tuple[List[Dict[str, Any]], TableReport]:
+                    joined: Optional[Dict[str, Dict[str, str]]] = None,
+                    si_readings: Optional[Dict[str, Any]] = None) -> Tuple[List[Dict[str, Any]], TableReport]:
     report = TableReport(tableFile=mapping["tableFile"], rowsIn=len(rows))
     footnotes = _collect_footnotes(mapping, rows)
     work: List[Row] = []
@@ -330,7 +335,7 @@ def normalize_table(mapping: Dict[str, Any], rows: List[TableRow],
             prev.note(f"Continuation row {src.source_row}: {vals}.")
             report.merged += 1
             continue
-        work.append(_normalize_row(mapping, src, footnotes, joined))
+        work.append(_normalize_row(mapping, src, footnotes, joined, si_readings, report))
 
     records = [_finish(mapping, r) for r in work]
     _assign_ids(mapping, records)
@@ -362,8 +367,35 @@ def _collect_footnotes(mapping: Dict[str, Any], rows: List[TableRow]) -> Dict[st
     return out
 
 
+def _si_notes(mapping: Dict[str, Any], row: Row, key: str, where: str, readings: Dict[str, Any],
+              report: Optional[TableReport]) -> None:
+    """Values a language model read from the note of this row, each accepted only with its quote.
+
+    An accepted value is listed in `inferred`, and the note quotes the words it rests on, the same
+    way as any other value taken from a NASA document.
+    """
+    spec = mapping["siNotes"]
+    accepted, rejected = si_notes.read_note(row.cell(spec["column"]), readings["readings"].get(key), row.rec)
+    quoted = []
+    for name, item in accepted.items():
+        row.rec[name] = item["value"]
+        row.infer(name)
+        value = item["value"]
+        shown = ("yes" if value else "no") if isinstance(value, bool) else f"{value:g} s" if name == "burnTimeS" else value
+        quoted.append(f"{name} = {shown} (\"{item['quote']}\")")
+    if quoted:
+        row.note(f"Read by SI ({readings['model']}) from the operator's note in {spec.get('label') or readings['sourceFile']}, "
+                 f"{where}: {'; '.join(quoted)}. Each value is kept only because the quoted words are in the note.")
+        row.lower(spec.get("confidence", "medium"))
+    if report is not None:
+        report.siAccepted += len(accepted)
+        report.siRejected.extend({"tableFile": mapping["tableFile"], "row": where, **item} for item in rejected)
+
+
 def _normalize_row(mapping: Dict[str, Any], src: TableRow, footnotes: Dict[str, str],
-                   joined: Optional[Dict[str, Dict[str, str]]] = None) -> Row:
+                   joined: Optional[Dict[str, Dict[str, str]]] = None,
+                   si_readings: Optional[Dict[str, Any]] = None,
+                   report: Optional[TableReport] = None) -> Row:
     row = Row(src)
     row.rec["raw"] = dict(src.raw)
     row.confidence = mapping.get("confidence", "high")
@@ -403,6 +435,9 @@ def _normalize_row(mapping: Dict[str, Any], src: TableRow, footnotes: Dict[str, 
     if join and row.joined_used:
         row.note(f"Taken from {join['label']}, row with {join_key}: {'; '.join(row.joined_used)}.")
         row.lower(join.get("confidence", "medium"))
+    if mapping.get("siNotes") and si_readings and join and row.joined is not None:
+        sheet = f"sheet '{join['sheet']}', " if join.get("sheet") else ""
+        _si_notes(mapping, row, make_key(cells), f"{sheet}row with {join_key}", si_readings, report)
     gravity = mapping["gravity"]
     row.rec["gravity"] = gravity["value"]
     row.infer("gravity")

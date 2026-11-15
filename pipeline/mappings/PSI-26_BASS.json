@@ -2,9 +2,9 @@
   "tableFile": "PSI-26_Experimental table_BASS.csv",
   "investigationId": "PSI-26",
   "tableId": "BASS",
-  "mappingVersion": "1.2.0",
+  "mappingVersion": "1.3.0",
   "granularity": "test",
-  "comment": "Only date, sample and material are in the table. Oxygen, pressure and airflow come from the As Run Test Matrix of the same investigation, joined on the as-run test number.",
+  "comment": "Only date, sample and material are in the table. Oxygen, pressure and airflow come from the As Run Test Matrix of the same investigation, joined on the as-run test number. Ignition, outcome and burn time are read from the operator's notes in the same matrix by a language model (siNotes), each kept only with a verbatim quote.",
   "label": {
     "column": "Test #"
   },
@@ -48,6 +48,12 @@
       "multi": true,
       "allowText": true
     }
+  },
+  "siNotes": {
+    "column": "@Test Observations and Anomalies (ignited, spread, extinguished, burn time, color, etc.)",
+    "readings": "si/PSI-26_BASS-notes.json",
+    "label": "the BASS As Run Test Matrix",
+    "confidence": "medium"
   },
   "skipRows": [
     {

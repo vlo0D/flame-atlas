@@ -11,6 +11,7 @@ Outputs: tests.json, investigations.json, scenarios.json, meta.json — exactly 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 import subprocess
@@ -24,6 +25,7 @@ from pipeline.extractors.csv_extractor import CsvExtractor
 from pipeline.ingest import write_json
 from pipeline.normalize.engine import normalize_table
 from pipeline.normalize.join import load_join
+from pipeline.normalize.si_notes import load_readings
 from pipeline.settings import REPO_ROOT, load_settings
 
 _log = log.get("pipeline.build")
@@ -66,7 +68,8 @@ def build_tests(raw_dir: Path, mappings: List[Dict[str, Any]], options: Dict[str
             _log.warning("%s: no table in %s", m["_path"], m["tableFile"])
             continue
         joined = load_join(raw_dir, m["investigationId"], m["join"]) if m.get("join") else None
-        records, report = normalize_table(m, result.blocks[0].rows, joined)
+        readings = load_readings(MAPPINGS_DIR, m["siNotes"]) if m.get("siNotes") else None
+        records, report = normalize_table(m, result.blocks[0].rows, joined, readings)
         tests.extend(records)
         reports.append(report)
         tables.append({"tableFile": m["tableFile"], "investigationId": m["investigationId"], "rows": len(records),
@@ -76,6 +79,8 @@ def build_tests(raw_dir: Path, mappings: List[Dict[str, Any]], options: Dict[str
             extra.append("skipped " + ", ".join(f"{n} {r}" for r, n in report.skipped.items()))
         if report.merged:
             extra.append(f"merged {report.merged} continuation rows")
+        if report.siAccepted or report.siRejected:
+            extra.append(f"SI notes: {report.siAccepted} values accepted, {len(report.siRejected)} rejected")
         _log.info("%-22s %4d rows → %4d records%s", m["tableId"], report.rowsIn, report.records,
                   f" ({'; '.join(extra)})" if extra else "")
     tests.sort(key=lambda t: (inv_sort_key(t["investigationId"]), t["tableFile"], t["sourceRow"]))
@@ -109,8 +114,28 @@ def build_investigations(raw_dir: Path, tests: List[Dict[str, Any]], cfg: Dict[s
     return out
 
 
+SI_REJECTED_COLUMNS = ["tableFile", "row", "field", "value", "quote", "reason"]
+
+
+def write_si_rejected(reports, path: Path) -> int:
+    """Readings of free-text notes that the quote check turned down, for a person to look at."""
+    rows = [item for r in reports for item in r.siRejected]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=SI_REJECTED_COLUMNS)
+        writer.writeheader()
+        writer.writerows(rows)
+    return len(rows)
+
+
 def build_meta(tests, tables, investigations, reports, cfg, unmapped: List[str]) -> Dict[str, Any]:
     notes = list(cfg.get("dataNotes") or [])
+    si_values = sum(r.siAccepted for r in reports)
+    if si_values:
+        notes.append(f"{si_values} values of ignition, outcome and burn time of the BASS tests were read by a "
+                     "language model from the operator's free-text notes in the As Run Test Matrix. Each is kept "
+                     "only with a word-for-word quote from the note, shown in the row's notes; the reading rules "
+                     "have not been reviewed by a combustion specialist.")
     skipped = sum(sum(r.skipped.values()) for r in reports)
     merged = sum(r.merged for r in reports)
     if skipped or merged:
@@ -174,6 +199,10 @@ def main(argv: Optional[List[str]] = None) -> int:
     write_json(out_dir / "investigations.json", investigations)
     write_json(out_dir / "scenarios.json", scenarios)
     write_json(out_dir / "meta.json", meta)
+    if out_dir == REPO_ROOT / "data" / "processed":
+        rejected = write_si_rejected(reports, REPO_ROOT / "data" / "review" / "si-notes-rejected.csv")
+        _log.info("SI notes: %d values accepted, %d rejected (data/review/si-notes-rejected.csv)",
+                  sum(r.siAccepted for r in reports), rejected)
     _log.info("wrote %s: %d tests, %d investigations, %d scenarios, %d tables",
               out_dir, len(tests), len(investigations), len(scenarios), len(tables))
     if args.no_validate:

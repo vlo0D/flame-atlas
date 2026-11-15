@@ -10,7 +10,7 @@
     "Rows are not always individual tests: some tables list test days, test-matrix ranges or figure references. See the granularity field.",
     "Pressure and flow speed are not reported in several source tables; those fields are null.",
     "Inverse-flame tables (ACME Flame Design Inverse, CFI-G Inverse) feed oxygen through the burner into a fuel ambient, so their ambient O2 fields are null; the burner O2 fraction is in notes.",
-    "BASS and BASS-II tables do not report the test outcome; the field is null."
+    "The BASS and BASS-II tables do not report the test outcome. For BASS it is read from the operator's notes where they state it; for BASS-II the field is null."
   ],
   "quality": {
     "checkedValues": null,

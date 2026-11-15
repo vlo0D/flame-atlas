@@ -1,6 +1,6 @@
 {
   "contractVersion": "1.1.0",
-  "generatedAt": "2026-11-15T11:13:58+00:00",
+  "generatedAt": "2026-11-15T11:44:57+00:00",
   "source": {
     "name": "NASA Physical Sciences Informatics (PSI), Combustion Science",
     "url": "https://psi.nasa.gov/physci/repo/search?q=combustion",
@@ -66,7 +66,7 @@
       "investigationId": "PSI-26",
       "rows": 121,
       "granularity": "test",
-      "mappingVersion": "1.2.0"
+      "mappingVersion": "1.3.0"
     },
     {
       "tableFile": "PSI-39_Experimental table_CFI.csv",
@@ -177,7 +177,8 @@
     "Rows are not always individual tests: some tables list test days, test-matrix ranges or figure references. See the granularity field.",
     "Pressure and flow speed are not reported in several source tables; those fields are null.",
     "Inverse-flame tables (ACME Flame Design Inverse, CFI-G Inverse) feed oxygen through the burner into a fuel ambient, so their ambient O2 fields are null; the burner O2 fraction is in notes.",
-    "BASS and BASS-II tables do not report the test outcome; the field is null.",
+    "The BASS and BASS-II tables do not report the test outcome. For BASS it is read from the operator's notes where they state it; for BASS-II the field is null.",
+    "205 values of ignition, outcome and burn time of the BASS tests were read by a language model from the operator's free-text notes in the As Run Test Matrix. Each is kept only with a word-for-word quote from the note, shown in the row's notes; the reading rules have not been reviewed by a combustion specialist.",
     "9 source rows were skipped as non-test rows (footnotes, video references, a soot cleaning run) and 11 continuation rows were merged into the row above; see pipeline/mappings for the rules."
   ]
 }
