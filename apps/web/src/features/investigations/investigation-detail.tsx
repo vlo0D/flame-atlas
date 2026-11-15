@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { ClaimText } from "@/components/claim-text";
-import { NotBuiltYet } from "@/components/page-parts";
 import { PillarBadge } from "@/components/pillar-badge";
 import { formatList, formatPressure, formatRange, formatText } from "@/domain/format";
 import { countRows } from "@/domain/rows";
 import type { Claim, Investigation } from "@/generated/contract";
 import { getTestsOfInvestigation } from "@/lib/data";
+import { VariationSection } from "./variation-section";
 
 function ClaimList({ title, claims }: { title: string; claims: Claim[] }) {
   if (claims.length === 0) return null;
@@ -30,7 +30,8 @@ const REVIEW_LABELS: Record<Investigation["review"]["status"], string> = {
 };
 
 export function InvestigationDetail({ investigation }: { investigation: Investigation }) {
-  const counts = countRows(getTestsOfInvestigation(investigation.id));
+  const rows = getTestsOfInvestigation(investigation.id);
+  const counts = countRows(rows);
   const { conditions } = investigation;
   const years =
     investigation.yearStart === null && investigation.yearEnd === null
@@ -144,13 +145,7 @@ export function InvestigationDetail({ investigation }: { investigation: Investig
         </section>
       ) : null}
 
-      <NotBuiltYet
-        title="Not built yet on this screen"
-        items={[
-          "What varied between the tests of this investigation and what stayed constant",
-          "Link to this investigation's rows on the Tests screen",
-        ]}
-      />
+      <VariationSection investigationId={investigation.id} rows={rows} />
     </article>
   );
 }

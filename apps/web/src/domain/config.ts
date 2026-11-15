@@ -145,3 +145,14 @@ export const NEAR_SCENARIO = {
   o2Pct: 5,
   pressureKpa: 15,
 } as const;
+
+/**
+ * Spread below which a measured condition counts as held constant across an investigation's
+ * tests, in the unit of that condition: readings of one setting differ by a little noise.
+ */
+export const CONSTANT_TOLERANCE = {
+  o2Pct: 0.5,
+  pressureKpa: 5,
+  flowCmS: 0.5,
+  thicknessMm: 0.01,
+} as const;
