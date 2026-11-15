@@ -11,7 +11,9 @@
  * "right" for (lo, hi] and defaults to both ends included.
  */
 
+import { DEFAULT_PAGE_SIZE } from "@/domain/config";
 import { NO_FILTERS, hasActiveFilters } from "@/domain/filters";
+import { isPageSize } from "@/domain/pagination";
 import type { Interval } from "@/domain/num";
 import type { TestFilters } from "@/domain/types";
 import { FUEL_STATES, GRANULARITIES, OUTCOMES } from "@/generated/contract";
@@ -26,6 +28,7 @@ export const TEST_FILTER_PARAMS = {
   granularities: "type",
   includeNotReported: "nr",
   page: "page",
+  pageSize: "size",
 } as const;
 
 type ReadableParams = Pick<URLSearchParams, "get">;
@@ -81,7 +84,13 @@ export function parsePage(params: ReadableParams): number {
   return Number.isInteger(page) && page >= 1 ? page : 1;
 }
 
-export function buildTestFilterParams(filters: TestFilters, page = 1): URLSearchParams {
+/** Rows per page; a size the table does not offer falls back to the default. */
+export function parsePageSize(params: ReadableParams): number {
+  const size = Number(params.get(TEST_FILTER_PARAMS.pageSize));
+  return isPageSize(size) ? size : DEFAULT_PAGE_SIZE;
+}
+
+export function buildTestFilterParams(filters: TestFilters, page = 1, pageSize: number = DEFAULT_PAGE_SIZE): URLSearchParams {
   const params = new URLSearchParams();
   const setList = (name: string, items: readonly string[]) => {
     if (items.length > 0) params.set(name, items.join(","));
@@ -95,6 +104,7 @@ export function buildTestFilterParams(filters: TestFilters, page = 1): URLSearch
   setList(TEST_FILTER_PARAMS.granularities, filters.granularities);
   if (filters.includeNotReported && hasActiveFilters(filters)) params.set(TEST_FILTER_PARAMS.includeNotReported, "1");
   if (page > 1) params.set(TEST_FILTER_PARAMS.page, String(page));
+  if (pageSize !== DEFAULT_PAGE_SIZE && isPageSize(pageSize)) params.set(TEST_FILTER_PARAMS.pageSize, String(pageSize));
   return params;
 }
 

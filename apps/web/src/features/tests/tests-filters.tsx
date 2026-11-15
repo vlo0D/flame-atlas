@@ -1,7 +1,7 @@
 "use client";
 
 import { useId } from "react";
-import { INPUT_CLASS, parseDecimal, useNumberDraft } from "@/components/number-field";
+import { INPUT_BASE, parseDecimal, useNumberDraft } from "@/components/number-field";
 import { NO_FILTERS, hasActiveFilters } from "@/domain/filters";
 import { formatGranularity, formatInterval } from "@/domain/format";
 import type { Interval } from "@/domain/num";
@@ -85,7 +85,7 @@ function RangeFilter({
   return (
     <fieldset>
       <legend className="text-sm font-medium text-fg">{legend}</legend>
-      <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+      <div className="mt-1 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto] items-center gap-2">
         <label htmlFor={`${id}-lo`} className="sr-only">
           {legend} from, {unit}
         </label>
@@ -101,7 +101,7 @@ function RangeFilter({
             setLoDraft(event.target.value);
             commit(event.target.value, hiDraft);
           }}
-          className={`${INPUT_CLASS} w-20`}
+          className={`${INPUT_BASE} w-full`}
         />
         <span className="text-sm text-fg-muted">to</span>
         <label htmlFor={`${id}-hi`} className="sr-only">
@@ -119,9 +119,9 @@ function RangeFilter({
             setHiDraft(event.target.value);
             commit(loDraft, event.target.value);
           }}
-          className={`${INPUT_CLASS} w-20`}
+          className={`${INPUT_BASE} w-full`}
         />
-        <span className="text-sm text-fg-muted">{unit}</span>
+        <span className="w-9 text-sm text-fg-muted">{unit}</span>
       </div>
       {valid ? (
         interval && interval.closed !== "both" ? (
@@ -160,7 +160,7 @@ export function TestsFilters({ filters, onChange }: { filters: TestFilters; onCh
         <summary className="cursor-pointer text-sm font-medium text-fg">
           Investigation{chosen > 0 ? ` (${chosen} chosen)` : " (all)"}
         </summary>
-        <div className="mt-2 grid max-h-56 grid-cols-2 gap-x-4 gap-y-1 overflow-y-auto">
+        <div className="mt-2 grid max-h-52 gap-y-1 overflow-y-auto pr-1">
           {investigations.map((investigation) => (
             <label key={investigation.id} className="flex items-center gap-2 text-sm text-fg-muted">
               <input

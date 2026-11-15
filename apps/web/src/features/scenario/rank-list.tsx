@@ -165,7 +165,11 @@ function RankCard({ item, position }: { item: RankItem; position: number }) {
 
   return (
     <li className="rounded-lg border border-line bg-surface p-4">
-      <div className="flex flex-wrap items-start justify-between gap-3">
+      {/*
+        Two fixed columns: the score keeps its place at the top right however long the title is
+        and whether or not the note under it is shown.
+      */}
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4 gap-y-2">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm tabular-nums text-fg-subtle">#{position}</span>
@@ -182,14 +186,14 @@ function RankCard({ item, position }: { item: RankItem; position: number }) {
           </div>
           <p className="mt-0.5 text-sm text-fg-muted">{investigation.title}</p>
         </div>
-        <div className="text-right">
-          <p aria-label={`Score ${formatNumber(item.score, 1)} out of 100`}>
+        <div className="w-28 text-right sm:w-36">
+          <p aria-label={`Score ${formatNumber(item.score, 1)} out of 100`} className="whitespace-nowrap">
             <span className="text-2xl font-semibold tabular-nums text-fg">{formatNumber(item.score, 1)}</span>
             <span className="text-sm text-fg-subtle"> / 100</span>
           </p>
           {checked < 100 ? (
-            <p className="text-xs text-fg-subtle">
-              {formatNumber(checked, 0)} of 100 points could be checked against the data
+            <p className="mt-0.5 text-xs leading-snug text-fg-subtle">
+              {formatNumber(checked, 0)} of 100 points checked against the data
             </p>
           ) : null}
         </div>

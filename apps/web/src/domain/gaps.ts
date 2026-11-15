@@ -97,7 +97,7 @@ function describeRow(row: TestRecord): string {
     unit: "%",
     approx: row.o2PctApprox,
   });
-  return `${row.investigationId} ${formatText(row.label)} (oxygen ${oxygen}, pressure ${formatPressure(ranges.pressureKpa)})`;
+  return `test ${formatText(row.label)} of ${row.investigationId} (oxygen ${oxygen}, pressure ${formatPressure(ranges.pressureKpa)})`;
 }
 
 /** The numbers a gap statement is built from. */

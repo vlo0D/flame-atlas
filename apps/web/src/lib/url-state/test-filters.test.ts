@@ -1,7 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { NO_FILTERS } from "@/domain/filters";
 import type { TestFilters } from "@/domain/types";
-import { buildIntervalParam, buildTestFilterParams, parseIntervalParam, parsePage, parseTestFilters, testsHref } from "./test-filters";
+import { DEFAULT_PAGE_SIZE } from "@/domain/config";
+import {
+  buildIntervalParam,
+  buildTestFilterParams,
+  parseIntervalParam,
+  parsePage,
+  parsePageSize,
+  parseTestFilters,
+  testsHref,
+} from "./test-filters";
 
 describe("interval parameter", () => {
   it("round-trips closed, half-open and open-ended ranges", () => {
@@ -27,6 +36,15 @@ describe("test filters in the address", () => {
   it("reads no filters from an empty address", () => {
     expect(parseTestFilters(new URLSearchParams(""))).toEqual(NO_FILTERS);
     expect(parsePage(new URLSearchParams(""))).toBe(1);
+    expect(parsePageSize(new URLSearchParams(""))).toBe(DEFAULT_PAGE_SIZE);
+  });
+
+  it("keeps the page size in the address only when it is not the default, and ignores sizes not offered", () => {
+    expect(buildTestFilterParams(NO_FILTERS, 2, 100).toString()).toBe("page=2&size=100");
+    expect(buildTestFilterParams(NO_FILTERS, 1, DEFAULT_PAGE_SIZE).toString()).toBe("");
+    expect(parsePageSize(new URLSearchParams("size=100"))).toBe(100);
+    expect(parsePageSize(new URLSearchParams("size=7"))).toBe(DEFAULT_PAGE_SIZE);
+    expect(parsePageSize(new URLSearchParams("size=abc"))).toBe(DEFAULT_PAGE_SIZE);
   });
 
   it("round-trips a full set of filters", () => {

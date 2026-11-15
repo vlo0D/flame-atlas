@@ -15,17 +15,19 @@ function download(text: string, fileName: string, type: string) {
 }
 
 const BUTTON =
-  "rounded-md border border-line-strong px-3 py-1 text-sm font-medium text-fg-muted hover:bg-surface-muted hover:text-fg " +
+  "rounded-md border border-line-strong bg-surface px-3 py-1.5 text-sm font-medium text-fg hover:bg-surface-muted " +
   "focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-50";
 
-/** Downloads the rows currently listed, all pages. The files are made in the browser. */
+/** Downloads the rows that match the filters, all pages. The files are made in the browser. */
 export function ExportButtons({ rows }: { rows: readonly TestRecord[] }) {
   const none = rows.length === 0;
+  const what = `${rows.length} row${rows.length === 1 ? "" : "s"}`;
   return (
     <div className="flex flex-wrap items-center gap-2">
       <button
         type="button"
         disabled={none}
+        title={`Download the ${what} that match the filters, every page`}
         onClick={() => download(toCsv(rows), exportFileName(rows.length, "csv"), "text/csv;charset=utf-8")}
         className={BUTTON}
       >
@@ -34,15 +36,12 @@ export function ExportButtons({ rows }: { rows: readonly TestRecord[] }) {
       <button
         type="button"
         disabled={none}
+        title={`Download the ${what} that match the filters, every page`}
         onClick={() => download(toJson(rows), exportFileName(rows.length, "json"), "application/json")}
         className={BUTTON}
       >
         Download JSON
       </button>
-      <span className="text-xs text-fg-subtle">
-        {rows.length} row{rows.length === 1 ? "" : "s"}: normalized fields, source file and row number, and every
-        original column. Empty cell = not reported.
-      </span>
     </div>
   );
 }

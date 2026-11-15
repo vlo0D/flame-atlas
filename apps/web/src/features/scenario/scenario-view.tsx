@@ -37,7 +37,7 @@ export function ScenarioView({
       />
 
       <div className="grid gap-6 lg:grid-cols-[22rem_minmax(0,1fr)]">
-        <div className="lg:sticky lg:top-4 lg:self-start">
+        <div className="lg:sticky lg:top-4 lg:max-h-[calc(100dvh-2rem)] lg:self-start lg:overflow-y-auto lg:overscroll-contain">
           <ScenarioForm scenario={scenario} presets={scenarios} activePreset={activePreset} onChange={onChange} />
         </div>
 

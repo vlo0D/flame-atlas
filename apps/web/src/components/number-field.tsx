@@ -36,10 +36,13 @@ export function useNumberDraft(value: number | null): [string, (text: string) =>
   return [draft, setDraft];
 }
 
-export const INPUT_CLASS =
-  "w-24 rounded-md border border-line-strong bg-bg px-2 py-1 text-sm tabular-nums text-fg " +
+/** Look of a number box without a width, for boxes that size themselves to their place. */
+export const INPUT_BASE =
+  "rounded-md border border-line-strong bg-bg px-2 py-1 text-sm tabular-nums text-fg " +
   "focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent " +
   "disabled:cursor-not-allowed disabled:opacity-50 aria-[invalid=true]:border-warn-fg";
+
+export const INPUT_CLASS = `w-24 ${INPUT_BASE}`;
 
 export function NumberField({
   label,

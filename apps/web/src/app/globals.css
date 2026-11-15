@@ -63,6 +63,11 @@
   --color-warn-line: var(--warn-line);
 }
 
+/* The scrollbar takes its room on every page, so the layout does not shift between a short and a long page. */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }

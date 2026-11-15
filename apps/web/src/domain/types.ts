@@ -177,6 +177,22 @@ export type BuildBriefFacts = (
 /** `knownNames` are all investigation names and ids the site knows; a sentence may use only the ones it cites. */
 export type VerifyBrief = (brief: Brief, facts: BriefFacts, knownNames: readonly string[]) => BriefCheck;
 
+/** One page of a list: which rows it shows, counted from 1, and how many pages there are. */
+export interface PageWindow {
+  /** The page shown, 1 to `pages`: a page past the end shows the last page. */
+  page: number;
+  pages: number;
+  size: number;
+  /** All rows in the list. */
+  total: number;
+  /** Position of the first and last row on the page, from 1; both 0 when the list is empty. */
+  from: number;
+  to: number;
+}
+
+/** An entry of the pager: a page number, or a gap standing for the pages left out. */
+export type PagerItem = number | "gap";
+
 export type RankInvestigations = (
   scenario: ScenarioInput,
   investigations: readonly Investigation[],

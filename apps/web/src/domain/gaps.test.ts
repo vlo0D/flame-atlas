@@ -49,7 +49,7 @@ describe("findGaps", () => {
     expect(gap.count).toBe(0);
     expect(gap.rowIds).toEqual(["earth"]);
     expect(gap.statement).toContain("None of the 2 tests with solid fuel");
-    expect(gap.statement).toContain("The closest is PSI-1 earth (oxygen 21 %, pressure 101.3 kPa (14.7 psi)).");
+    expect(gap.statement).toContain("The closest is test earth of PSI-1 (oxygen 21 %, pressure 101.3 kPa (14.7 psi)).");
   });
 
   it("says how many tests are close in oxygen but do not report pressure", () => {

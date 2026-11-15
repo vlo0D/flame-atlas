@@ -121,6 +121,13 @@ export const GRAVITY_SHORTCUTS = [
  */
 export const SI_NOTE_MARKER = "Read by SI (";
 
+/** Rows per page the Tests table offers, and the one it starts with. */
+export const PAGE_SIZES = [25, 50, 100, 200] as const;
+export const DEFAULT_PAGE_SIZE = 50;
+
+/** How many page numbers the pager shows on each side of the current page. */
+export const PAGER_SIBLINGS = 1;
+
 /** How many of an investigation's closest rows a ranked result lists. */
 export const NEAREST_ROWS_LIMIT = 3;
 

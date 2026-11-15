@@ -43,19 +43,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-bg text-fg">
         <SampleDataBanner />
         <header className="border-b border-line bg-surface">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
-            <Link href="/" className="text-lg font-semibold tracking-tight">
+          {/* On a phone the name and the theme switch share the first line and the navigation takes the second. */}
+          <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3 sm:px-6">
+            <Link href="/" className="mr-auto text-lg font-semibold tracking-tight">
               Flame Atlas
             </Link>
-            <div className="flex items-center gap-2">
+            <div className="order-last w-full sm:order-none sm:w-auto">
               <SiteNav />
-              <ThemeToggle />
             </div>
+            <ThemeToggle />
           </div>
         </header>
-        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">{children}</main>
+        <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 sm:px-6">{children}</main>
         <footer className="border-t border-line bg-surface">
-          <div className="mx-auto w-full max-w-6xl px-4 py-4 text-xs text-fg-subtle">
+          <div className="mx-auto w-full max-w-7xl px-4 py-4 text-xs text-fg-subtle sm:px-6">
             Data:{" "}
             <a href={meta.source.url} target="_blank" rel="noreferrer" className="underline underline-offset-2">
               {meta.source.name}

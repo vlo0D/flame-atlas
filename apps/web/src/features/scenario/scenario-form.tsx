@@ -25,14 +25,16 @@ function PresetNote({ preset }: { preset: Scenario | undefined }) {
   if (!preset) {
     return (
       <p className="text-sm text-fg-muted">
-        Custom environment: the values below do not match any preset. The address of this page keeps them, so the link
-        can be shared.
+        <span className="font-medium text-fg">Custom environment.</span> The values above do not match any preset.
+        The address of this page keeps them, so the link can be shared.
       </p>
     );
   }
   return (
     <div className="space-y-2 text-sm text-fg-muted">
-      <p>{preset.description}</p>
+      <p>
+        <span className="font-medium text-fg">{preset.name}.</span> {preset.description}
+      </p>
       {preset.assumptions.length > 0 ? (
         <details className="text-xs">
           <summary className="cursor-pointer text-fg-subtle hover:text-fg">
@@ -209,27 +211,6 @@ export function ScenarioForm({
         </div>
       </fieldset>
 
-      {/*
-        Every note sits in the same grid cell and only the active one is visible, so the
-        cell is as tall as the longest note and the fields below do not move when the
-        preset changes.
-      */}
-      <div className="grid">
-        {[...presets, undefined].map((preset) => {
-          const active = preset?.id === activePreset?.id;
-          return (
-            <div
-              key={preset?.id ?? "custom"}
-              className={`col-start-1 row-start-1 ${active ? "" : "invisible"}`}
-              aria-hidden={!active}
-              inert={!active}
-            >
-              <PresetNote preset={preset} />
-            </div>
-          );
-        })}
-      </div>
-
       <div className="grid grid-cols-2 gap-4">
         <NumberField
           label="Oxygen"
@@ -315,6 +296,14 @@ export function ScenarioForm({
             </option>
           ))}
         </select>
+      </div>
+
+      {/*
+        The note about the preset sits last, so the fields above never move when its length
+        changes, and no empty space is kept for a longer note.
+      */}
+      <div className="border-t border-line pt-4" aria-live="polite">
+        <PresetNote preset={activePreset} />
       </div>
     </form>
   );
