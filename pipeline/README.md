@@ -11,7 +11,8 @@ python3 -m venv .venv
 ```
 
 That one command searches PSI for `combustion`, keeps the Combustion Science investigations,
-downloads their `pdf`, `docx`, `csv` and `xlsx` files (never the `Raw Data` folder) and writes:
+downloads their `pdf`, `docx`, `csv` and `xlsx` files (never the `Raw Data` folder; the sensor
+telemetry named in `config/telemetry.json` is fetched by a separate step, see below) and writes:
 
 | Path | Content |
 |---|---|
@@ -98,3 +99,18 @@ the build warns about every downloaded table without a mapping.
 **New selection rule**: add it to `selection.decide` with its own `reason` string.
 
 Bump an extractor's `version` when its output changes: extract will then redo those documents.
+
+## Sensor telemetry
+
+Some tables leave out the pressure or oxygen of a test that the experiment's own sensors recorded.
+Those logs are in `Raw Data`, next to videos and archives the pipeline never downloads.
+
+```
+.venv/bin/python -m pipeline.telemetry            # download the listed logs (about 300 MB), rebuild the summaries
+.venv/bin/python -m pipeline.telemetry --offline  # rebuild from logs already in data/raw
+```
+
+`config/telemetry.json` names the files and the sensor columns. The step writes one line per test
+(median, minimum, maximum and number of readings) to `data/derived/<id>_telemetry.csv`. These small
+files are committed, so `python -m pipeline.build` needs neither the logs nor the network. A mapping
+reads a summary through `join` with `"root": "derived"` (`mappings/README.md`).

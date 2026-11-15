@@ -2,11 +2,28 @@
   "tableFile": "PSI-101_Experimental table_SAME-R.csv",
   "investigationId": "PSI-101",
   "tableId": "SAME-R",
-  "mappingVersion": "1.0.0",
+  "mappingVersion": "1.1.0",
   "granularity": "test",
   "comment": "Dates have no year in the source, so `date` is null.",
   "label": {
     "column": "SAME Test #"
+  },
+  "join": {
+    "root": "derived",
+    "file": "PSI-101_telemetry.csv",
+    "label": "the SAME-R housekeeping telemetry (PSI-101 Raw Data, 'HKPData_gmt*.csv', column 'SampleSidePressure[AT20](PSIA)': the pressure on the sample side of the aging-chamber piston, which holds the smoke drawn from the sample duct; median of the readings logged under this test number, summarised in data/derived/PSI-101_telemetry.csv)",
+    "shortLabel": "the SAME-R housekeeping telemetry on PSI, so pressure is not reported",
+    "headerRow": 1,
+    "key": {
+      "table": [
+        "SAME Test #"
+      ],
+      "tablePattern": "^\\s*(\\d+)",
+      "source": [
+        "test"
+      ]
+    },
+    "confidence": "medium"
   },
   "fuel": {
     "column": "Sample Type",
@@ -17,6 +34,10 @@
     "flowCmS": {
       "column": "Inlet velocity (cm/s)",
       "unit": "cm/s"
+    },
+    "pressureKpa": {
+      "column": "@sample side pressure psia median",
+      "unit": "psi"
     }
   },
   "notes": {

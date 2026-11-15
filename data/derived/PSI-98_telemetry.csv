@@ -1,0 +1,3 @@
+test,file,pressure psia median,pressure psia min,pressure psia max,pressure psia readings,oxygen pct median,oxygen pct min,oxygen pct max,oxygen pct readings,airflow cm/s median,airflow cm/s min,airflow cm/s max,airflow cm/s readings
+S1,PSI-98_Raw Data_Saffire-I Sample 1 Sensor Data Complete TM graphs.xlsx,14.87,14.82,14.9,20000,22.36,22.21,22.72,20000,21.3,0.1097,21.63,20000
+S2,PSI-98_Raw Data_Saffire-I Sample 2 Sensor Data Complete TM graphs.xlsx,14.88,14.85,14.9,20000,22.32,22.21,22.45,20000,21.04,0.1097,21.41,20000

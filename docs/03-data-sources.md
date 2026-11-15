@@ -45,7 +45,8 @@
 2. **Документи бувають великі й старих форматів.** BASS-II Summary Report — PDF на 46.7 МБ.
    У DAFT звіти в `.doc` і `.ppt`. Ставимо ліміт 60 МБ на файл, старі формати конвертуємо через
    LibreOffice (`soffice --headless --convert-to pdf`) або пропускаємо із записом у журнал.
-3. **Папки `Raw Data` не чіпаємо.** Загальний обсяг: BASS-II 275 ГБ, FLEX 924 ГБ, FLEX-2 1.2 ТБ,
+3. **Папки `Raw Data` не чіпаємо**, крім файлів телеметрії датчиків за списком у
+   `pipeline/config/telemetry.json` (тиск і кисень по тестах для SAFFIRE і SAME-R). Загальний обсяг: BASS-II 275 ГБ, FLEX 924 ГБ, FLEX-2 1.2 ТБ,
    Flame Design 2.2 ТБ, CFI-G 2.1 ТБ.
 4. **Потрібні папки:** `Experimental table`, `Science Documents` (ReadMe, SRD, Test Matrices),
    `Reports` (Summary або Final Report), за потреби `Reference Data`.

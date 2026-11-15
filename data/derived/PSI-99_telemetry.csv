@@ -1,0 +1,10 @@
+test,file,pressure psia median,pressure psia min,pressure psia max,pressure psia readings,oxygen pct median,oxygen pct min,oxygen pct max,oxygen pct readings,airflow cm/s median,airflow cm/s min,airflow cm/s max,airflow cm/s readings
+2-1,PSI-99_Raw Data_Saffire Sensor Data Sample 1.xlsx,14.87,14.85,14.89,13182,21.55,21.45,21.87,13182,19.93,0.5042,20.06,13182
+2-2,PSI-99_Raw Data_Saffire Sensor Data Sample 2.xlsx,14.87,14.84,14.89,16818,21.53,21.42,21.86,16818,19.94,0.5114,20.17,16818
+2-3,PSI-99_Raw Data_Saffire Sensor Data Sample 3.xlsx,14.87,14.85,14.9,16818,21.56,21.41,21.87,16818,19.94,0.5114,20.17,16818
+2-4,PSI-99_Raw Data_Saffire Sensor Data Sample 4.xlsx,14.88,14.85,14.9,16818,21.53,21.45,21.88,16818,20.04,0.509,20.17,16818
+2-5,PSI-99_Raw Data_Saffire Sensor Data Sample 5.xlsx,14.88,14.86,14.9,11363,21.79,21.47,21.88,11363,20.04,0.509,20.17,11363
+2-6,PSI-99_Raw Data_Saffire Sensor Data Sample 6.xlsx,14.88,14.86,14.9,11363,21.56,21.43,21.88,11363,25.13,0.5138,25.35,11363
+2-7,PSI-99_Raw Data_Saffire Sensor Data Sample 7.xlsx,14.89,14.86,14.91,20454,21.54,21.4,21.88,20454,20.05,0.5114,20.28,20454
+2-8,PSI-99_Raw Data_Saffire Sensor Data Sample 8.xlsx,14.9,14.86,14.92,21818,21.54,21.4,21.86,21818,20.49,0.5066,21.45,20950
+2-9,PSI-99_Raw Data_Saffire Sensor Data Sample 9.xlsx,14.91,14.88,14.94,30909,21.48,21.14,21.62,30909,20.26,0.5018,21.86,30909

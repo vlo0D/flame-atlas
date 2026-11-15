@@ -27,10 +27,10 @@ at 70.3 kPa (10.2 psi) or less. In the PSI data:
 
 - Of 1,872 individual tests, **20 were run inside that atmosphere, and all 20 are gas-burner flames** (ACME CFI-G).
 - **No solid material, which is what actually burns in a habitat, was tested above 22.7 % oxygen.**
-  Every solid-fuel test that reports pressure was run at ISS cabin pressure, 98–102 kPa.
+  Every solid-fuel test that reports pressure was run at ISS cabin pressure, 98–104 kPa.
 - No test was run at real partial gravity. E-FIELD Flames only simulates it with an electric field.
 
-For the ISS cabin itself, 141 solid-fuel tests sit within 5 points of oxygen and 15 kPa of pressure.
+For the ISS cabin itself, 154 solid-fuel tests sit within 5 points of oxygen and 15 kPa of pressure.
 
 ## How it works
 
@@ -44,8 +44,8 @@ NASA PSI API ──> Python pipeline ──> 4 JSON files ──> static web app
 - **Pipeline** (`pipeline/`, Python): downloads PSI metadata, the 22 experiment tables and the documents that
   explain them; maps each table to common fields and units with a JSON mapping applied by code; fills a
   condition from another NASA document of the same investigation only when the table leaves it out (for
-  example the BASS As Run Test Matrix), marking the value and quoting the source; writes and validates the
-  four files of the data contract.
+  example the BASS As Run Test Matrix, or the pressure logged by the SAFFIRE and SAME-R sensors), marking
+  the value and quoting the source; writes and validates the four files of the data contract.
 - **Data contract** (`contracts/`): JSON schemas, TypeScript types and a dependency-free validator.
 - **Site** (`apps/web/`): Next.js static export with TypeScript and Tailwind. Ranking, coverage and gaps are
   pure functions with unit tests; the site makes no network calls and runs no AI model.
@@ -91,6 +91,7 @@ python3 contracts/validate.py data/processed    # check the data against the con
 | `contracts/` | the data contract between the pipeline and the site |
 | `data/processed/` | the four files the site reads |
 | `data/raw/` | the 22 NASA tables and investigation metadata (documents are downloaded, not committed) |
+| `data/derived/` | per-test summaries of sensor telemetry, built by `pipeline/telemetry.py` |
 | `data/review/` | samples for checking the data by hand |
 | `submission/` | project page text and references |
 | `docs/` | team documents, in Ukrainian; start with [docs/kit-readme.md](docs/kit-readme.md) |

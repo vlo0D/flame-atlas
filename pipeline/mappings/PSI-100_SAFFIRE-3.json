@@ -2,10 +2,26 @@
   "tableFile": "PSI-100_Experimental table_SAFFIRE-3.csv",
   "investigationId": "PSI-100",
   "tableId": "SAFFIRE-3",
-  "mappingVersion": "1.0.0",
+  "mappingVersion": "1.1.0",
   "granularity": "test",
   "label": {
     "column": "Sample Number "
+  },
+  "join": {
+    "root": "derived",
+    "file": "PSI-100_telemetry.csv",
+    "label": "the Saffire-III sensor telemetry (PSI-100 Raw Data, 'Saffire III Sample N Sensors.xlsx', sheet 'Calibrated Data', columns 'Ambient Pressure' in PSIA and 'O2' in percent; median of all readings in the sample's file, summarised in data/derived/PSI-100_telemetry.csv)",
+    "shortLabel": "the Saffire-III sensor telemetry",
+    "headerRow": 1,
+    "key": {
+      "table": [
+        "Sample Number "
+      ],
+      "source": [
+        "test"
+      ]
+    },
+    "confidence": "medium"
   },
   "fuel": {
     "column": "Material",
@@ -24,6 +40,15 @@
     "flowCmS": {
       "column": "Air Flow ",
       "unit": "cm/s"
+    },
+    "pressureKpa": {
+      "column": "@pressure psia median",
+      "unit": "psi"
+    },
+    "o2Pct": {
+      "column": "@oxygen pct median",
+      "unit": "%",
+      "approx": true
     }
   },
   "flowDirection": {
@@ -38,7 +63,7 @@
       "Sample length {Sample Length}."
     ],
     "static": [
-      "Oxygen concentration and burn results are not in the source table."
+      "Oxygen concentration and burn results are not in the source table. Oxygen is the reading of the experiment's own O2 sensor; in Saffire-I the same kind of sensor read about 0.7 points above the oxygen its table reports, so the value is marked approximate."
     ]
   },
   "gravity": {

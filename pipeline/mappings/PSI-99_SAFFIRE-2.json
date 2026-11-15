@@ -2,11 +2,27 @@
   "tableFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
   "investigationId": "PSI-99",
   "tableId": "SAFFIRE-2",
-  "mappingVersion": "1.1.0",
+  "mappingVersion": "1.2.0",
   "granularity": "test",
   "comment": "Spread rate comes from '?-g Spread Length', whose cells are rates in mm/s. Footnote rows become notes; flow-visualization rows are skipped.",
   "label": {
     "column": "Sample Number"
+  },
+  "join": {
+    "root": "derived",
+    "file": "PSI-99_telemetry.csv",
+    "label": "the Saffire-II sensor telemetry (PSI-99 Raw Data, 'Saffire Sensor Data Sample N.xlsx', sheet 'Calibrated Data', column 'Ambient Pressure' in PSIA; median of all readings in the sample's file, summarised in data/derived/PSI-99_telemetry.csv)",
+    "shortLabel": "the Saffire-II sensor telemetry",
+    "headerRow": 1,
+    "key": {
+      "table": [
+        "Sample Number"
+      ],
+      "source": [
+        "test"
+      ]
+    },
+    "confidence": "high"
   },
   "confidence": "medium",
   "footnotes": {
@@ -52,6 +68,10 @@
     "spreadRateMmS": {
       "column": "?-g Spread Length",
       "unit": "mm/s"
+    },
+    "pressureKpa": {
+      "column": "@pressure psia median",
+      "unit": "psi"
     }
   },
   "flowDirection": {

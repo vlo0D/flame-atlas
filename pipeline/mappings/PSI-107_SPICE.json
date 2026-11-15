@@ -2,7 +2,7 @@
   "tableFile": "PSI-107_Experimental table_Spice.csv",
   "investigationId": "PSI-107",
   "tableId": "SPICE",
-  "mappingVersion": "1.0.0",
+  "mappingVersion": "1.1.0",
   "granularity": "test",
   "comment": "SPICE = Smoke Point In Co-flow Experiment, hence coflow. The source repeats some rows; each keeps its own row number.",
   "idFrom": "row",
@@ -12,6 +12,16 @@
     "geometry": "burner"
   },
   "fields": {
+    "o2Pct": {
+      "value": [
+        19,
+        24
+      ],
+      "range": true,
+      "approx": true,
+      "confidence": "medium",
+      "note": "Oxygen is not in the source table. Taken from the SPICE Final Report (PSI-107 Reports), p. 13: \"after each two such burns the MSG contents were flushed with ISS cabin air. The oxygen mole fraction of this cabin air is maintained within 19 – 24%.\" This is the range the cabin air is kept in, not a reading taken during this test."
+    },
     "flowCmS": {
       "column": "Air Rate (cm/s)",
       "unit": "cm/s"

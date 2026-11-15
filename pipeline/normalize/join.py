@@ -8,8 +8,10 @@ The table's own `raw` is never changed.
 """
 from __future__ import annotations
 
+import csv
+import re
 from pathlib import Path
-from typing import Any, Dict, Iterable, Optional
+from typing import Any, Dict, Iterable, List, Optional, Sequence
 
 
 def cell_text(value: Any) -> str:
@@ -26,34 +28,59 @@ def key_text(value: Any) -> str:
 
 
 def load_join(raw_dir: Path, investigation_id: str, spec: Dict[str, Any]) -> Dict[str, Dict[str, str]]:
-    """{key: {column: text}} for every data row of the joined sheet.
+    """{key: {column: text}} for every data row of the joined file.
 
-    spec: {"file": path under data/raw/<id>/, "sheet": name, "headerRow": 1-based row with the
-    column names, "key": {"table": [columns], "source": [columns]}}: the key is the cells of those
-    columns together, in order. A key that appears twice is an error: the join must be one to one.
+    spec: {"file": path under data/raw/<id>/ (an xlsx sheet), or under data/derived/ when
+    "root" is "derived" (a csv written by pipeline/telemetry.py), "sheet": name, "headerRow":
+    1-based row with the column names, "key": {"table": [columns], "source": [columns]}}: the
+    key is the cells of those columns together, in order. A key that appears twice is an error:
+    one row of the joined file answers for one key.
     """
-    from openpyxl import load_workbook  # imported here so the engine runs without it
-
-    path = raw_dir / investigation_id / spec["file"]
+    derived = spec.get("root") == "derived"
+    path = (raw_dir.parent / "derived" / spec["file"]) if derived else (raw_dir / investigation_id / spec["file"])
     if not path.exists():
-        raise FileNotFoundError(f"join file not downloaded: {path}")
-    sheet = load_workbook(path, read_only=True, data_only=True)[spec["sheet"]]
-    rows = list(sheet.iter_rows(values_only=True))
-    header = [cell_text(c) for c in rows[spec["headerRow"] - 1]]
+        raise FileNotFoundError(f"join file not found: {path}")
+    rows = _read(path, spec.get("sheet"))
+    header_row = spec.get("headerRow", 1)
+    header = [cell_text(c) for c in rows[header_row - 1]]
     key_columns = spec["key"]["source"]
     for name in key_columns:
         if name not in header:
             raise KeyError(f"{path.name}: key column {name!r} not in {header}")
     out: Dict[str, Dict[str, str]] = {}
-    for values in rows[spec["headerRow"]:]:
+    for values in rows[header_row:]:
         record = {name: cell_text(v) for name, v in zip(header, values) if name}
         first = key_text(record.get(key_columns[0]))
-        if not first.isdigit():
+        if not first or (not derived and not first.isdigit()):
             continue  # setup notes, dilution checks and blank rows have no test number
         key = make_key(record.get(name) for name in key_columns)
         if key in out:
             raise ValueError(f"{path.name}: key {key!r} appears twice in columns {key_columns}")
         out[key] = record
+    return out
+
+
+def _read(path: Path, sheet: Optional[str]) -> List[Sequence[Any]]:
+    if path.suffix.lower() == ".csv":
+        with path.open(newline="", encoding="utf-8") as handle:
+            return list(csv.reader(handle))
+    from openpyxl import load_workbook  # imported here so the engine runs without it
+
+    return list(load_workbook(path, read_only=True, data_only=True)[sheet].iter_rows(values_only=True))
+
+
+def table_key(spec: Dict[str, Any], cells: Iterable[Any]) -> List[str]:
+    """The table's key cells, each cut down by `key.tablePattern` when the mapping gives one.
+
+    The pattern's first group is the part that names the test in the joined file: SAME-R
+    labels the second measurement of run 58 as "58a", and its telemetry knows only run 58.
+    """
+    pattern = spec["key"].get("tablePattern")
+    out = []
+    for cell in cells:
+        text = cell_text(cell)
+        found = re.search(pattern, text) if pattern else None
+        out.append(found.group(1) if found else text)
     return out
 
 

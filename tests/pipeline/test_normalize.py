@@ -167,3 +167,51 @@ class JoinTest(unittest.TestCase):
         self.assertIn("Taken from the matrix, row with run no. 24, test no. 12-R: O2 = '0.211'", first["notes"])
         self.assertIsNone(missing["o2PctMin"])
         self.assertIn("No row with run no. 99, test no. 1 in the matrix.", missing["notes"])
+
+    def test_table_pattern_cuts_the_key_and_a_fixed_range_is_not_a_list_of_values(self):
+        mapping = {
+            "tableFile": "t.csv", "investigationId": "PSI-101", "tableId": "T", "mappingVersion": "1",
+            "granularity": "test", "label": {"column": "Test"},
+            "join": {"label": "the telemetry", "confidence": "medium",
+                     "key": {"table": ["Test"], "tablePattern": r"^\s*(\d+)", "source": ["test"]}},
+            "fields": {"pressureKpa": {"column": "@p median", "unit": "psi"},
+                       "o2Pct": {"value": [19, 24], "range": True, "approx": True, "confidence": "medium",
+                                 "note": "From the report."}},
+            "gravity": {"value": "micro", "source": "ISS"},
+        }
+        rows = [TableRow(source_row=1, raw={"Test": "58"}), TableRow(source_row=2, raw={"Test": "58a"})]
+        records, _ = normalize_table(mapping, rows, {"58": {"p median": "14.89"}})
+        for record in records:
+            self.assertEqual(record["pressureKpaMin"], 102.66)
+            self.assertEqual((record["o2PctMin"], record["o2PctMax"], record["o2PctValues"]), (19, 24, None))
+            self.assertTrue(record["o2PctApprox"])
+            self.assertIn("o2PctMin", record["inferred"])
+            self.assertEqual(record["confidence"], "medium")
+        self.assertEqual(records[1]["label"], "58a")
+
+
+class TelemetryTest(unittest.TestCase):
+    """One line per test from a sensor log (pipeline/telemetry.py)."""
+
+    def test_splits_a_log_by_test_and_drops_filler_readings(self):
+        from pipeline.telemetry import reduce_file, summarise
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "log.csv"
+            path.write_text("Time,TestNumber,P(PSIA)\n1,0,14.1\n2,58,14.8\n3,58,-999\n4,58,15.0\n5,59,14.9\n")
+            source = {"keyColumn": "TestNumber", "skipKeys": ["0"],
+                      "columns": {"p": {"column": "P(PSIA)", "valid": [5, 20]}}}
+            readings = reduce_file(path, source)
+        self.assertEqual(readings, {"58": {"p": [14.8, 15.0]}, "59": {"p": [14.9]}})
+        self.assertEqual(summarise(readings["58"]["p"]), {"median": "14.9", "min": "14.8", "max": "15", "readings": "2"})
+        self.assertEqual(summarise([])["readings"], "0")
+
+    def test_reads_a_derived_csv_as_a_join_file(self):
+        from pipeline.normalize.join import load_join
+
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "derived").mkdir()
+            (Path(tmp) / "derived" / "x.csv").write_text("test,p median\n2-1,14.87\nS2,14.88\n")
+            joined = load_join(Path(tmp) / "raw", "PSI-99",
+                               {"root": "derived", "file": "x.csv", "key": {"table": ["Sample"], "source": ["test"]}})
+        self.assertEqual(joined, {"2-1": {"test": "2-1", "p median": "14.87"}, "s2": {"test": "S2", "p median": "14.88"}})
