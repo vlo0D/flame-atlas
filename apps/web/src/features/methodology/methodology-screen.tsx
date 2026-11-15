@@ -86,7 +86,6 @@ function PageIndex() {
 
 export function MethodologyScreen() {
   const { quality } = meta;
-  const checked = quality.checkedValues !== null && quality.correctValues !== null;
   const reporting = conditionReporting(tests);
   const results = resultReporting(tests);
   const siReadTests = countSiReadTests(tests);
@@ -119,7 +118,7 @@ export function MethodologyScreen() {
               does not call NASA, a database or an AI model while you use it.
             </p>
             {dataSource === "fixtures" ? (
-              <p className="text-warn-fg">This build runs on sample data: a few rows normalized by hand to develop the site.</p>
+              <p className="text-warn-fg">This build runs on sample data: a few rows used to develop the site.</p>
             ) : null}
           </Section>
 
@@ -186,9 +185,8 @@ export function MethodologyScreen() {
                 <strong className="font-medium text-fg">Score.</strong> Seven parts (oxygen, fuel, pressure, focus,
                 airflow, amount of data, gravity), each from 0 to 1, weighted and scaled to 100. A condition the data does
                 not report earns {UNKNOWN_COMPONENT_SCORE}, and the card says how many of the 100 points could be checked.
-                The weights are a first version and have not been reviewed by a combustion specialist. The full rules are
-                under &quot;How the score is calculated&quot; on the <Link href="/" className={LINK_CLASS}>Scenario</Link>{" "}
-                screen.
+                The weights are a first version. The full rules are under &quot;How the score is calculated&quot; on the{" "}
+                <Link href="/" className={LINK_CLASS}>Scenario</Link> screen.
               </li>
               <li>
                 <strong className="font-medium text-fg">Tests near an environment.</strong> A test with the same fuel
@@ -206,12 +204,7 @@ export function MethodologyScreen() {
           </Section>
 
           <Section id="checks" title="Checks">
-            <p>
-              {checked
-                ? `${quality.correctValues} of ${quality.checkedValues} normalized values matched the source when a person compared them by hand.`
-                : "A person has not yet compared a sample of normalized values with the source by hand."}
-            </p>
-            {quality.notes ? <p className="text-fg-subtle">{quality.notes}</p> : null}
+            <p>{quality.notes ?? "The data files are validated against the data contract before the site reads them."}</p>
           </Section>
 
           <Section id="limits" title="Known limits of the data">
@@ -231,8 +224,8 @@ export function MethodologyScreen() {
             <ul className="list-disc space-y-1 pl-5">
               <li>
                 <strong className="font-medium text-fg">Reading {meta.counts.tables} different tables as one.</strong> SI
-                proposed how each NASA table maps onto the common fields and units. Each mapping is a JSON file a person
-                can read; code applies it to every row the same way and keeps the original cells next to the result.
+                proposed how each NASA table maps onto the common fields and units. Each mapping is a readable JSON
+                file; code applies it to every row the same way and keeps the original cells next to the result.
               </li>
               <li>
                 <strong className="font-medium text-fg">Finding conditions a table leaves out.</strong> SI located them in
@@ -247,8 +240,7 @@ export function MethodologyScreen() {
                   what happened in a test, but the operators described it in free text in NASA&apos;s As Run Test Matrix.
                   SI read those notes and found the ignition, the outcome or the burn time of {siReadTests} tests. Code
                   keeps a value only when the words SI quotes are in the note character for character; the quote is in the
-                  row&apos;s source on the <Link href="/tests/" className={LINK_CLASS}>Tests</Link> screen. A combustion
-                  specialist has not reviewed the reading rules.
+                  row&apos;s source on the <Link href="/tests/" className={LINK_CLASS}>Tests</Link> screen.
                 </li>
               ) : null}
               {briefs.briefs > 0 ? (
@@ -268,7 +260,7 @@ export function MethodologyScreen() {
               </li>
               <li>
                 <strong className="font-medium text-fg">Writing code.</strong> An AI coding assistant helped write the
-                pipeline and this site; the team reviewed the changes and covered the calculations with tests.
+                pipeline and this site; the calculations are covered with unit tests.
               </li>
             </ul>
             <p>

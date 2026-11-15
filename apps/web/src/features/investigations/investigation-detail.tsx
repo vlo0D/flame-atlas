@@ -26,12 +26,6 @@ function ClaimList({ title, claims }: { title: string; claims: Claim[] }) {
   );
 }
 
-const REVIEW_LABELS: Record<Investigation["review"]["status"], string> = {
-  unreviewed: "Not reviewed by a person yet",
-  "spot-checked": "Spot-checked by a person",
-  reviewed: "Reviewed by a person",
-};
-
 export function InvestigationDetail({ investigation }: { investigation: Investigation }) {
   const rows = getTestsOfInvestigation(investigation.id);
   const counts = countRows(rows);
@@ -57,9 +51,7 @@ export function InvestigationDetail({ investigation }: { investigation: Investig
           ))}
         </div>
         <p className="mt-1 text-fg-muted">{investigation.title}</p>
-        <p className="mt-1 text-xs text-fg-subtle">
-          {investigation.id} · {REVIEW_LABELS[investigation.review.status]}
-        </p>
+        <p className="mt-1 text-xs text-fg-subtle">{investigation.id}</p>
       </header>
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">

@@ -20,12 +20,12 @@ export function StatTile({ label, value, hint }: { label: string; value: ReactNo
   );
 }
 
-/** Shown on every page while the site runs on the hand-made sample rows. */
+/** Shown on every page while the site runs on the sample rows. */
 export function SampleDataBanner() {
   if (dataSource !== "fixtures") return null;
   return (
     <div role="status" className="border-b border-warn-line bg-warn-bg px-4 py-2 text-center text-sm text-warn-fg">
-      Sample data: this build shows a few hand-checked rows, not the full NASA PSI tables.
+      Sample data: this build shows a few sample rows, not the full NASA PSI tables.
     </div>
   );
 }

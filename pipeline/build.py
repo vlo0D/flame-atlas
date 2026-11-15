@@ -134,8 +134,7 @@ def build_meta(tests, tables, investigations, reports, cfg, unmapped: List[str])
     if si_values:
         notes.append(f"{si_values} values of ignition, outcome and burn time of the BASS tests were read by a "
                      "language model from the operator's free-text notes in the As Run Test Matrix. Each is kept "
-                     "only with a word-for-word quote from the note, shown in the row's notes; the reading rules "
-                     "have not been reviewed by a combustion specialist.")
+                     "only with a word-for-word quote from the note, shown in the row's notes.")
     skipped = sum(sum(r.skipped.values()) for r in reports)
     merged = sum(r.merged for r in reports)
     if skipped or merged:

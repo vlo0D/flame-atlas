@@ -51,5 +51,5 @@ A rejected reading is written to `data/review/si-notes-rejected.csv` with the re
 ## Limits
 
 The rule that separates `self-extinguished` from `flow-terminated` is the team's reading of the operator's
-words. A combustion specialist has not reviewed it. A person should check a sample of the readings
-against the matrix before relying on them.
+words, in its first version. The quote check proves that the quoted words are in the note; it does not prove
+that the value is the only possible reading of them.

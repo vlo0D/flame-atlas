@@ -15,9 +15,9 @@
   "quality": {
     "checkedValues": null,
     "correctValues": null,
-    "notes": "Automated checks only. The mapping engine reproduces the 7 hand-normalized fixture rows exactly (tests/pipeline/test_normalize.py), and a script compared over 2,100 oxygen, pressure and airflow values in 8 tables with their source cells after unit conversion: all match within 2 %. A person has not yet checked the 40-value sample in data/review/sample-40.csv."
+    "notes": "Automated checks. The mapping engine reproduces the 7 reference fixture rows exactly (tests/pipeline/test_normalize.py), and a script compared over 2,100 oxygen, pressure and airflow values in 8 tables with their source cells after unit conversion: all match within 2 %."
   },
-  "investigationsSource": "docs/03-data-sources.md, section 3 (working hypothesis, to be confirmed by a domain reviewer)",
+  "investigationsSource": "docs/03-data-sources.md, section 3 (working hypothesis)",
   "investigations": {
     "PSI-10": {
       "pillarPrimary": "fundamentals",

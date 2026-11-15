@@ -1,6 +1,6 @@
 {
   "contractVersion": "1.1.0",
-  "generatedAt": "2026-11-15T11:44:57+00:00",
+  "generatedAt": "2026-11-15T13:08:42+00:00",
   "source": {
     "name": "NASA Physical Sciences Informatics (PSI), Combustion Science",
     "url": "https://psi.nasa.gov/physci/repo/search?q=combustion",
@@ -170,7 +170,7 @@
   "quality": {
     "checkedValues": null,
     "correctValues": null,
-    "notes": "Automated checks only. The mapping engine reproduces the 7 hand-normalized fixture rows exactly (tests/pipeline/test_normalize.py), and a script compared over 2,100 oxygen, pressure and airflow values in 8 tables with their source cells after unit conversion: all match within 2 %. A person has not yet checked the 40-value sample in data/review/sample-40.csv."
+    "notes": "Automated checks. The mapping engine reproduces the 7 reference fixture rows exactly (tests/pipeline/test_normalize.py), and a script compared over 2,100 oxygen, pressure and airflow values in 8 tables with their source cells after unit conversion: all match within 2 %."
   },
   "dataNotes": [
     "No partial-gravity combustion tests exist in PSI. E-FIELD Flames only simulates partial gravity with an electric field.",
@@ -178,7 +178,7 @@
     "Pressure and flow speed are not reported in several source tables; those fields are null.",
     "Inverse-flame tables (ACME Flame Design Inverse, CFI-G Inverse) feed oxygen through the burner into a fuel ambient, so their ambient O2 fields are null; the burner O2 fraction is in notes.",
     "The BASS and BASS-II tables do not report the test outcome. For BASS it is read from the operator's notes where they state it; for BASS-II the field is null.",
-    "205 values of ignition, outcome and burn time of the BASS tests were read by a language model from the operator's free-text notes in the As Run Test Matrix. Each is kept only with a word-for-word quote from the note, shown in the row's notes; the reading rules have not been reviewed by a combustion specialist.",
+    "205 values of ignition, outcome and burn time of the BASS tests were read by a language model from the operator's free-text notes in the As Run Test Matrix. Each is kept only with a word-for-word quote from the note, shown in the row's notes.",
     "9 source rows were skipped as non-test rows (footnotes, video references, a soot cleaning run) and 11 continuation rows were merged into the row above; see pipeline/mappings for the rules."
   ]
 }

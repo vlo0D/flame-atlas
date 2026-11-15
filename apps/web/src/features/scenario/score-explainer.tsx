@@ -71,8 +71,7 @@ export function ScoreExplainer() {
           rest, each group by score. Equal scores are ordered by investigation number.
         </p>
         <p>
-          The weights are a first version and have not been reviewed by a combustion specialist. The score compares
-          test conditions; it is not a safety rating.
+          The weights are a first version. The score compares test conditions; it is not a safety rating.
         </p>
       </div>
     </details>
