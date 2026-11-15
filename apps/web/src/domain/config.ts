@@ -5,6 +5,17 @@
 
 export const KPA_PER_PSI = 6.894757;
 
+/**
+ * Inverse flames (ACME Flame Design, CFI-G) feed the oxidizer through the burner into a fuel-filled
+ * chamber, so their ambient oxygen is null. The oxidizer's O2 mole fraction stays verbatim in the
+ * row's raw cells; these are the source columns it is read from.
+ */
+export const BURNER_OXIDIZER = {
+  flameTypeColumn: "Flame Type",
+  inverseValue: "Inverse",
+  o2FractionColumn: "XO2",
+} as const;
+
 /** Weights of the ranking score components. They sum to 1. */
 export const RANK_WEIGHTS = {
   o2: 0.25,

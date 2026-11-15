@@ -17,8 +17,18 @@ from pipeline import investigation
 
 _SENTENCE = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9(\"'])|\n+")
 _ENUM_ITEM = re.compile(r"(?:^|\s)\(?(\d{1,2})[).]\s+(.+?)(?=\s+\(?\d{1,2}[).]\s+|\n|$)", re.S)
-MEASURE = re.compile(r"\b(measur\w*|diagnostic\w*|camera\w*|sensor\w*|thermocouple\w*|radiometer\w*|imag(?:e|es|ing)|"
-                     r"spectro\w*|video|photograph\w*|recorded)\b", re.I)
+MEASURE = re.compile(r"\b(measure[sd]?|measurements?|diagnostic\w*|camera\w*|sensor\w*|thermocouple\w*|radiometer\w*|"
+                     r"images|spectro\w*|video|photograph\w*|photomultiplier\w*|recorded)\b", re.I)
+# Sentences that mention a camera or a measurement but describe set-up or samples, not what was measured.
+NOT_MEASURE = re.compile(r"\b(installed|attached|positioned|fuel source|sample material)\b", re.I)
+# A summary sentence split only at sentence ends, so a lead-in such as "The objectives are to:" stays
+# joined to the first item it introduces.
+_SUMMARY_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9(\"'])")
+# Objective sentences about running the project rather than its science.
+GENERIC_SUMMARY = re.compile(r"^(?:\(?[A-Za-z0-9]{1,2}[.)]\s*)?(plan and support|support the flight)\b", re.I)
+MAX_SUMMARY_CHARS = 400
+_LIST_MARKER_END = re.compile(r"(?:^|\s)\(?[A-Za-z0-9]{1,2}[.)]$")
+_LIST_MARKER_START = re.compile(r"^\(?[0-9]{1,2}[.)]+\s+")
 SAFETY = re.compile(r"\b(fire\w*|safety|flammab\w*|suppress\w*|extinguish\w*|detect\w*|smoke|spacecraft|crew\w*)\b", re.I)
 MAX_CLAIMS = 5
 DILUENT_TOKENS = re.compile(r"\b(N2|CO2|He|Ar)\b")
@@ -28,6 +38,37 @@ def sentences(text: Optional[str]) -> List[str]:
     if not text:
         return []
     return [s.strip() for s in _SENTENCE.split(text) if s and len(s.strip()) > 20]
+
+
+def summary_sentences(text: Optional[str]) -> List[str]:
+    """Candidates for the one-line summary: whole sentences, never a bare lead-in ending with ':'."""
+    if not text:
+        return []
+    # Rejoin a list marker such as "A." or "1." with the item it opens, keeping the original whitespace
+    # so every chunk stays a verbatim substring of the source.
+    parts = _SUMMARY_SPLIT.split(text)
+    seps = _SUMMARY_SPLIT.findall(text)
+    chunks: List[str] = []
+    pending = ""
+    for i, part in enumerate(parts):
+        pending += part
+        if i < len(seps) and _LIST_MARKER_END.search(part):
+            pending += seps[i]
+            continue
+        chunks.append(pending)
+        pending = ""
+    if pending:
+        chunks.append(pending)
+    out = []
+    for chunk in chunks:
+        chunk = chunk.strip()
+        if len(chunk) <= 20 or GENERIC_SUMMARY.match(chunk):
+            continue
+        if len(chunk) > MAX_SUMMARY_CHARS:  # several paragraphs without a full stop: fall back to lines
+            out.extend(s for s in sentences(chunk) if not s.endswith(":") and not GENERIC_SUMMARY.match(s))
+        elif not chunk.endswith(":"):
+            out.append(chunk)
+    return out
 
 
 def enumerated(text: Optional[str]) -> List[str]:
@@ -71,10 +112,13 @@ def build_claims(rec: Dict[str, Any]) -> Tuple[Dict[str, Any], int]:
     texts = rec["texts"]
     cb = ClaimBuilder(rec["id"], rec["psiUrl"], texts)
     objective = sentences(texts.get("objective"))
-    summary = cb.claim("objective", objective[0]) if objective else None
+    first_objective = summary_sentences(texts.get("objective"))
+    summary = cb.claim("objective", first_objective[0]) if first_objective else None
+    if summary:  # "2. Determine ..." reads as a fragment on its own; the quote keeps the marker
+        summary["text"] = _LIST_MARKER_START.sub("", summary["text"])
     if summary is None:
         for field in ("description", "approach"):
-            first = sentences(texts.get(field))
+            first = summary_sentences(texts.get(field))
             if first:
                 summary = cb.claim(field, first[0])
                 if summary:
@@ -83,7 +127,8 @@ def build_claims(rec: Dict[str, Any]) -> Tuple[Dict[str, Any], int]:
         cb.texts = dict(texts, title=rec["title"])
         summary = cb.claim("title", rec["title"])
     objectives = cb.many("objective", enumerated(texts.get("objective")) or objective[1:] or objective)
-    measurements = cb.many("approach", [s for s in sentences(texts.get("approach")) if MEASURE.search(s)])
+    measurements = cb.many("approach", [s for s in sentences(texts.get("approach"))
+                                             if MEASURE.search(s) and not NOT_MEASURE.search(s)])
     safety = cb.many("researchImpacts", [s for s in sentences(texts.get("researchImpacts")) if SAFETY.search(s)])
     return {"summary": summary, "objectives": objectives, "measurements": measurements,
             "fireSafetyRelevance": safety}, cb.dropped

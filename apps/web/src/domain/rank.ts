@@ -258,6 +258,19 @@ export function componentPoints(item: RankItem, name: RankComponent): { earned: 
   return { earned: max * item.components[name], max };
 }
 
+/**
+ * Group of an investigation for the chosen focus: 0 when it is its main pillar, 1 when it is a
+ * secondary pillar, 2 otherwise. With the focus "all pillars" every investigation is in group 0.
+ *
+ * The list is sorted by group first. Without it, a focus on detection put BASS and Saffire above
+ * SAME and SAME-R, because the smoke tables do not report oxygen or pressure and the focus is
+ * only 15 of the 100 points (docs/decisions.md).
+ */
+export function focusTier(scenario: ScenarioInput, investigation: Investigation): 0 | 1 | 2 {
+  if (scenario.focus === "all" || scenario.focus === investigation.pillarPrimary) return 0;
+  return investigation.pillarsSecondary.includes(scenario.focus) ? 1 : 2;
+}
+
 function idNumber(id: string): number {
   return Number(id.replace(/^PSI-/, ""));
 }
@@ -270,10 +283,15 @@ export const rankInvestigations: RankInvestigations = (scenario, investigations,
     else rowsByInvestigation.set(row.investigationId, [row]);
   }
 
+  const tiers = new Map(investigations.map((investigation) => [investigation.id, focusTier(scenario, investigation)]));
   const items = investigations.map((investigation) =>
     rankInvestigation(scenario, investigation, rowsByInvestigation.get(investigation.id) ?? []),
   );
-  // Highest score first; equal scores by investigation number, so the order never jumps.
-  items.sort((a, b) => b.score - a.score || idNumber(a.investigationId) - idNumber(b.investigationId));
+  // The chosen focus first, then the highest score; equal scores by investigation number, so the order never jumps.
+  const tier = (item: RankItem) => tiers.get(item.investigationId) ?? 2;
+  items.sort(
+    (a, b) =>
+      tier(a) - tier(b) || b.score - a.score || idNumber(a.investigationId) - idNumber(b.investigationId),
+  );
   return { scenario, items };
 };

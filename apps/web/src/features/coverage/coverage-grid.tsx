@@ -77,7 +77,7 @@ export function CoverageGrid({
                   <>
                     <span className="block text-base font-semibold tabular-nums leading-tight">{cell.tests}</span>
                     <span className="block text-[0.65rem] leading-tight">
-                      {here ? "◆ you" : cell.otherRows > 0 ? `+${cell.otherRows} rows` : " "}
+                      {here ? "◆ you" : cell.otherRows > 0 ? `+${cell.otherRows} summary` : " "}
                     </span>
                   </>
                 );

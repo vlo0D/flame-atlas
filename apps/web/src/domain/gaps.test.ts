@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { filterTests } from "./filters";
-import { findGaps, gapFilters, testedConditions } from "./gaps";
+import { burnerO2Pct, findGaps, gapFilters, testedConditions } from "./gaps";
 import { testRow } from "./test-helpers";
 import type { ScenarioInput } from "./types";
 
@@ -28,8 +28,14 @@ const rows = [
 const byKind = (kind: string, data = rows) => findGaps(lunar, data).find((gap) => gap.kind === kind)!;
 
 describe("findGaps", () => {
-  it("returns the four gaps in a fixed order", () => {
-    expect(findGaps(lunar, rows).map((gap) => gap.kind)).toEqual(["near-scenario", "exploration-solids", "partial-gravity", "not-reported"]);
+  it("returns the five gaps in a fixed order", () => {
+    expect(findGaps(lunar, rows).map((gap) => gap.kind)).toEqual([
+      "near-scenario",
+      "exploration-solids",
+      "burner-oxygen",
+      "partial-gravity",
+      "not-reported",
+    ]);
   });
 
   it("counts only individual tests with the environment's fuel near its conditions", () => {
@@ -74,6 +80,29 @@ describe("findGaps", () => {
     expect(gap.statement).toBe("No test in the data was run at real partial gravity. 1 test of 4 simulated it.");
   });
 
+  it("names summary rows that simulated partial gravity when no individual test did", () => {
+    const data = [solid("a", 21, 101.3), testRow({ id: "day", granularity: "test-day", gravity: "partial-simulated" })];
+    const gap = byKind("partial-gravity", data);
+    expect(gap.statement).toBe(
+      "No test in the data was run at real partial gravity. None of the 1 individual test simulated it; 1 summary row (test days, not individual tests) did, with an electric field.",
+    );
+  });
+
+  it("reads the burner oxygen of inverse flames from their source cells", () => {
+    const inverse = (id: string, xo2: string) =>
+      testRow({ id, fuelState: "gas", o2PctMin: null, o2PctMax: null, raw: { "Flame Type": "Inverse", XO2: xo2 } });
+    const data = [inverse("rich", "0.85"), inverse("air", "0.21"), inverse("ramp", "RAMP"), solid("a", 21, 101.3)];
+    expect(burnerO2Pct(data[0])).toBeCloseTo(85);
+    expect(burnerO2Pct(data[2])).toBeNull();
+    expect(burnerO2Pct(data[3])).toBeNull();
+    const gap = byKind("burner-oxygen", data);
+    expect(gap).toMatchObject({ count: 2, rowIds: ["rich", "air"] });
+    expect(gap.statement).toBe(
+      "2 inverse-flame tests fed the oxidizer through the burner into a fuel-filled chamber, at up to 85 % oxygen; 1 of them at 30 % or more. They are gas flames, and the grid places tests by the oxygen of the surrounding gas, so they are not in it.",
+    );
+    expect(gapFilters("burner-oxygen", lunar)).toBeNull();
+  });
+
   it("counts tests that leave out pressure or airflow", () => {
     const gap = byKind("not-reported");
     expect(gap).toMatchObject({ count: 1, total: 4 });
@@ -90,7 +119,7 @@ describe("findGaps", () => {
 
   it("does not break on empty data", () => {
     const gaps = findGaps(lunar, []);
-    expect(gaps).toHaveLength(4);
+    expect(gaps).toHaveLength(5);
     expect(gaps[0].statement).toBe("The data has no test with solid fuel.");
   });
 });

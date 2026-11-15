@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { ClaimText } from "@/components/claim-text";
+import { KindBadge } from "@/components/kind-badge";
 import { PillarBadge } from "@/components/pillar-badge";
-import { formatList, formatPressure, formatRange, formatText } from "@/domain/format";
+import { formatFuelName, formatList, formatPressure, formatRange, formatText } from "@/domain/format";
+import { burnerO2Pct } from "@/domain/gaps";
 import { countRows } from "@/domain/rows";
 import type { Claim, Investigation } from "@/generated/contract";
 import { getTestsOfInvestigation } from "@/lib/data";
@@ -33,6 +35,7 @@ export function InvestigationDetail({ investigation }: { investigation: Investig
   const rows = getTestsOfInvestigation(investigation.id);
   const counts = countRows(rows);
   const { conditions } = investigation;
+  const burner = rows.map(burnerO2Pct).filter((pct): pct is number => pct !== null);
   const years =
     investigation.yearStart === null && investigation.yearEnd === null
       ? null
@@ -47,6 +50,7 @@ export function InvestigationDetail({ investigation }: { investigation: Investig
         <div className="mt-2 flex flex-wrap items-center gap-2">
           <h1 className="text-2xl font-semibold tracking-tight">{investigation.acronym ?? investigation.id}</h1>
           <PillarBadge pillar={investigation.pillarPrimary} />
+          <KindBadge investigation={investigation} />
           {investigation.pillarsSecondary.map((pillar) => (
             <PillarBadge key={pillar} pillar={pillar} />
           ))}
@@ -78,11 +82,21 @@ export function InvestigationDetail({ investigation }: { investigation: Investig
             {investigation.fuels.length === 0
               ? formatText(null)
               : investigation.fuels
-                  .map((fuel) => [fuel.name, fuel.geometry].filter(Boolean).join(" ") + ` (${fuel.state})`)
+                  .map((fuel) => `${formatFuelName(fuel.name, fuel.geometry)} (${fuel.state})`)
                   .join("; ")}
           </dd>
           <dt className="text-fg-subtle">Oxygen</dt>
           <dd>{formatRange({ min: conditions.o2PctMin, max: conditions.o2PctMax }, { unit: "%" })}</dd>
+          {burner.length > 0 ? (
+            <>
+              <dt className="text-fg-subtle">Oxygen through the burner</dt>
+              <dd>
+                {formatRange({ min: Math.min(...burner), max: Math.max(...burner) }, { unit: "%" })} in{" "}
+                {burner.length} inverse-flame tests: the oxidizer flows out of the burner into a fuel-filled chamber, so
+                these tests report no oxygen in the surrounding gas.
+              </dd>
+            </>
+          ) : null}
           <dt className="text-fg-subtle">Pressure</dt>
           <dd>{formatPressure({ min: conditions.pressureKpaMin, max: conditions.pressureKpaMax })}</dd>
           <dt className="text-fg-subtle">Airflow</dt>

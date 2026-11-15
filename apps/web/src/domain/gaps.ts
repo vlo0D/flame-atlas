@@ -6,7 +6,7 @@
  */
 
 import { type FuelState, GRAVITIES, type Gravity, type TestRecord } from "@/generated/contract";
-import { NEAR_SCENARIO } from "./config";
+import { BURNER_OXIDIZER, NEAR_SCENARIO } from "./config";
 import { EXPLORATION_INTERVALS } from "./coverage";
 import { NO_FILTERS, filterTests, rowRanges } from "./filters";
 import {
@@ -62,10 +62,23 @@ export function gapFilters(
         o2Pct: EXPLORATION_INTERVALS.o2Pct,
         pressureKpa: EXPLORATION_INTERVALS.pressureKpa,
       };
+    case "burner-oxygen":
     case "partial-gravity":
     case "not-reported":
       return null;
   }
+}
+
+/**
+ * Oxygen of the oxidizer an inverse flame feeds through its burner, in % by volume, read from the
+ * row's verbatim source cells. Null for any other row or when the cell is not a number (e.g. "RAMP").
+ */
+export function burnerO2Pct(row: TestRecord): number | null {
+  if (row.raw[BURNER_OXIDIZER.flameTypeColumn]?.trim() !== BURNER_OXIDIZER.inverseValue) return null;
+  const cell = row.raw[BURNER_OXIDIZER.o2FractionColumn]?.trim() ?? "";
+  if (!/^\d*\.?\d+$/.test(cell)) return null;
+  const fraction = Number(cell);
+  return fraction > 0 && fraction <= 1 ? fraction * 100 : null;
 }
 
 function plural(count: number, one: string, many = `${one}s`): string {
@@ -104,6 +117,12 @@ export interface GapFacts {
   unknownPressure?: number;
   /** partial-gravity: tests that simulated partial gravity. */
   simulated?: number;
+  /** partial-gravity: summary rows (test days, matrix rows) that simulated partial gravity. */
+  simulatedSummaryRows?: number;
+  /** burner-oxygen: the highest oxidizer oxygen fed through a burner, in %. */
+  maxPct?: number | null;
+  /** burner-oxygen: tests whose burner oxidizer is at or above the exploration-atmosphere oxygen. */
+  atExplorationOxygen?: number;
   /** not-reported: tests without an airflow speed. */
   withoutFlow?: number;
 }
@@ -143,12 +162,23 @@ export function describeGap(facts: GapFacts): string {
           : "";
       return `${plural(count, "solid-fuel test")} of ${total} ${count === 1 ? "was" : "were"} run at ${oxygen} oxygen or more and ${pressure} or less.${extra}`;
     }
+    case "burner-oxygen": {
+      if (count === 0) return "No test in the data fed its oxidizer through the burner.";
+      const oxygen = formatValue(EXPLORATION_INTERVALS.o2Pct.lo, "%");
+      const rich = facts.atExplorationOxygen ?? 0;
+      return `${plural(count, "inverse-flame test")} fed the oxidizer through the burner into a fuel-filled chamber, at up to ${formatValue(facts.maxPct ?? null, "%", 1)} oxygen; ${rich} of them at ${oxygen} or more. They are gas flames, and the grid places tests by the oxygen of the surrounding gas, so they are not in it.`;
+    }
     case "partial-gravity": {
       const simulated = facts.simulated ?? 0;
+      const summary = facts.simulatedSummaryRows ?? 0;
+      const summaryTail =
+        summary > 0 ? ` ${plural(summary, "summary row")} (test days, not individual tests) simulated it with an electric field.` : "";
       const tail =
         simulated > 0
-          ? `${plural(simulated, "test")} of ${total} simulated it.`
-          : `None of the ${plural(total ?? 0, "test")} simulated it either.`;
+          ? `${plural(simulated, "test")} of ${total} simulated it.${summaryTail}`
+          : summary > 0
+            ? `None of the ${plural(total ?? 0, "individual test")} simulated it;${summaryTail.replace(" simulated it with", " did, with")}`
+            : `None of the ${plural(total ?? 0, "test")} simulated it either.`;
       return `No test in the data was run at real partial gravity. ${tail}`;
     }
     case "not-reported":
@@ -260,6 +290,15 @@ export const findGaps: FindGaps = (scenario, tests) => {
   const simulated = allTests.filter(
     (row) => row.gravity === "partial-simulated",
   );
+  const simulatedSummaryRows = tests.filter(
+    (row) => !isTestRow(row) && row.gravity === "partial-simulated",
+  ).length;
+
+  // 3b. Inverse flames: oxygen fed through the burner, not in the surrounding gas.
+  const burner = allTests.filter((row) => burnerO2Pct(row) !== null);
+  const burnerPcts = burner.map((row) => burnerO2Pct(row) as number);
+  const burnerMax = burnerPcts.length > 0 ? Math.max(...burnerPcts) : null;
+  const burnerRich = burnerPcts.filter((pct) => pct >= EXPLORATION_INTERVALS.o2Pct.lo).length;
 
   // 4. Tests that leave out pressure or airflow.
   const withoutPressure = allTests.filter(
@@ -294,11 +333,23 @@ export const findGaps: FindGaps = (scenario, tests) => {
     ),
     gap(
       {
+        kind: "burner-oxygen",
+        count: burner.length,
+        total: null,
+        scenario,
+        maxPct: burnerMax,
+        atExplorationOxygen: burnerRich,
+      },
+      burner,
+    ),
+    gap(
+      {
         kind: "partial-gravity",
         count: 0,
         total: allTests.length,
         scenario,
         simulated: simulated.length,
+        simulatedSummaryRows,
       },
       simulated,
     ),

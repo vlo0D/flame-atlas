@@ -7,6 +7,7 @@ import { rankInvestigations } from "@/domain/rank";
 import { countRows } from "@/domain/rows";
 import type { ScenarioInput } from "@/domain/types";
 import { investigations, meta, scenarios, tests } from "@/lib/data";
+import { PILLARS } from "@/lib/pillars";
 import { describeEnvironment } from "@/lib/scenario-text";
 import { matchingPreset } from "@/lib/url-state/scenario";
 import { Findings } from "./findings";
@@ -45,7 +46,8 @@ export function ScenarioView({
         <section aria-labelledby="ranked-heading" className="min-w-0 space-y-3">
           <div>
             <h2 id="ranked-heading" className="text-lg font-semibold">
-              {result.items.length} investigation{result.items.length === 1 ? "" : "s"}, closest conditions first
+              {result.items.length} investigation{result.items.length === 1 ? "" : "s"},{" "}
+              {scenario.focus === "all" ? "closest conditions first" : "chosen focus first, then closest conditions"}
             </h2>
             <p className="mt-1 min-h-[2lh] text-sm text-fg-muted" aria-live="polite">
               {activePreset ? `${activePreset.name}: ` : "Custom environment: "}
@@ -54,6 +56,9 @@ export function ScenarioView({
             <p className="mt-1 text-sm text-fg-subtle">
               The score, 0 to 100, says how close an investigation&apos;s test conditions are to this environment. It
               is not a safety rating.
+              {scenario.focus === "all"
+                ? null
+                : ` Investigations whose main pillar is ${PILLARS[scenario.focus].label} come first, then those where it is a secondary pillar, then the rest; each group is ordered by score.`}
             </p>
           </div>
           <ScoreExplainer />

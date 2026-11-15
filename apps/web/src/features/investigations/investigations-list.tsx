@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageHeader } from "@/components/page-parts";
+import { KindBadge } from "@/components/kind-badge";
 import { PillarBadge } from "@/components/pillar-badge";
 import { countRows } from "@/domain/rows";
 import { getTestsOfInvestigation, investigations } from "@/lib/data";
@@ -26,6 +27,7 @@ export function InvestigationsList() {
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="font-semibold">{investigation.acronym ?? investigation.id}</span>
                   <PillarBadge pillar={investigation.pillarPrimary} />
+                  <KindBadge investigation={investigation} />
                 </div>
                 <p className="mt-1 text-sm text-fg-muted">{investigation.title}</p>
                 <p className="mt-2 text-xs text-fg-subtle">

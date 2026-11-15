@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { KindBadge } from "@/components/kind-badge";
 import { PillarBadge } from "@/components/pillar-badge";
 import { RowSource } from "@/components/row-source";
 import { RANK_WEIGHTS } from "@/domain/config";
@@ -174,6 +175,7 @@ function RankCard({ item, position }: { item: RankItem; position: number }) {
               </Link>
             </h3>
             <PillarBadge pillar={investigation.pillarPrimary} />
+            <KindBadge investigation={investigation} />
             {investigation.pillarsSecondary.map((pillar) => (
               <PillarBadge key={pillar} pillar={pillar} />
             ))}

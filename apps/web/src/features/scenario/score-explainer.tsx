@@ -65,8 +65,9 @@ export function ScoreExplainer() {
           A value the data does not report scores {UNKNOWN_COMPONENT_SCORE}: there is no evidence that the
           investigation tested anything close, so it earns no points. It is drawn as a striped bar and listed under the
           card, and the card says how many of the 100 points could be checked against the data. Most gaps are in the
-          NASA tables themselves: many do not record pressure or airflow. Equal scores are ordered by investigation
-          number.
+          NASA tables themselves: many do not record pressure or airflow. When a fire-safety focus is chosen, the
+          investigations with that main pillar are listed first, then those with it as a secondary pillar, then the
+          rest, each group by score. Equal scores are ordered by investigation number.
         </p>
         <p>
           The weights are a first version and have not been reviewed by a combustion specialist. The score compares
