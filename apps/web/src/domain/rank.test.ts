@@ -17,6 +17,7 @@ import {
   gravityClass,
   nearestRowIds,
   rankInvestigation,
+  focusTier,
   rankInvestigations,
   scoreData,
   scoreFlow,
@@ -473,6 +474,26 @@ describe("rankInvestigations", () => {
 
     const order = rankInvestigations(lunarHabitat, sample, []).items.map((item) => item.investigationId);
     expect(order).toEqual(["PSI-20", "PSI-25", "PSI-99", "PSI-98", "PSI-159", "PSI-69"]);
+  });
+
+  it("lists the chosen focus first even when its tables report fewer conditions", () => {
+    // ISS cabin, focus on detection: SAME reports no oxygen or pressure, BASS reports both.
+    const iss: ScenarioInput = { ...issCabin, focus: "detection" };
+    const same = investigation({
+      id: "PSI-102",
+      pillarPrimary: "detection",
+      conditions: { o2PctMin: null, o2PctMax: null, pressureKpaMin: null, pressureKpaMax: null, flowCmSMin: 5, flowCmSMax: 10 },
+    });
+    const bass = investigation({
+      id: "PSI-26",
+      pillarsSecondary: ["suppression"],
+      conditions: { o2PctMin: 15.9, o2PctMax: 22.7, pressureKpaMin: 98.3, pressureKpaMax: 102.2, flowCmSMin: 0, flowCmSMax: 44 },
+    });
+    const secondary = investigation({ id: "PSI-5", pillarsSecondary: ["detection"] });
+    const order = rankInvestigations(iss, [bass, secondary, same], []).items.map((item) => item.investigationId);
+    expect(order).toEqual(["PSI-102", "PSI-5", "PSI-26"]);
+    expect(focusTier(iss, same)).toBe(0);
+    expect(focusTier({ ...iss, focus: "all" }, bass)).toBe(0);
   });
 
   it("does not put an investigation that reports no conditions above one that reports close ones", () => {

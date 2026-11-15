@@ -67,6 +67,12 @@ export function formatBoolean(value: boolean | null, yes = "yes", no = "no"): st
   return value ? yes : no;
 }
 
+/** "SIBAL fabric" with geometry "fabric" reads "SIBAL fabric", not "SIBAL fabric fabric". */
+export function formatFuelName(name: string, geometry: string | null): string {
+  if (!geometry || name.toLowerCase().endsWith(geometry.toLowerCase())) return name;
+  return `${name} ${geometry}`;
+}
+
 export function formatText(value: string | null): string {
   return value === null || value.trim() === "" ? NOT_REPORTED : value;
 }

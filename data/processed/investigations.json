@@ -42,12 +42,12 @@
       ]
     },
     "summary": {
-      "text": "The primary objectives of this flight experiment are:",
+      "text": "The primary objectives of this flight experiment are: A. Obtain soot-inception limits of quasi-steady normal and inverse spherical diffusion flames as functions of flow rate, Zst, amount of inert (N2 or CO2), and pressure for C2H4 and CH4 flames.",
       "citations": [
         {
           "label": "PSI-10 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-10",
-          "quote": "The primary objectives of this flight experiment are:"
+          "quote": "The primary objectives of this flight experiment are:\nA. Obtain soot-inception limits of quasi-steady normal and inverse spherical diffusion flames as functions of flow rate, Zst, amount of inert (N2 or CO2), and pressure for C2H4 and CH4 flames."
         }
       ]
     },
@@ -614,12 +614,12 @@
       ]
     },
     "summary": {
-      "text": "In order to provide the experimental data needed to allow rigorous testing of computational models at the extremes of the fuel dilution spectrum, we have the following objectives:",
+      "text": "In order to provide the experimental data needed to allow rigorous testing of computational models at the extremes of the fuel dilution spectrum, we have the following objectives: A) Characterize the behavior of weak coflow diffusion flames of methane and ethylene, as a function of velocity and fuel dilution, through measurement of flame shape, lift-off heights, temperatures and extinction limits.",
       "citations": [
         {
           "label": "PSI-21 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-21",
-          "quote": "In order to provide the experimental data needed to allow rigorous testing of computational models at the extremes of the fuel dilution spectrum, we have the following objectives:"
+          "quote": "In order to provide the experimental data needed to allow rigorous testing of computational models at the extremes of the fuel dilution spectrum, we have the following objectives:\nA) Characterize the behavior of weak coflow diffusion flames of methane and ethylene, as a function of velocity and fuel dilution, through measurement of flame shape, lift-off heights, temperatures and extinction limits."
         }
       ]
     },
@@ -1121,12 +1121,12 @@
       ]
     },
     "summary": {
-      "text": "A series of experiments is proposed with the following specific objectives, in both soot-free and sooty flames, to compare with detailed computational simulation to assess transport properties and detailed chemical kinetics (including chemiluminescence):",
+      "text": "Measure and characterize the transient structure (such as temperature and species distribution) of diffusion flames established at initially non-steady, spherical flame structures for mixtures of different H2/CH4/diluent ratios (soot-free) and different C2H4/diluent ratios (sooty), for different flow rates.",
       "citations": [
         {
           "label": "PSI-23 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-23",
-          "quote": "A series of experiments is proposed with the following specific objectives, in both soot-free and sooty flames, to compare with detailed computational simulation to assess transport properties and detailed chemical kinetics (including chemiluminescence):"
+          "quote": "Measure and characterize the transient structure (such as temperature and species distribution) of diffusion flames established at initially non-steady, spherical flame structures for mixtures of different H2/CH4/diluent ratios   (soot-free) and different C2H4/diluent ratios (sooty), for different flow rates."
         }
       ]
     },
@@ -1531,18 +1531,7 @@
         ]
       }
     ],
-    "measurements": [
-      {
-        "text": "The wind tunnel was installed in the Microgravity Science Glovebox which supplied power, imaging, and a level of containment.",
-        "citations": [
-          {
-            "label": "PSI-25 PSI metadata: approach",
-            "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
-            "quote": "The wind tunnel was installed in the Microgravity Science Glovebox which supplied power, imaging, and a level of containment."
-          }
-        ]
-      }
-    ],
+    "measurements": [],
     "fireSafetyRelevance": [
       {
         "text": "A primary goal of BASS-II is improved spacecraft fire safety, improved understanding of combustion in space and how to avoid it.",
@@ -1777,12 +1766,12 @@
       ]
     },
     "summary": {
-      "text": "The two main objectives for BASS are to:",
+      "text": "The two main objectives for BASS are to: 1.) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test#1 method, ground-based microgravity tests, and actual material flammability in microgravity.",
       "citations": [
         {
           "label": "PSI-26 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26",
-          "quote": "The two main objectives for BASS are to:"
+          "quote": "The two main objectives for BASS are to:\n    1.) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test#1 method, ground-based microgravity tests, and actual material flammability in microgravity."
         }
       ]
     },
@@ -1828,18 +1817,7 @@
         ]
       }
     ],
-    "measurements": [
-      {
-        "text": "Custom-made fabric samples consisting of 75% cotton and 25% fiberglass (by mass) measuring were used as a fuel source as well as Nomex fabric and Ultem.",
-        "citations": [
-          {
-            "label": "PSI-26 PSI metadata: approach",
-            "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26",
-            "quote": "Custom-made fabric samples consisting of 75% cotton and 25% fiberglass (by mass) measuring were used as a fuel source as well as Nomex fabric and Ultem."
-          }
-        ]
-      }
-    ],
+    "measurements": [],
     "fireSafetyRelevance": [
       {
         "text": "Current NASA spacecraft materials selection is based on a standard test method (NASA–STD–6001 Test 1) that segregates material based on 1-g behavior without consideration of low gravity effects.",
@@ -2000,12 +1978,12 @@
       ]
     },
     "summary": {
-      "text": "The objectives of this investigation are to:",
+      "text": "The objectives of this investigation are to: 1) Examine the combustion behavior of n-dodecane and mixtures of n-dodecane/iso-dodecane at pressures ranging from 0.25 atm to 5 atm.",
       "citations": [
         {
           "label": "PSI-39 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-39",
-          "quote": "The objectives of this investigation are to:"
+          "quote": "The objectives of this investigation are to:\n    1) Examine the combustion behavior of n-dodecane and mixtures of n-dodecane/iso-dodecane at pressures ranging from 0.25 atm to 5 atm."
         }
       ]
     },
@@ -3524,12 +3502,12 @@
       ]
     },
     "summary": {
-      "text": "The objectives of this investigation were to:",
+      "text": "The objectives of this investigation were to: (1) determine how rapidly a large scale fire grows in low-gravity and (2) investigate the low-g flammability limits compared to those obtained in NASA’s normal gravity material flammability screening test.",
       "citations": [
         {
           "label": "PSI-98 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
-          "quote": "The objectives of this investigation were to:"
+          "quote": "The objectives of this investigation were to:\n(1) determine how rapidly a large scale fire grows in low-gravity and (2) investigate the low-g flammability limits compared to those obtained in NASA’s normal\ngravity material flammability screening test."
         }
       ]
     },
@@ -3899,12 +3877,12 @@
       ]
     },
     "summary": {
-      "text": "The objectives of this investigation were to:",
+      "text": "The objectives of this investigation were to: (1) determine how rapidly a large scale fire grows in low-gravity and (2) investigate the low-g flammability limits compared to those obtained in NASA’s normal gravity material flammability screening test.",
       "citations": [
         {
           "label": "PSI-100 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100",
-          "quote": "The objectives of this investigation were to:"
+          "quote": "The objectives of this investigation were to:\n(1) determine how rapidly a large scale fire grows in low-gravity and (2) investigate the low-g flammability limits compared to those obtained in NASA’s normal gravity material flammability screening test."
         }
       ]
     },
@@ -4307,16 +4285,6 @@
       }
     ],
     "measurements": [
-      {
-        "text": "The crew installed the near field hardware in the Glovebox, attached the Far Field Box to the Glovebox, and positioned the video cameras.",
-        "citations": [
-          {
-            "label": "PSI-102 PSI metadata: approach",
-            "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
-            "quote": "The crew installed the near field hardware in the Glovebox, attached the Far Field Box to the Glovebox, and positioned the video cameras."
-          }
-        ]
-      },
       {
         "text": "The operator then ran the self diagnostic procedures on the two smoke detectors and activated the video cameras, turned on the igniter for a predefined period of time (15 to 60 seconds), and initiated the thermophoretic soot samplers to sample the smoke.",
         "citations": [
@@ -5184,12 +5152,12 @@
       ]
     },
     "summary": {
-      "text": "By using the Flame Extinguishment (FLEX) experimental data from the Physical Sciences Informatics (PSI) system of combustion science, the purpose of this grant was to conduct new simulations and ground-based experiments using ozone-sensitized counterflow flames to:",
+      "text": "By using the Flame Extinguishment (FLEX) experimental data from the Physical Sciences Informatics (PSI) system of combustion science, the purpose of this grant was to conduct new simulations and ground-based experiments using ozone-sensitized counterflow flames to: 1) Develop a new diagram of the flammability limits of diffusional cool flames affected by radiation, diffusion, and convection.",
       "citations": [
         {
           "label": "PSI-142 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-142",
-          "quote": "By using the Flame Extinguishment (FLEX) experimental data from the Physical Sciences Informatics (PSI) system of combustion science, the purpose of this grant was to conduct new simulations and ground-based experiments using ozone-sensitized counterflow flames to:"
+          "quote": "By using the Flame Extinguishment (FLEX) experimental data from the Physical Sciences Informatics (PSI) system of combustion science, the purpose of this grant was to conduct new simulations and ground-based experiments using ozone-sensitized counterflow flames to:\n    1) Develop a new diagram of the flammability limits of diffusional cool flames affected by radiation, diffusion, and convection."
         }
       ]
     },
@@ -5383,12 +5351,12 @@
       ]
     },
     "summary": {
-      "text": "Plan and support flight testing on the International Space Station (ISS).",
+      "text": "Determine the conditions for which cool diffusion flames occur for propane, n-butane, and n-pentane; normal and inverse flames; and a broad range of Zst, Tad, and fluent flow rate.",
       "citations": [
         {
           "label": "PSI-159 PSI metadata: objective",
           "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
-          "quote": "Plan and support flight testing on the International Space Station (ISS)."
+          "quote": "2. Determine the conditions for which cool diffusion flames occur for propane, n-butane, and n-pentane; normal and inverse flames; and a broad range of Zst, Tad, and fluent flow rate."
         }
       ]
     },

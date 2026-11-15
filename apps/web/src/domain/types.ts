@@ -82,7 +82,7 @@ export interface CoverageGrid {
   multiCellRows: number;
 }
 
-export type GapKind = "near-scenario" | "exploration-solids" | "partial-gravity" | "not-reported";
+export type GapKind = "near-scenario" | "exploration-solids" | "burner-oxygen" | "partial-gravity" | "not-reported";
 
 export interface Gap {
   kind: GapKind;

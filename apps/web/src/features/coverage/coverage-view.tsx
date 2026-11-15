@@ -20,6 +20,10 @@ const CHIP =
 const CHIP_ON = "border-accent bg-accent text-accent-fg";
 const CHIP_OFF = "border-line-strong text-fg-muted hover:bg-surface-muted hover:text-fg";
 
+function sameStates(a: readonly FuelState[], b: readonly FuelState[]): boolean {
+  return a.length === b.length && a.every((state) => b.includes(state));
+}
+
 const Y_AXES: { value: View["yAxis"]; label: string }[] = [
   { value: "pressureKpa", label: "Oxygen against pressure" },
   { value: "flowCmS", label: "Oxygen against airflow" },
@@ -92,7 +96,16 @@ export function CoverageView({
               {state}
             </label>
           ))}
-          <span className="text-xs text-fg-subtle">{view.fuelStates.length === 0 ? "none ticked: all fuels" : ""}</span>
+          {view.fuelStates.length === 0 ? <span className="text-xs text-fg-subtle">none ticked: all fuels</span> : null}
+          {scenario.fuelStates.length > 0 && !sameStates(view.fuelStates, scenario.fuelStates) ? (
+            <button
+              type="button"
+              onClick={() => onChange({ ...view, fuelStates: FUEL_STATES.filter((s) => scenario.fuelStates.includes(s)) })}
+              className="text-xs text-fg-muted underline underline-offset-2 hover:text-fg"
+            >
+              Show only this environment&apos;s fuel ({scenario.fuelStates.join(", ")})
+            </button>
+          ) : null}
         </fieldset>
       </div>
 
@@ -108,7 +121,10 @@ export function CoverageView({
           {grid.multiCellRows === 1 ? "is" : "are"} counted in more than one cell, so the cells do not add up to the
           number of tests.
         </li>
-        <li>A cell opens the Tests table filtered to its rows.</li>
+        <li>
+          A number is individual tests; &ldquo;+N summary&rdquo; counts rows that sum up a test day or a test-matrix
+          range in the same cell. A cell opens the Tests table filtered to its rows.
+        </li>
       </ul>
 
       <section aria-labelledby="gaps-heading" className="space-y-3">

@@ -6,6 +6,7 @@ import { testsHref } from "@/lib/url-state/test-filters";
 const TITLES: Record<Gap["kind"], string> = {
   "near-scenario": "Tests near this environment",
   "exploration-solids": "Solid fuels in the exploration atmosphere",
+  "burner-oxygen": "Oxygen fed through the burner",
   "partial-gravity": "Partial gravity",
   "not-reported": "Values the tables leave out",
 };
