@@ -5,22 +5,21 @@
 
 Зараз у репозиторії план, контекст для AI-агентів, формат даних, зразки й каркас сайту в `apps/web`.
 
-**Сайт:** <https://vlo0d.github.io/flame-atlas/> — оновлюється сам після кожного пушу в `main`. Поки що показує зразки даних.
+**Сайт:** <https://vlo0d.github.io/flame-atlas/> — оновлюється сам після кожного пушу в `main`. Показує справжні дані PSI.
 
-> Перед поданням цей README замінюється англійським README проєкту (задача DA-17).
-> Цей текст тоді переїжджає в `docs/kit-readme.md`.
+> Це колишній README команди. Англійський README проєкту тепер у корені репозиторію.
 
 ## З чого почати
 
 | Хто | Читає |
 |---|---|
-| Усі | [docs/10-what-we-build.md](docs/10-what-we-build.md) — що має вийти, на прикладі |
-| Усі | [docs/00-team-brief.md](docs/00-team-brief.md) — одна сторінка: дві команди, кроки |
-| Усі | [AGENTS.md](AGENTS.md) — правила для людей і AI-агентів |
-| Обидві команди | [contracts/README.md](contracts/README.md) — контракт даних, єдина межа між командами |
-| Команда «Дані й AI» | [tracks/data-ai.md](tracks/data-ai.md), [docs/03-data-sources.md](docs/03-data-sources.md) |
-| Команда «Продукт» | [tracks/product.md](tracks/product.md), [docs/01-product-spec.md](docs/01-product-spec.md) |
-| Власник подання | [docs/08-submission.md](docs/08-submission.md), [docs/07-glossary.md](docs/07-glossary.md) |
+| Усі | [docs/10-what-we-build.md](10-what-we-build.md) — що має вийти, на прикладі |
+| Усі | [docs/00-team-brief.md](00-team-brief.md) — одна сторінка: дві команди, кроки |
+| Усі | [AGENTS.md](../AGENTS.md) — правила для людей і AI-агентів |
+| Обидві команди | [contracts/README.md](../contracts/README.md) — контракт даних, єдина межа між командами |
+| Команда «Дані й AI» | [tracks/data-ai.md](../tracks/data-ai.md), [docs/03-data-sources.md](03-data-sources.md) |
+| Команда «Продукт» | [tracks/product.md](../tracks/product.md), [docs/01-product-spec.md](01-product-spec.md) |
+| Власник подання | [docs/08-submission.md](08-submission.md), [docs/07-glossary.md](07-glossary.md) |
 
 ## Що де лежить
 
