@@ -1,6 +1,6 @@
 {
-  "contractVersion": "1.0.0",
-  "generatedAt": "2026-11-14T17:41:15+00:00",
+  "contractVersion": "1.1.0",
+  "generatedAt": "2026-11-15T09:59:20+00:00",
   "source": {
     "name": "NASA Physical Sciences Informatics (PSI), Combustion Science",
     "url": "https://psi.nasa.gov/physci/repo/search?q=combustion",
@@ -59,14 +59,14 @@
       "investigationId": "PSI-25",
       "rows": 129,
       "granularity": "test",
-      "mappingVersion": "1.0.0"
+      "mappingVersion": "1.1.0"
     },
     {
       "tableFile": "PSI-26_Experimental table_BASS.csv",
       "investigationId": "PSI-26",
       "rows": 121,
       "granularity": "test",
-      "mappingVersion": "1.0.0"
+      "mappingVersion": "1.2.0"
     },
     {
       "tableFile": "PSI-39_Experimental table_CFI.csv",
@@ -108,7 +108,7 @@
       "investigationId": "PSI-99",
       "rows": 9,
       "granularity": "test",
-      "mappingVersion": "1.0.0"
+      "mappingVersion": "1.1.0"
     },
     {
       "tableFile": "PSI-100_Experimental table_SAFFIRE-3.csv",
@@ -170,7 +170,7 @@
   "quality": {
     "checkedValues": null,
     "correctValues": null,
-    "notes": "Automated check only: the mapping engine reproduces the 7 hand-normalized fixture rows exactly (tests/pipeline/test_normalize.py). A manual sample check has not been done yet."
+    "notes": "Automated checks only. The mapping engine reproduces the 7 hand-normalized fixture rows exactly (tests/pipeline/test_normalize.py), and a script compared over 2,100 oxygen, pressure and airflow values in 8 tables with their source cells after unit conversion: all match within 2 %. A person has not yet checked the 40-value sample in data/review/sample-40.csv."
   },
   "dataNotes": [
     "No partial-gravity combustion tests exist in PSI. E-FIELD Flames only simulates partial gravity with an electric field.",

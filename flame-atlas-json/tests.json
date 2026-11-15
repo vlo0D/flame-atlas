@@ -23353,8 +23353,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 22.2,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.44,
     "flowCmSMin": 5,
     "flowCmSMax": 5,
@@ -23365,7 +23365,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B1",
@@ -23386,10 +23386,12 @@
       "Final CO (ppm)": "6"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B2",
@@ -23412,8 +23414,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 1.6,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.44,
     "flowCmSMin": 5,
     "flowCmSMax": 5,
@@ -23424,7 +23426,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B2",
@@ -23445,10 +23447,12 @@
       "Final CO (ppm)": ""
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B3",
@@ -23471,8 +23475,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 21.8,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.43,
     "flowCmSMin": 2,
     "flowCmSMax": 2,
@@ -23483,7 +23487,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods). PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods). Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B3",
@@ -23505,10 +23509,12 @@
     },
     "inferred": [
       "fuelName",
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B4",
@@ -23531,8 +23537,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 22.2,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.44,
     "flowCmSMin": 5,
     "flowCmSMax": 5,
@@ -23543,7 +23549,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B4",
@@ -23564,10 +23570,12 @@
       "Final CO (ppm)": "10"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B5",
@@ -23577,9 +23585,9 @@
     "granularity": "test",
     "label": "B5",
     "date": "2014-02-19",
-    "fuelName": null,
-    "fuelState": null,
-    "fuelGeometry": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
+    "fuelGeometry": "film",
     "fuelRaw": "200 micron  2 cm wide ",
     "thicknessMm": 0.2,
     "widthMm": 20,
@@ -23590,8 +23598,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 21.9,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.43,
     "flowCmSMin": 5,
     "flowCmSMax": 5,
@@ -23602,7 +23610,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Material PMMA film taken from the BASS-II ReadMe (paragraph 5): \"Subrata Bhattacharjee burned various thickness of very thin pmma films.\" Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B5",
@@ -23623,10 +23631,14 @@
       "Final CO (ppm)": "12"
     },
     "inferred": [
+      "fuelName",
+      "fuelGeometry",
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B6",
@@ -23649,8 +23661,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.9,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.33,
     "flowCmSMin": 3,
     "flowCmSMax": 10,
@@ -23661,7 +23673,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '3   5   approaching 10' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '3   5   approaching 10' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B6",
@@ -23682,10 +23694,12 @@
       "Final CO (ppm)": "0.3"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B7",
@@ -23708,8 +23722,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 22.1,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.45,
     "flowCmSMin": 2,
     "flowCmSMax": 2,
@@ -23720,7 +23734,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods). PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods). Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B7",
@@ -23742,10 +23756,12 @@
     },
     "inferred": [
       "fuelName",
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B8",
@@ -23768,8 +23784,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.5,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.33,
     "flowCmSMin": 10,
     "flowCmSMax": 10,
@@ -23780,7 +23796,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '10   max' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 0 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '10   max' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 0 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B8",
@@ -23801,10 +23817,12 @@
       "Final CO (ppm)": "131"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B9",
@@ -23827,8 +23845,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.9,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.33,
     "flowCmSMin": 1,
     "flowCmSMax": 2,
@@ -23839,7 +23857,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B9",
@@ -23860,10 +23878,12 @@
       "Final CO (ppm)": "10"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B10",
@@ -23886,8 +23906,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.8,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.33,
     "flowCmSMin": 1,
     "flowCmSMax": 5,
@@ -23898,7 +23918,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B10",
@@ -23919,10 +23939,12 @@
       "Final CO (ppm)": "23"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B11",
@@ -23945,8 +23967,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.7,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.33,
     "flowCmSMin": 1,
     "flowCmSMax": 5,
@@ -23957,7 +23979,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B11",
@@ -23978,10 +24000,12 @@
       "Final CO (ppm)": "46"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B12",
@@ -24004,8 +24028,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 22.1,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.51,
     "flowCmSMin": 2,
     "flowCmSMax": 2,
@@ -24016,7 +24040,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods). PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods). Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B12",
@@ -24038,10 +24062,12 @@
     },
     "inferred": [
       "fuelName",
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B13",
@@ -24064,8 +24090,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.5,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.33,
     "flowCmSMin": 1,
     "flowCmSMax": 10,
@@ -24076,7 +24102,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods). PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods). Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B13",
@@ -24098,10 +24124,12 @@
     },
     "inferred": [
       "fuelName",
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B14",
@@ -24124,8 +24152,8 @@
     "o2PctApprox": false,
     "o2PctFinal": null,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0,
     "flowCmSMin": 2,
     "flowCmSMax": 5,
@@ -24136,7 +24164,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '5  3  2   ext' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '5  3  2   ext' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B14",
@@ -24157,10 +24185,12 @@
       "Final CO (ppm)": "none"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B15",
@@ -24183,8 +24213,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.8,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.33,
     "flowCmSMin": 10,
     "flowCmSMax": 10,
@@ -24195,7 +24225,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '10   max' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 0 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '10   max' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 0 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B15",
@@ -24216,10 +24246,12 @@
       "Final CO (ppm)": "22"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B16",
@@ -24242,8 +24274,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 17.2,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.47,
     "flowCmSMin": 0.4,
     "flowCmSMax": 3,
@@ -24254,7 +24286,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '3  0.5 pot   0.4 pot' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '3  0.5 pot   0.4 pot' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B16",
@@ -24275,10 +24307,12 @@
       "Final CO (ppm)": "119"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B17",
@@ -24301,8 +24335,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 17.4,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.2,
     "flowCmSMin": 0.4,
     "flowCmSMax": 5,
@@ -24313,7 +24347,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '5   3    pot 0.4' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '5   3    pot 0.4' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B17",
@@ -24334,10 +24368,12 @@
       "Final CO (ppm)": "47"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B18",
@@ -24360,8 +24396,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 17.4,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.34,
     "flowCmSMin": 10,
     "flowCmSMax": 10,
@@ -24372,7 +24408,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '10   blowoff' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 0 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '10   blowoff' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 0 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B18",
@@ -24393,10 +24429,12 @@
       "Final CO (ppm)": "78"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B19",
@@ -24419,8 +24457,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 17.2,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.51,
     "flowCmSMin": 10,
     "flowCmSMax": 10,
@@ -24431,7 +24469,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '10   blowoff' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 0 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '10   blowoff' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 0 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B19",
@@ -24452,10 +24490,12 @@
       "Final CO (ppm)": "131"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B20",
@@ -24478,8 +24518,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 17.4,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.42,
     "flowCmSMin": 0.5,
     "flowCmSMax": 5,
@@ -24490,7 +24530,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '5   3      pot 0.5' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '5   3      pot 0.5' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B20",
@@ -24511,10 +24551,12 @@
       "Final CO (ppm)": "103"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B21",
@@ -24537,8 +24579,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.6,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.36,
     "flowCmSMin": 5,
     "flowCmSMax": 5,
@@ -24549,7 +24591,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '5 down to ext' is approximate or uncertain. PI: Bhattacharjee. Flow restrictor 1 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '5 down to ext' is approximate or uncertain. Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 1 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B21",
@@ -24570,10 +24612,12 @@
       "Final CO (ppm)": "18"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:B22",
@@ -24596,8 +24640,8 @@
     "o2PctApprox": false,
     "o2PctFinal": 20.5,
     "diluent": null,
-    "pressureKpaMin": null,
-    "pressureKpaMax": null,
+    "pressureKpaMin": 99.2,
+    "pressureKpaMax": 99.5,
     "co2Pct": 0.41,
     "flowCmSMin": 0,
     "flowCmSMax": 5,
@@ -24608,7 +24652,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: Bhattacharjee. Flow restrictor 1 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\" PI: Bhattacharjee. Flow restrictor 1 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "Bhattacharjee",
       "Test #": "B22",
@@ -24629,10 +24673,12 @@
       "Final CO (ppm)": "10"
     },
     "inferred": [
+      "pressureKpaMin",
+      "pressureKpaMax",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:F1",
@@ -24691,7 +24737,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:F2",
@@ -24750,7 +24796,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:F3",
@@ -24809,7 +24855,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:F4",
@@ -24868,7 +24914,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M1",
@@ -24927,7 +24973,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M2",
@@ -24986,7 +25032,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M3",
@@ -25045,7 +25091,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M4",
@@ -25104,7 +25150,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M5",
@@ -25163,7 +25209,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M6",
@@ -25222,7 +25268,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M7",
@@ -25281,7 +25327,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M8",
@@ -25340,7 +25386,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M9",
@@ -25399,7 +25445,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M10",
@@ -25458,7 +25504,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M11",
@@ -25517,7 +25563,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M12",
@@ -25576,7 +25622,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M13",
@@ -25635,7 +25681,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M14",
@@ -25694,7 +25740,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M15",
@@ -25753,7 +25799,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M16",
@@ -25812,7 +25858,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M17",
@@ -25871,7 +25917,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M18",
@@ -25930,7 +25976,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M19",
@@ -25989,7 +26035,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:M20",
@@ -26048,7 +26094,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O1",
@@ -26108,7 +26154,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O2",
@@ -26168,7 +26214,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O3a",
@@ -26228,7 +26274,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O3b",
@@ -26288,7 +26334,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O4",
@@ -26348,7 +26394,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O5a",
@@ -26407,7 +26453,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O5b",
@@ -26466,7 +26512,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O6",
@@ -26526,7 +26572,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O7",
@@ -26586,7 +26632,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O8a",
@@ -26646,7 +26692,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O8b",
@@ -26706,7 +26752,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O9",
@@ -26766,7 +26812,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O10",
@@ -26826,7 +26872,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O11",
@@ -26886,7 +26932,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O12",
@@ -26946,7 +26992,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O13a",
@@ -27005,7 +27051,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O13b",
@@ -27064,7 +27110,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O14",
@@ -27124,7 +27170,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O15a",
@@ -27184,7 +27230,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O15b",
@@ -27244,7 +27290,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O16",
@@ -27304,7 +27350,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O17",
@@ -27364,7 +27410,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O18",
@@ -27424,7 +27470,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O19",
@@ -27484,7 +27530,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O20",
@@ -27544,7 +27590,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O21",
@@ -27604,7 +27650,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:O22",
@@ -27664,7 +27710,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P1",
@@ -27724,7 +27770,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P2",
@@ -27784,7 +27830,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P3a",
@@ -27844,7 +27890,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P3b",
@@ -27904,7 +27950,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P4",
@@ -27964,7 +28010,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P5",
@@ -28024,7 +28070,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P6",
@@ -28084,7 +28130,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P8",
@@ -28144,7 +28190,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P9",
@@ -28204,7 +28250,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P10",
@@ -28264,7 +28310,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P12",
@@ -28324,7 +28370,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P13a",
@@ -28384,7 +28430,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P13b",
@@ -28444,7 +28490,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P14",
@@ -28504,7 +28550,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P15",
@@ -28564,7 +28610,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P16",
@@ -28624,7 +28670,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P17",
@@ -28684,7 +28730,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P18",
@@ -28744,7 +28790,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P19",
@@ -28804,7 +28850,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P20",
@@ -28864,7 +28910,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P21a",
@@ -28924,7 +28970,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P21b",
@@ -28984,7 +29030,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P22a",
@@ -29044,7 +29090,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P22b",
@@ -29104,7 +29150,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P23",
@@ -29164,7 +29210,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P24",
@@ -29224,7 +29270,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:P25",
@@ -29284,7 +29330,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T1",
@@ -29343,7 +29389,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T2",
@@ -29402,7 +29448,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T3",
@@ -29412,8 +29458,8 @@
     "granularity": "test",
     "label": "T3",
     "date": "2014-06-27",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "4 cm spherical section",
     "thicknessMm": null,
@@ -29437,7 +29483,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "PI: T'ien. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Material PMMA taken from the BASS-II ReadMe (paragraph 10): \"Also had 1 sample/2 tests with 4 cm pmma spherical section.\" PI: T'ien. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "T'ien",
       "Test #": "T3",
@@ -29458,10 +29504,11 @@
       "Final CO (ppm)": "113"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T4",
@@ -29520,7 +29567,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T5",
@@ -29579,7 +29626,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T6",
@@ -29638,7 +29685,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T7",
@@ -29648,8 +29695,8 @@
     "granularity": "test",
     "label": "T7",
     "date": "2014-07-09",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "4 cm spherical section",
     "thicknessMm": null,
@@ -29673,7 +29720,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "Air display: source value '10   5  3  1   decr' is approximate or uncertain. PI: T'ien. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
+    "notes": "Air display: source value '10   5  3  1   decr' is approximate or uncertain. Material PMMA taken from the BASS-II ReadMe (paragraph 10): \"Also had 1 sample/2 tests with 4 cm pmma spherical section.\" PI: T'ien. Flow restrictor 2 (0 gives the most flow, 2 the least). Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed. Test outcome is not reported in the source table.",
     "raw": {
       "PI": "T'ien",
       "Test #": "T7",
@@ -29694,10 +29741,11 @@
       "Final CO (ppm)": "140"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T9",
@@ -29756,7 +29804,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T10",
@@ -29815,7 +29863,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T11",
@@ -29874,7 +29922,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T12",
@@ -29933,7 +29981,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T13",
@@ -29992,7 +30040,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T14",
@@ -30051,7 +30099,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T15",
@@ -30110,7 +30158,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T16",
@@ -30169,7 +30217,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T17",
@@ -30228,7 +30276,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T18",
@@ -30287,7 +30335,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T19",
@@ -30346,7 +30394,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T20",
@@ -30405,7 +30453,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T21",
@@ -30464,7 +30512,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T22",
@@ -30523,7 +30571,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T23",
@@ -30582,7 +30630,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T24",
@@ -30641,7 +30689,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T25",
@@ -30700,7 +30748,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T26",
@@ -30759,7 +30807,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T27",
@@ -30818,7 +30866,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T28a",
@@ -30877,7 +30925,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T28b",
@@ -30936,7 +30984,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-25:BASS-II:T29",
@@ -30995,7 +31043,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:1",
@@ -31043,7 +31091,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:42",
@@ -31091,7 +31139,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:18",
@@ -31139,7 +31187,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:7",
@@ -31187,7 +31235,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:8",
@@ -31235,7 +31283,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:43",
@@ -31283,7 +31331,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:44",
@@ -31331,7 +31379,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:45",
@@ -31379,7 +31427,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:19",
@@ -31427,7 +31475,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:20",
@@ -31475,7 +31523,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:21",
@@ -31523,7 +31571,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:4",
@@ -31571,7 +31619,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:10",
@@ -31619,7 +31667,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:12",
@@ -31667,7 +31715,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:54",
@@ -31715,7 +31763,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:55",
@@ -31763,7 +31811,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:56",
@@ -31811,7 +31859,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:57",
@@ -31859,7 +31907,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:110",
@@ -31907,7 +31955,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:30",
@@ -31955,7 +32003,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:31",
@@ -32003,7 +32051,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:32",
@@ -32051,7 +32099,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:33",
@@ -32099,7 +32147,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:12-R",
@@ -32147,7 +32195,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:12-R2",
@@ -32195,7 +32243,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:46",
@@ -32205,8 +32253,8 @@
     "granularity": "test",
     "label": "46",
     "date": "2012-06-11",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -32230,7 +32278,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 25, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 25, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/11/2012",
       "GMT": "163",
@@ -32240,10 +32288,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:47",
@@ -32253,8 +32302,8 @@
     "granularity": "test",
     "label": "47",
     "date": "2012-06-11",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -32278,7 +32327,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 26, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 26, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/11/2012",
       "GMT": "163",
@@ -32288,10 +32337,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:48",
@@ -32301,8 +32351,8 @@
     "granularity": "test",
     "label": "48",
     "date": "2012-06-11",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -32326,7 +32376,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 27, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 27, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/11/2012",
       "GMT": "163",
@@ -32336,10 +32386,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:49",
@@ -32349,8 +32400,8 @@
     "granularity": "test",
     "label": "49",
     "date": "2012-06-11",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -32374,7 +32425,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 28, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 28, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/11/2012",
       "GMT": "163",
@@ -32384,10 +32435,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:22",
@@ -32397,8 +32449,8 @@
     "granularity": "test",
     "label": "22",
     "date": "2012-06-14",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm sphere",
     "thicknessMm": null,
@@ -32422,7 +32474,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 29, sample 18. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 29, sample 18. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/14/2012",
       "GMT": "166",
@@ -32432,10 +32484,11 @@
       "Fuel Sample Material": "1 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:23",
@@ -32445,8 +32498,8 @@
     "granularity": "test",
     "label": "23",
     "date": "2012-06-14",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm sphere",
     "thicknessMm": null,
@@ -32470,7 +32523,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 30, sample 18. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 30, sample 18. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/14/2012",
       "GMT": "166",
@@ -32480,10 +32533,11 @@
       "Fuel Sample Material": "1 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:24",
@@ -32493,8 +32547,8 @@
     "granularity": "test",
     "label": "24",
     "date": "2012-06-14",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm sphere",
     "thicknessMm": null,
@@ -32518,7 +32572,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 31, sample 18. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 31, sample 18. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/14/2012",
       "GMT": "166",
@@ -32528,10 +32582,11 @@
       "Fuel Sample Material": "1 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:25",
@@ -32541,8 +32596,8 @@
     "granularity": "test",
     "label": "25",
     "date": "2012-06-14",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm sphere",
     "thicknessMm": null,
@@ -32566,7 +32621,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 32, sample 18. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 32, sample 18. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/14/2012",
       "GMT": "166",
@@ -32576,10 +32631,11 @@
       "Fuel Sample Material": "1 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:58",
@@ -32589,8 +32645,8 @@
     "granularity": "test",
     "label": "58",
     "date": "2012-06-18",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -32614,7 +32670,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 33, sample 25. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 33, sample 25. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/18/2012",
       "GMT": "170",
@@ -32624,10 +32680,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:59",
@@ -32637,8 +32694,8 @@
     "granularity": "test",
     "label": "59",
     "date": "2012-06-18",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -32662,7 +32719,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 34, sample 25. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 34, sample 25. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/18/2012",
       "GMT": "170",
@@ -32672,10 +32729,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:60",
@@ -32685,8 +32743,8 @@
     "granularity": "test",
     "label": "60",
     "date": "2012-06-18",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -32710,7 +32768,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 35, sample 25. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 35, sample 25. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/18/2012",
       "GMT": "170",
@@ -32720,10 +32778,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:61",
@@ -32733,8 +32792,8 @@
     "granularity": "test",
     "label": "61",
     "date": "2012-06-18",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -32758,7 +32817,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 36, sample 25. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 36, sample 25. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/18/2012",
       "GMT": "170",
@@ -32768,10 +32827,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:5",
@@ -32819,7 +32879,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:14",
@@ -32867,7 +32927,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:66",
@@ -32915,7 +32975,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:67",
@@ -32963,7 +33023,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:34",
@@ -32973,8 +33033,8 @@
     "granularity": "test",
     "label": "34",
     "date": "2012-06-29",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm sphere",
     "thicknessMm": null,
@@ -32998,7 +33058,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 41, sample 16. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 41, sample 16. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/29/2012",
       "GMT": "181",
@@ -33008,10 +33068,11 @@
       "Fuel Sample Material": "1 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:35",
@@ -33021,8 +33082,8 @@
     "granularity": "test",
     "label": "35",
     "date": null,
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm sphere",
     "thicknessMm": null,
@@ -33046,7 +33107,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 42, sample 16. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 42, sample 16. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/29/`12",
       "GMT": "181",
@@ -33056,10 +33117,11 @@
       "Fuel Sample Material": "1 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:16",
@@ -33107,7 +33169,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:5b",
@@ -33155,7 +33217,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:6",
@@ -33203,7 +33265,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:82",
@@ -33251,7 +33313,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:82a",
@@ -33299,7 +33361,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:82b",
@@ -33347,7 +33409,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:68",
@@ -33395,7 +33457,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:69",
@@ -33443,7 +33505,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:111",
@@ -33453,8 +33515,8 @@
     "granularity": "test",
     "label": "111",
     "date": "2012-07-12",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere   wake ign",
     "thicknessMm": null,
@@ -33478,7 +33540,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 51, sample 21. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 51, sample 21. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "7/12/2012",
       "GMT": "194",
@@ -33488,10 +33550,11 @@
       "Fuel Sample Material": "2 cm sphere   wake ign"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:112",
@@ -33501,8 +33564,8 @@
     "granularity": "test",
     "label": "112",
     "date": "2012-07-12",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere   wake ign",
     "thicknessMm": null,
@@ -33526,7 +33589,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 52, sample 21. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 52, sample 21. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "7/12/2012",
       "GMT": "194",
@@ -33536,10 +33599,11 @@
       "Fuel Sample Material": "2 cm sphere   wake ign"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:113",
@@ -33549,8 +33613,8 @@
     "granularity": "test",
     "label": "113",
     "date": "2012-07-12",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere   wake ign",
     "thicknessMm": null,
@@ -33574,7 +33638,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 53, sample 21. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 53, sample 21. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "7/12/2012",
       "GMT": "194",
@@ -33584,10 +33648,11 @@
       "Fuel Sample Material": "2 cm sphere   wake ign"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:2",
@@ -33635,7 +33700,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:3",
@@ -33683,7 +33748,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:15",
@@ -33731,7 +33796,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:13",
@@ -33779,7 +33844,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:17",
@@ -33827,7 +33892,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:114-r60",
@@ -33875,7 +33940,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:62",
@@ -33923,7 +33988,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:63",
@@ -33971,7 +34036,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:64",
@@ -34019,7 +34084,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:65",
@@ -34067,7 +34132,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:118-r65",
@@ -34115,7 +34180,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:11",
@@ -34163,7 +34228,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:9",
@@ -34211,7 +34276,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:102",
@@ -34259,7 +34324,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:83a",
@@ -34307,7 +34372,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:83b",
@@ -34355,7 +34420,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:83c",
@@ -34403,7 +34468,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:84a",
@@ -34451,7 +34516,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:84b",
@@ -34499,7 +34564,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:86a",
@@ -34547,7 +34612,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:86b",
@@ -34595,7 +34660,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:86c",
@@ -34643,7 +34708,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:70",
@@ -34691,7 +34756,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:71",
@@ -34739,7 +34804,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:74",
@@ -34787,7 +34852,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:75-r81",
@@ -34835,7 +34900,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:98",
@@ -34883,7 +34948,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:99",
@@ -34931,7 +34996,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:114-r84",
@@ -34979,7 +35044,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:115",
@@ -35027,7 +35092,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:116",
@@ -35075,7 +35140,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:117",
@@ -35123,7 +35188,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:117a",
@@ -35171,7 +35236,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:100",
@@ -35219,7 +35284,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:85",
@@ -35267,7 +35332,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:93",
@@ -35315,7 +35380,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:26",
@@ -35363,7 +35428,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:27",
@@ -35411,7 +35476,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:28",
@@ -35459,7 +35524,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:87",
@@ -35507,7 +35572,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:103",
@@ -35517,8 +35582,8 @@
     "granularity": "test",
     "label": "103",
     "date": "2013-04-23",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -35542,7 +35607,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 90, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 90, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "4/23/2013",
       "GMT": "113",
@@ -35552,10 +35617,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:104",
@@ -35565,8 +35631,8 @@
     "granularity": "test",
     "label": "104",
     "date": "2013-04-23",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -35590,7 +35656,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 91, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 91, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "4/23/2013",
       "GMT": "113",
@@ -35600,10 +35666,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:105",
@@ -35613,8 +35680,8 @@
     "granularity": "test",
     "label": "105",
     "date": "2013-04-23",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -35638,7 +35705,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 92, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 92, sample 22. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "4/23/2013",
       "GMT": "113",
@@ -35648,10 +35715,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:38",
@@ -35661,8 +35729,8 @@
     "granularity": "test",
     "label": "38",
     "date": "2013-04-26",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm sphere   wake",
     "thicknessMm": null,
@@ -35686,7 +35754,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 93, sample 20. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 93, sample 20. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "4/26/2013",
       "GMT": "113",
@@ -35696,10 +35764,11 @@
       "Fuel Sample Material": "1 cm sphere   wake"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:39",
@@ -35709,8 +35778,8 @@
     "granularity": "test",
     "label": "39",
     "date": "2013-04-26",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm wake sphere",
     "thicknessMm": null,
@@ -35734,7 +35803,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 94, sample 20. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 94, sample 20. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "4/26/2013",
       "GMT": "116",
@@ -35744,10 +35813,11 @@
       "Fuel Sample Material": "1 cm wake sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:40",
@@ -35757,8 +35827,8 @@
     "granularity": "test",
     "label": "40",
     "date": "2013-04-26",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "1 cm wake sphere",
     "thicknessMm": null,
@@ -35782,7 +35852,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 95, sample 20. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 95, sample 20. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "4/26/2013",
       "GMT": "116",
@@ -35792,10 +35862,11 @@
       "Fuel Sample Material": "1 cm wake sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:72",
@@ -35843,7 +35914,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:73",
@@ -35891,7 +35962,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:118-r104",
@@ -35939,7 +36010,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:119",
@@ -35987,7 +36058,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:89",
@@ -36035,7 +36106,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:95",
@@ -36083,7 +36154,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:92",
@@ -36131,7 +36202,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:78",
@@ -36179,7 +36250,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:50",
@@ -36227,7 +36298,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:51",
@@ -36237,8 +36308,8 @@
     "granularity": "test",
     "label": "51",
     "date": "2013-05-15",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -36262,7 +36333,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 105, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 105, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "5/15/2013",
       "GMT": "135",
@@ -36272,10 +36343,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:52",
@@ -36285,8 +36357,8 @@
     "granularity": "test",
     "label": "52",
     "date": "2013-05-15",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -36310,7 +36382,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 106, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 106, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "5/15/2013",
       "GMT": "135",
@@ -36320,10 +36392,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:53-r113",
@@ -36333,8 +36406,8 @@
     "granularity": "test",
     "label": "53",
     "date": "2013-05-15",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -36358,7 +36431,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 107, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 107, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "5/15/2013",
       "GMT": "135",
@@ -36368,10 +36441,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:106",
@@ -36381,8 +36455,8 @@
     "granularity": "test",
     "label": "106",
     "date": "2013-05-17",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -36406,7 +36480,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 108, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 108, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "5/17/2013",
       "GMT": "137",
@@ -36416,10 +36490,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:107",
@@ -36429,8 +36504,8 @@
     "granularity": "test",
     "label": "107",
     "date": "2013-05-17",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -36454,7 +36529,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 109, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 109, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "5/17/2013",
       "GMT": "137",
@@ -36464,10 +36539,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:108",
@@ -36477,8 +36553,8 @@
     "granularity": "test",
     "label": "108",
     "date": "2013-05-17",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -36502,7 +36578,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 110, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 110, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "5/17/2013",
       "GMT": "137",
@@ -36512,10 +36588,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:109",
@@ -36525,8 +36602,8 @@
     "granularity": "test",
     "label": "109",
     "date": "2013-06-01",
-    "fuelName": null,
-    "fuelState": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
     "fuelGeometry": null,
     "fuelRaw": "2 cm sphere",
     "thicknessMm": null,
@@ -36550,7 +36627,7 @@
     "burnTimeS": null,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "As-run test 111, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
+    "notes": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\". As-run test 111, sample 26. Atmosphere and flow conditions are not in the source table (see the BASS test matrices and ReadMe).",
     "raw": {
       "Date": "6/1/2013",
       "GMT": "137",
@@ -36560,10 +36637,11 @@
       "Fuel Sample Material": "2 cm sphere"
     },
     "inferred": [
+      "fuelName",
       "gravity"
     ],
-    "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "confidence": "medium",
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:79",
@@ -36611,7 +36689,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:80",
@@ -36659,7 +36737,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:75-r120",
@@ -36707,7 +36785,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:53-r121",
@@ -36755,7 +36833,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-26:BASS:53a",
@@ -36803,7 +36881,7 @@
       "gravity"
     ],
     "confidence": "high",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-39:CFI:f068a03",
@@ -58551,7 +58629,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-99:SAFFIRE-2:2-2",
@@ -58610,7 +58688,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-99:SAFFIRE-2:2-3",
@@ -58669,7 +58747,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-99:SAFFIRE-2:2-4",
@@ -58728,7 +58806,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-99:SAFFIRE-2:2-5",
@@ -58788,7 +58866,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-99:SAFFIRE-2:2-6",
@@ -58798,9 +58876,9 @@
     "granularity": "test",
     "label": "2-6",
     "date": null,
-    "fuelName": null,
-    "fuelState": null,
-    "fuelGeometry": null,
+    "fuelName": "SIBAL fabric",
+    "fuelState": "solid",
+    "fuelGeometry": "fabric",
     "fuelRaw": null,
     "thicknessMm": null,
     "widthMm": 50,
@@ -58823,7 +58901,7 @@
     "burnTimeS": 115,
     "spreadRateMmS": 2.6,
     "coolFlame": null,
-    "notes": "Samle Thickness: '037 mm' is not a readable number; left null. Sample length 29 cm. Microgravity burn length 29 cm. Columns '?-g ...' are the microgravity results ('µ-g' with a lost character); '1-g' columns are ground comparisons and are not used for the normalized fields. Note 1: Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+    "notes": "Samle Thickness: '037 mm' is not a readable number; left null. Material cell is empty in the source table; SIBAL fabric taken from the pre-flight sample table of \"SAFFIRE Objectives, Development and Status\" (Table 2, p. 3): \"S6 SIBAL fabric\". Sample length 29 cm. Microgravity burn length 29 cm. Columns '?-g ...' are the microgravity results ('µ-g' with a lost character); '1-g' columns are ground comparisons and are not used for the normalized fields. Note 1: Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
     "raw": {
       "Sample Number": "2-6",
       "Material": "",
@@ -58845,10 +58923,13 @@
     },
     "inferred": [
       "ignited",
+      "fuelName",
+      "fuelState",
+      "fuelGeometry",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-99:SAFFIRE-2:2-7",
@@ -58908,7 +58989,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-99:SAFFIRE-2:2-8",
@@ -58968,7 +59049,7 @@
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-99:SAFFIRE-2:2-9",
@@ -58978,9 +59059,9 @@
     "granularity": "test",
     "label": "2-9",
     "date": null,
-    "fuelName": null,
-    "fuelState": null,
-    "fuelGeometry": null,
+    "fuelName": "PMMA",
+    "fuelState": "solid",
+    "fuelGeometry": "slab",
     "fuelRaw": null,
     "thicknessMm": 10,
     "widthMm": 50,
@@ -59003,7 +59084,7 @@
     "burnTimeS": 900,
     "spreadRateMmS": null,
     "coolFlame": null,
-    "notes": "?-g Spread Length: 'Note 4' is not a readable number; left null. Sample length 29 cm. Microgravity burn length ~ 10 cm (note 4). Columns '?-g ...' are the microgravity results ('µ-g' with a lost character); '1-g' columns are ground comparisons and are not used for the normalized fields. Note 1: Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS. Note 4: The flames remain anchored at the base of the sample which has a very slow regression rate (0.01 to 0.04 mm/s)",
+    "notes": "?-g Spread Length: 'Note 4' is not a readable number; left null. Material cell is empty in the source table; PMMA taken from the pre-flight sample table of \"SAFFIRE Objectives, Development and Status\" (Table 2, p. 3): \"S9 Flat PMMA\". Sample length 29 cm. Microgravity burn length ~ 10 cm (note 4). Columns '?-g ...' are the microgravity results ('µ-g' with a lost character); '1-g' columns are ground comparisons and are not used for the normalized fields. Note 1: Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS. Note 4: The flames remain anchored at the base of the sample which has a very slow regression rate (0.01 to 0.04 mm/s)",
     "raw": {
       "Sample Number": "2-9",
       "Material": "",
@@ -59025,10 +59106,13 @@
     },
     "inferred": [
       "ignited",
+      "fuelName",
+      "fuelState",
+      "fuelGeometry",
       "gravity"
     ],
     "confidence": "medium",
-    "mappingVersion": "1.0.0"
+    "mappingVersion": "1.1.0"
   },
   {
     "id": "PSI-100:SAFFIRE-3:S1",

@@ -1,0 +1,115 @@
+{
+  "tableFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+  "investigationId": "PSI-99",
+  "tableId": "SAFFIRE-2",
+  "mappingVersion": "1.1.0",
+  "granularity": "test",
+  "comment": "Spread rate comes from '?-g Spread Length', whose cells are rates in mm/s. Footnote rows become notes; flow-visualization rows are skipped.",
+  "label": {
+    "column": "Sample Number"
+  },
+  "confidence": "medium",
+  "footnotes": {
+    "column": "Sample Number",
+    "regex": "^Note\\s*(\\d+)\\s+(.*)$",
+    "applyToAll": [
+      "1"
+    ]
+  },
+  "skipRows": [
+    {
+      "column": "Material",
+      "regex": "(?i)flow visulation",
+      "reason": "pre-test flow visualization video, not a burn"
+    }
+  ],
+  "fuel": {
+    "column": "Material",
+    "parser": "plain",
+    "state": "solid"
+  },
+  "fields": {
+    "thicknessMm": {
+      "column": "Samle Thickness ",
+      "unit": "mm"
+    },
+    "widthMm": {
+      "column": "Sample Width (cm)",
+      "unit": "cm"
+    },
+    "flowCmS": {
+      "column": "Air Flow (cm/s)",
+      "unit": "cm/s"
+    },
+    "o2Pct": {
+      "column": "Percent O2 (Note 1)",
+      "unit": "%"
+    },
+    "burnTimeS": {
+      "column": "Burn Time (s)",
+      "unit": "s"
+    },
+    "spreadRateMmS": {
+      "column": "?-g Spread Length",
+      "unit": "mm/s"
+    }
+  },
+  "flowDirection": {
+    "column": "Flow Direction",
+    "map": {
+      "concurrent": "concurrent",
+      "opposed": "opposed"
+    }
+  },
+  "ignited": {
+    "rule": "burnTime"
+  },
+  "notes": {
+    "templates": [
+      "Sample length {Sample Length }.",
+      "Microgravity burn length {?-g Burn Length}.",
+      "1-g comparison: burn length {1-g Burn Length}, spread rate {1-g Spread Rate}."
+    ],
+    "static": [
+      "Columns '?-g ...' are the microgravity results ('µ-g' with a lost character); '1-g' columns are ground comparisons and are not used for the normalized fields."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  },
+  "overrides": [
+    {
+      "column": "Sample Number",
+      "regex": "^\\s*2-6\\s*$",
+      "set": {
+        "fuelName": "SIBAL fabric",
+        "fuelState": "solid",
+        "fuelGeometry": "fabric"
+      },
+      "inferred": [
+        "fuelName",
+        "fuelState",
+        "fuelGeometry"
+      ],
+      "confidence": "medium",
+      "note": "Material cell is empty in the source table; SIBAL fabric taken from the pre-flight sample table of \"SAFFIRE Objectives, Development and Status\" (Table 2, p. 3): \"S6 SIBAL fabric\"."
+    },
+    {
+      "column": "Sample Number",
+      "regex": "^\\s*2-9\\s*$",
+      "set": {
+        "fuelName": "PMMA",
+        "fuelState": "solid",
+        "fuelGeometry": "slab"
+      },
+      "inferred": [
+        "fuelName",
+        "fuelState",
+        "fuelGeometry"
+      ],
+      "confidence": "medium",
+      "note": "Material cell is empty in the source table; PMMA taken from the pre-flight sample table of \"SAFFIRE Objectives, Development and Status\" (Table 2, p. 3): \"S9 Flat PMMA\"."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "tableFile": "PSI-100_Experimental table_SAFFIRE-3.csv",
+  "investigationId": "PSI-100",
+  "tableId": "SAFFIRE-3",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "label": {
+    "column": "Sample Number "
+  },
+  "fuel": {
+    "column": "Material",
+    "parser": "plain",
+    "state": "solid"
+  },
+  "fields": {
+    "thicknessMm": {
+      "column": "Sample Thickness",
+      "unit": "cm"
+    },
+    "widthMm": {
+      "column": "Sample Width",
+      "unit": "cm"
+    },
+    "flowCmS": {
+      "column": "Air Flow ",
+      "unit": "cm/s"
+    }
+  },
+  "flowDirection": {
+    "column": "Direction",
+    "map": {
+      "concurrent": "concurrent",
+      "opposed": "opposed"
+    }
+  },
+  "notes": {
+    "templates": [
+      "Sample length {Sample Length}."
+    ],
+    "static": [
+      "Oxygen concentration and burn results are not in the source table."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

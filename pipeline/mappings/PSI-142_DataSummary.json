@@ -1,0 +1,20 @@
+{
+  "tableFile": "PSI-142_Experimental table_Data Summary Table.csv",
+  "investigationId": "PSI-142",
+  "tableId": "DataSummary",
+  "mappingVersion": "1.0.0",
+  "granularity": "reference",
+  "label": {
+    "column": "Data ID"
+  },
+  "gravity": {
+    "value": "normal",
+    "source": "ground laboratory investigation"
+  },
+  "notes": {
+    "templates": [
+      "{Data Description}.",
+      "Figure {Figure ID in Reference} in {Reference Publication Link}."
+    ]
+  }
+}

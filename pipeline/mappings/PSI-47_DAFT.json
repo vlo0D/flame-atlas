@@ -1,0 +1,29 @@
+{
+  "tableFile": "PSI-47_Experimental table_DAFT.csv",
+  "investigationId": "PSI-47",
+  "tableId": "DAFT",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "label": {
+    "column": "Session Name"
+  },
+  "date": {
+    "column": "Actual Day",
+    "format": "gmt-doy-year"
+  },
+  "fuel": {
+    "column": "Sample Material",
+    "parser": "plain",
+    "state": "aerosol"
+  },
+  "notes": {
+    "templates": [
+      "{Hardware Description}.",
+      "{Sampled Location}."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

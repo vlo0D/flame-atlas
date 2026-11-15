@@ -22,15 +22,21 @@ out/
 .idea/
 .vscode/
 
-# archives and large downloads (role B extends this for data/raw documents)
+# archives and large downloads: PSI documents are downloaded by the pipeline, not committed.
+# data/raw keeps only the 22 experimental tables and the metadata JSON.
 *.zip
-data/raw/**/*.pdf
-data/raw/**/*.docx
-data/raw/**/*.doc
-data/raw/**/*.pptx
-data/raw/**/*.ppt
-data/raw/**/*.xlsx
+data/raw/**
+!data/raw/**/
+!data/raw/*/metadata.json
+!data/raw/*/Experimental table/*.csv
+data/extracted/
 
 # BMAD: personal install answers stay local; team config is committed
 _bmad/config.user.toml
 _bmad/custom/*.user.toml
+
+# python
+.venv/
+__pycache__/
+*.pyc
+*.part

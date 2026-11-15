@@ -19,13 +19,16 @@ Everyone adds a line when they bring something in; roles B and E clean it up on 
 
 | Library | Purpose | License | Link |
 |---|---|---|---|
-| | | | |
+| requests | HTTP client for the PSI API | Apache-2.0 | https://github.com/psf/requests |
+| openpyxl | reading .xlsx tables | MIT | https://foss.heptapod.net/openpyxl/openpyxl |
+| python-docx | reading .docx text and tables | MIT | https://github.com/python-openxml/python-docx |
+| pdfplumber (pdfminer.six) | reading .pdf text and tables | MIT | https://github.com/jsvine/pdfplumber |
 
 ## AI tools
 
 | Tool / model | Purpose |
 |---|---|
-| | |
+| Claude Code (Claude Opus 5.5) | writing the data pipeline code and its tests; every output is validated by code |
 
 ## Images and media
 

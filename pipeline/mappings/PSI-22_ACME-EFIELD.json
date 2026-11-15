@@ -1,0 +1,48 @@
+{
+  "tableFile": "PSI-22_Experimental table_ACME E-FIELD Flames.csv",
+  "investigationId": "PSI-22",
+  "tableId": "ACME-EFIELD",
+  "mappingVersion": "1.0.0",
+  "granularity": "test-day",
+  "comment": "Rows with an empty Test Day only add another fuel concentration for the day above; they are merged into that record's notes.",
+  "label": {
+    "column": "Test Day"
+  },
+  "gravity": {
+    "value": "partial-simulated",
+    "source": "electric field body force, see notes"
+  },
+  "date": {
+    "parts": {
+      "year": "Year",
+      "month": "Month",
+      "day": "Date"
+    }
+  },
+  "continuation": {
+    "whenEmpty": "Test Day",
+    "collect": [
+      "Fuel Conc"
+    ]
+  },
+  "fuel": {
+    "column": "Fuel Bottle",
+    "parser": "gas",
+    "geometry": "burner"
+  },
+  "ignited": {
+    "rule": "countPositive",
+    "column": "Flames Ignited"
+  },
+  "notes": {
+    "templates": [
+      "{Flames Ignited} flames ignited that day.",
+      "Mesh polarity {Mesh Polarity}.",
+      "Fuel concentration {Fuel Conc} (diluted with nitrogen).",
+      "{Test Type}."
+    ],
+    "static": [
+      "An electric field (up to 10 kV between burner and mesh) acts on the flame; this dataset treats it as simulated partial gravity."
+    ]
+  }
+}

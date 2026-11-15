@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "extracted-document.schema.json",
+  "title": "data/extracted/<id>/<file>.json: one source document as ordered text and table blocks",
+  "description": "Intermediate pipeline format, not part of the web contract. Validated by pipeline/validate_extracted.py with the contract validator (subset of JSON Schema: no oneOf, so block-type rules are checked in code).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "investigationId", "format", "source", "extractor", "extractedAt", "status", "warnings", "stats", "blocks"],
+  "$defs": {
+    "strOrNull": { "type": ["string", "null"] },
+    "intOrNull": { "type": ["integer", "null"] },
+    "Location": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "page": { "type": "integer", "minimum": 1 },
+        "paragraph": { "type": "integer", "minimum": 1 },
+        "table": { "type": "integer", "minimum": 1 },
+        "sheet": { "type": "string" }
+      }
+    },
+    "Row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceRow", "raw"],
+      "properties": {
+        "sourceRow": { "type": "integer", "minimum": 1 },
+        "raw": { "type": "object", "additionalProperties": { "type": "string" } }
+      }
+    },
+    "Block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "location"],
+      "properties": {
+        "type": { "enum": ["text", "table"] },
+        "id": { "type": "string", "pattern": "^b[0-9]+$" },
+        "location": { "$ref": "#/$defs/Location" },
+        "kind": { "enum": ["heading", "paragraph", "list-item", "page", "caption"] },
+        "level": { "$ref": "#/$defs/intOrNull" },
+        "style": { "$ref": "#/$defs/strOrNull" },
+        "text": { "type": "string", "minLength": 1 },
+        "name": { "type": "string" },
+        "confidence": { "enum": ["high", "low"] },
+        "headerRow": { "$ref": "#/$defs/intOrNull" },
+        "columns": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "rowCount": { "type": "integer", "minimum": 0 },
+        "truncated": { "type": "boolean" },
+        "rows": { "type": "array", "items": { "$ref": "#/$defs/Row" } }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "investigationId": { "type": "string", "pattern": "^PSI-[0-9]+$" },
+    "format": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fileName", "folder", "subfolder", "key", "version", "sizeBytes", "sha256", "localPath", "investigationUrl"],
+      "properties": {
+        "fileName": { "type": "string", "minLength": 1 },
+        "folder": { "type": "string" },
+        "subfolder": { "$ref": "#/$defs/strOrNull" },
+        "key": { "type": "string", "minLength": 1 },
+        "version": { "$ref": "#/$defs/intOrNull" },
+        "sizeBytes": { "$ref": "#/$defs/intOrNull" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "localPath": { "type": "string", "minLength": 1 },
+        "investigationUrl": { "type": "string", "pattern": "^https?://" }
+      }
+    },
+    "extractor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": { "name": { "type": "string" }, "version": { "type": "string" } }
+    },
+    "extractedAt": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["ok", "partial", "failed"] },
+    "error": { "$ref": "#/$defs/strOrNull" },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["textBlocks", "characters", "tables", "tableRows", "pages"],
+      "properties": {
+        "textBlocks": { "type": "integer", "minimum": 0 },
+        "characters": { "type": "integer", "minimum": 0 },
+        "tables": { "type": "integer", "minimum": 0 },
+        "tableRows": { "type": "integer", "minimum": 0 },
+        "pages": { "$ref": "#/$defs/intOrNull" }
+      }
+    },
+    "blocks": { "type": "array", "items": { "$ref": "#/$defs/Block" } }
+  }
+}

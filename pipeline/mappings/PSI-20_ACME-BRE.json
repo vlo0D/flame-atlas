@@ -1,0 +1,54 @@
+{
+  "tableFile": "PSI-20_Experimental table_ACME BRE.csv",
+  "investigationId": "PSI-20",
+  "tableId": "ACME-BRE",
+  "mappingVersion": "1.0.0",
+  "granularity": "test-day",
+  "label": {
+    "from": "date"
+  },
+  "idFrom": "row",
+  "confidence": "medium",
+  "date": {
+    "parts": {
+      "year": "Year",
+      "month": "Month",
+      "day": "Date"
+    }
+  },
+  "fuel": {
+    "column": "Fuel Bottle",
+    "parser": "gas",
+    "geometry": "burner"
+  },
+  "fields": {
+    "diameterMm": {
+      "column": "Burner Size (mm)",
+      "unit": "mm"
+    },
+    "o2Pct": {
+      "column": "Oxygen Conc (percent)",
+      "unit": "%",
+      "excelPercent": true
+    }
+  },
+  "diluent": {
+    "value": "N2"
+  },
+  "ignited": {
+    "rule": "countPositive",
+    "column": "Flames Ignited"
+  },
+  "notes": {
+    "templates": [
+      "{Flames Ignited} flames ignited that day."
+    ],
+    "static": [
+      "Oxygen diluted with nitrogen (table footnote). Chamber pressure varied but is not listed in this summary table."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

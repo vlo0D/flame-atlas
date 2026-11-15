@@ -28,6 +28,7 @@
         "geometry": "burner"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 19.8,
       "o2PctMax": 40,
@@ -327,6 +328,22 @@
         "geometry": "burner"
       }
     ],
+    "fuelAnalogOf": {
+      "states": [
+        "solid",
+        "liquid"
+      ],
+      "claim": {
+        "text": "Burns gas on a porous burner to emulate solid and liquid (condensed) fuels.",
+        "citations": [
+          {
+            "label": "PSI-20 metadata: objective",
+            "url": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-20",
+            "quote": "Emphasize fuel conditions that can be related to a diverse range of condensed fuels."
+          }
+        ]
+      }
+    },
     "conditions": {
       "o2PctMin": 21,
       "o2PctMax": 40,
@@ -583,6 +600,7 @@
         "geometry": "burner"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -817,6 +835,7 @@
         "geometry": "burner"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -1085,6 +1104,7 @@
         "geometry": "burner"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 21,
       "o2PctMax": 30,
@@ -1416,14 +1436,14 @@
         "geometry": "rod"
       },
       {
-        "name": "SIBAL fabric",
-        "state": "solid",
-        "geometry": "fabric"
-      },
-      {
         "name": "PMMA",
         "state": "solid",
         "geometry": null
+      },
+      {
+        "name": "SIBAL fabric",
+        "state": "solid",
+        "geometry": "fabric"
       },
       {
         "name": "PMMA",
@@ -1446,11 +1466,12 @@
         "geometry": "candle"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 13.6,
       "o2PctMax": 22.2,
-      "pressureKpaMin": null,
-      "pressureKpaMax": null,
+      "pressureKpaMin": 99.2,
+      "pressureKpaMax": 99.5,
       "flowCmSMin": 0,
       "flowCmSMax": 62,
       "diluents": [],
@@ -1689,12 +1710,12 @@
       {
         "name": "PMMA",
         "state": "solid",
-        "geometry": "sphere"
+        "geometry": null
       },
       {
         "name": "PMMA",
         "state": "solid",
-        "geometry": null
+        "geometry": "sphere"
       },
       {
         "name": "SIBAL fabric",
@@ -1742,13 +1763,14 @@
         "geometry": "sheet"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
-      "o2PctMin": null,
-      "o2PctMax": null,
-      "pressureKpaMin": null,
-      "pressureKpaMax": null,
-      "flowCmSMin": null,
-      "flowCmSMax": null,
+      "o2PctMin": 15.9,
+      "o2PctMax": 22.72,
+      "pressureKpaMin": 98.29,
+      "pressureKpaMax": 102.21,
+      "flowCmSMin": 0,
+      "flowCmSMax": 44,
       "diluents": [],
       "gravity": [
         "micro"
@@ -1961,6 +1983,7 @@
         "geometry": "droplet"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 17,
       "o2PctMax": 21,
@@ -2168,6 +2191,7 @@
         "geometry": null
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -2308,6 +2332,7 @@
     "pillarsSecondary": [],
     "fuelStates": [],
     "fuels": [],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -2438,6 +2463,7 @@
     "pillarsSecondary": [],
     "fuelStates": [],
     "fuels": [],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -2668,6 +2694,7 @@
         "geometry": "droplet"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 17,
       "o2PctMax": 30,
@@ -3064,6 +3091,7 @@
         "geometry": "droplet"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 12,
       "o2PctMax": 34,
@@ -3482,6 +3510,7 @@
         "geometry": "fabric"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 21.5,
       "o2PctMax": 21.7,
@@ -3674,8 +3703,14 @@
         "name": "PMMA",
         "state": "solid",
         "geometry": null
+      },
+      {
+        "name": "PMMA",
+        "state": "solid",
+        "geometry": "slab"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 21.5,
       "o2PctMax": 22.1,
@@ -3850,6 +3885,7 @@
         "geometry": "fabric"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -4034,6 +4070,7 @@
         "geometry": null
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -4234,6 +4271,7 @@
         "geometry": null
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -4493,6 +4531,7 @@
         "geometry": "burner"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -4704,6 +4743,7 @@
         "geometry": "burner"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -4900,6 +4940,7 @@
     "pillarsSecondary": [],
     "fuelStates": [],
     "fuels": [],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -4983,6 +5024,7 @@
     "pillarsSecondary": [],
     "fuelStates": [],
     "fuels": [],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -5128,6 +5170,7 @@
     "pillarsSecondary": [],
     "fuelStates": [],
     "fuels": [],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": null,
       "o2PctMax": null,
@@ -5326,6 +5369,7 @@
         "geometry": "burner"
       }
     ],
+    "fuelAnalogOf": null,
     "conditions": {
       "o2PctMin": 17.97,
       "o2PctMax": 39.97,

@@ -1,0 +1,34 @@
+{
+  "tableFile": "PSI-106_Experimental table_Slice.csv",
+  "investigationId": "PSI-106",
+  "tableId": "SLICE",
+  "mappingVersion": "1.0.0",
+  "granularity": "test-day",
+  "comment": "Diluent here is the fuel-stream balance gas named in the cell.",
+  "label": {
+    "from": "date"
+  },
+  "idFrom": "row",
+  "date": {
+    "column": "Test Date",
+    "format": "yyyy-mon-dd"
+  },
+  "fuel": {
+    "column": "Fuel Type",
+    "parser": "gas",
+    "geometry": "burner"
+  },
+  "diluent": {
+    "column": "Fuel Type",
+    "regex": "balance\\s+(\\w+)"
+  },
+  "notes": {
+    "templates": [
+      "Source date cell: {Test Date}."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

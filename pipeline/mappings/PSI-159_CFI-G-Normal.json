@@ -1,0 +1,81 @@
+{
+  "tableFile": "PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+  "investigationId": "PSI-159",
+  "tableId": "CFI-G-Normal",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "label": {
+    "column": "Test"
+  },
+  "fuel": {
+    "column": "Fuel",
+    "parser": "gas",
+    "geometry": "burner"
+  },
+  "fields": {
+    "o2Pct": {
+      "column": " XO2 before test",
+      "unit": "fraction"
+    },
+    "o2PctFinal": {
+      "column": "XO2  after test",
+      "unit": "fraction"
+    },
+    "pressureKpa": {
+      "column": "approx p (bar)",
+      "unit": "bar"
+    },
+    "burnTimeS": {
+      "column": "burn time (sec)",
+      "unit": "s"
+    }
+  },
+  "outcome": {
+    "column": "Self-ext or flow term",
+    "map": {
+      "se": "self-extinguished",
+      "ft": "flow-terminated"
+    }
+  },
+  "coolFlame": {
+    "column": "Cool flame?",
+    "prefixMap": {
+      "yes": true,
+      "no": false
+    }
+  },
+  "ignited": {
+    "rule": "map",
+    "column": "Hot ignition",
+    "map": {
+      "yes": true,
+      "no": false
+    }
+  },
+  "ignitedIfCoolFlame": true,
+  "overrides": [
+    {
+      "column": "Comments",
+      "regex": "(?i)fail(ed)? to ignite|not ignited",
+      "set": {
+        "ignited": false,
+        "outcome": "not-ignited"
+      }
+    }
+  ],
+  "notes": {
+    "templates": [
+      "Hot ignition: {Hot ignition}.",
+      "TFP: {TFP}.",
+      "Peak burner temperature {Peak burner T (C )} C.",
+      "Comments: {Comments}."
+    ],
+    "static": [
+      "Pressure is given in the source as approximate."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

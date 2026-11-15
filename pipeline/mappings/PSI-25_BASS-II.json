@@ -1,0 +1,103 @@
+{
+  "tableFile": "PSI-25_Experimental table_BASS-II.csv",
+  "investigationId": "PSI-25",
+  "tableId": "BASS-II",
+  "mappingVersion": "1.1.0",
+  "granularity": "test",
+  "comment": "Flow from 'Air display' per ReadMe, not 'Fan display'. Several readings in one cell become a min-max range with confidence medium.",
+  "label": {
+    "column": "Test #"
+  },
+  "date": {
+    "column": "Date",
+    "format": "m/d/y"
+  },
+  "fuel": {
+    "column": "Fuel Sample Material",
+    "parser": "solid",
+    "defaultMaterial": "PMMA",
+    "defaultMaterialFor": [
+      "film",
+      "rod",
+      "slab"
+    ],
+    "defaultMaterialNote": "Material PMMA taken from the BASS-II ReadMe (PIs burned PMMA films, slabs and rods)."
+  },
+  "fields": {
+    "o2Pct": {
+      "column": "Calibrated  initial O2 % by vol ",
+      "unit": "%"
+    },
+    "o2PctFinal": {
+      "column": "Calibrated final O2 % by vol",
+      "unit": "%"
+    },
+    "co2Pct": {
+      "column": "Initial CO2 % by vol",
+      "unit": "%"
+    },
+    "flowCmS": {
+      "column": "Air display",
+      "unit": "cm/s",
+      "multi": true
+    }
+  },
+  "notes": {
+    "templates": [
+      "PI: {PI}.",
+      "Flow restrictor {Flow restrictor} (0 gives the most flow, 2 the least)."
+    ],
+    "static": [
+      "Air display is the flow speed measured in the duct, in cm/s (BASS-II ReadMe); the sensor responds slowly, so the reading is steady only at a constant flow setting. Fan display is fan voltage x10, not a speed.",
+      "Test outcome is not reported in the source table."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  },
+  "overrides": [
+    {
+      "column": "Fuel Sample Material",
+      "regex": "(?i)^\\s*4 cm spherical section\\s*$",
+      "set": {
+        "fuelName": "PMMA",
+        "fuelState": "solid"
+      },
+      "inferred": [
+        "fuelName"
+      ],
+      "confidence": "medium",
+      "note": "Material PMMA taken from the BASS-II ReadMe (paragraph 10): \"Also had 1 sample/2 tests with 4 cm pmma spherical section.\""
+    },
+    {
+      "column": "Fuel Sample Material",
+      "regex": "(?i)^\\s*200 micron\\s+2 cm wide\\s*$",
+      "set": {
+        "fuelName": "PMMA",
+        "fuelState": "solid",
+        "fuelGeometry": "film"
+      },
+      "inferred": [
+        "fuelName",
+        "fuelGeometry"
+      ],
+      "confidence": "medium",
+      "note": "Material PMMA film taken from the BASS-II ReadMe (paragraph 5): \"Subrata Bhattacharjee burned various thickness of very thin pmma films.\""
+    },
+    {
+      "column": "PI",
+      "regex": "^\\s*Bhattacharjee\\s*$",
+      "set": {
+        "pressureKpaMin": 99.2,
+        "pressureKpaMax": 99.5
+      },
+      "inferred": [
+        "pressureKpaMin",
+        "pressureKpaMax"
+      ],
+      "confidence": "medium",
+      "note": "Pressure taken from the BASS-II Summary Report, section 2.3.5 (Bhattacharjee), p. 46: \"The total pressure is also monitored, which varied from 99.2 to 99.5 kPa in the tests reported.\""
+    }
+  ]
+}

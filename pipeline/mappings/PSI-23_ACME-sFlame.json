@@ -1,0 +1,54 @@
+{
+  "tableFile": "PSI-23_Experimental table_ACME s-Flame.csv",
+  "investigationId": "PSI-23",
+  "tableId": "ACME-sFlame",
+  "mappingVersion": "1.0.0",
+  "granularity": "test-day",
+  "comment": "Atmosphere cells 'with N3'..'with N6' are auto-increment artifacts of N2.",
+  "label": {
+    "column": "Test Day*"
+  },
+  "confidence": "medium",
+  "date": {
+    "parts": {
+      "year": "Year",
+      "month": "Month",
+      "day": "Date"
+    }
+  },
+  "fuel": {
+    "column": "Fuel Bottle",
+    "parser": "gas",
+    "geometry": "burner"
+  },
+  "fields": {
+    "o2Pct": {
+      "column": "Atmosphere*",
+      "unit": "%",
+      "allowText": true
+    },
+    "pressureKpa": {
+      "value": 101.325,
+      "note": "Atmosphere is ~1 atm (table footnote); pressure rises and O2 drops with vitiation during the test."
+    }
+  },
+  "diluent": {
+    "column": "Atmosphere*",
+    "regex": "with\\s+(\\w+)",
+    "fixAutoIncrement": true
+  },
+  "ignited": {
+    "rule": "countPositive",
+    "column": "Flames Ignited*"
+  },
+  "notes": {
+    "templates": [
+      "{Flames Ignited*} flames ignited that day.",
+      "{Test Type}."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

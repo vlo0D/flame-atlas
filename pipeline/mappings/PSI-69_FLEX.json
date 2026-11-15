@@ -1,0 +1,80 @@
+{
+  "tableFile": "PSI-69_Experimental table_FLEX.csv",
+  "investigationId": "PSI-69",
+  "tableId": "FLEX",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "comment": "'Test end': Extinction -> self-extinguished, Completion -> burned-out (droplet consumed), Disruption -> disruption.",
+  "label": {
+    "column": "FLEX Identifier"
+  },
+  "idColumn": "FLEX Test #",
+  "date": {
+    "column": "Test Date",
+    "format": "m/d/y"
+  },
+  "confidence": "medium",
+  "fuel": {
+    "column": "Fuel",
+    "parser": "liquid",
+    "geometry": "droplet"
+  },
+  "fields": {
+    "pressureKpa": {
+      "column": "Ambient pressure; mmHg",
+      "unit": "mmHg"
+    },
+    "o2Pct": {
+      "column": "O initial ambient composition; mole fraction",
+      "unit": "fraction"
+    },
+    "co2Pct": {
+      "column": "CO initial ambient composition; mole fraction",
+      "unit": "fraction"
+    },
+    "diameterMm": {
+      "column": "Droplet initial diameter; mm",
+      "unit": "mm"
+    },
+    "burnTimeS": {
+      "column": "Burn time; s",
+      "unit": "s"
+    }
+  },
+  "diluent": {
+    "fractions": {
+      "N2": "N initial ambient composition; mole fraction",
+      "CO2": "CO initial ambient composition; mole fraction",
+      "He": "He initial ambient composition; mole fraction"
+    },
+    "inferred": true
+  },
+  "flowDirection": {
+    "value": "quiescent"
+  },
+  "ignited": {
+    "rule": "value",
+    "value": true
+  },
+  "outcome": {
+    "column": "Test end",
+    "map": {
+      "disruption": "disruption",
+      "extinction": "self-extinguished",
+      "completion": "burned-out"
+    }
+  },
+  "notes": {
+    "templates": [
+      "Visible flame extinction diameter {Visible flame extinction diameter; mm} mm.",
+      "Burning rate {Burning rate; mm} (unit as in the source column)."
+    ],
+    "static": [
+      "Composition columns O, N, CO are read as O2, N2, CO2 (subscripts lost in the source headers)."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

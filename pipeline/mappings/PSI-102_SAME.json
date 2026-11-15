@@ -1,0 +1,40 @@
+{
+  "tableFile": "PSI-102_Experimental table_SAME.csv",
+  "investigationId": "PSI-102",
+  "tableId": "SAME",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "label": {
+    "column": "Sample #"
+  },
+  "fuel": {
+    "column": "Sample Material  ",
+    "parser": "plain",
+    "state": "solid",
+    "stripAfter": ":"
+  },
+  "fields": {
+    "flowCmS": {
+      "column": "Air Flow (cm/s)",
+      "unit": "cm/s"
+    }
+  },
+  "overrides": [
+    {
+      "column": "Sample Material  ",
+      "regex": "(?i)same conditions as 1-4",
+      "set": {},
+      "note": "Source: same conditions as samples 1-4; the values are not repeated in the table, so they stay null here."
+    }
+  ],
+  "notes": {
+    "templates": [
+      "Weight loss rate {Weight loss rate (mg/min)} mg/min.",
+      "Aging duration {Aging Duration (minutes)} min."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

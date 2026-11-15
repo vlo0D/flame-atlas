@@ -1,0 +1,35 @@
+{
+  "tableFile": "PSI-101_Experimental table_SAME-R.csv",
+  "investigationId": "PSI-101",
+  "tableId": "SAME-R",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "comment": "Dates have no year in the source, so `date` is null.",
+  "label": {
+    "column": "SAME Test #"
+  },
+  "fuel": {
+    "column": "Sample Type",
+    "parser": "plain",
+    "state": "solid"
+  },
+  "fields": {
+    "flowCmS": {
+      "column": "Inlet velocity (cm/s)",
+      "unit": "cm/s"
+    }
+  },
+  "notes": {
+    "templates": [
+      "Date in the source: {Date} (no year).",
+      "{Description}.",
+      "Rt/R0 = {Rt/R0}.",
+      "Duration {Duration (sec)} s.",
+      "Net aging time {Net aging time (sec)} s."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

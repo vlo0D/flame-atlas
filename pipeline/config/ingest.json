@@ -1,0 +1,41 @@
+{
+  "source": {
+    "name": "psi",
+    "baseUrl": "https://psi.nasa.gov",
+    "investigationPageUrl": "https://psi.nasa.gov/physci/repo/data/investigations/{id}",
+    "license": "CC0-1.0",
+    "treeTimeoutSeconds": 600
+  },
+  "discovery": {
+    "query": "combustion",
+    "dataType": "investigation",
+    "pageSize": 300,
+    "researchAreas": ["Combustion Science"],
+    "includeIds": [],
+    "excludeIds": []
+  },
+  "selection": {
+    "allowedExtensions": ["pdf", "docx", "csv", "xlsx"],
+    "excludeFolders": ["Raw Data"],
+    "includeFolders": [],
+    "maxFileSizeMb": 60
+  },
+  "http": {
+    "pauseSeconds": 0.5,
+    "timeoutSeconds": 60,
+    "retries": 3,
+    "backoffSeconds": 2.0,
+    "userAgent": "flame-atlas-pipeline/1.0 (NASA Space Apps 2026)"
+  },
+  "extraction": {
+    "pdfTables": true,
+    "pdfMaxPages": 400,
+    "maxTableRows": 20000,
+    "maxRowsPerDocument": 20000,
+    "csvEncodings": ["utf-8-sig", "cp1252", "latin-1"]
+  },
+  "paths": {
+    "raw": "data/raw",
+    "extracted": "data/extracted"
+  }
+}

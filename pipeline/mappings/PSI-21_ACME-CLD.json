@@ -1,0 +1,43 @@
+{
+  "tableFile": "PSI-21_Experimental table_CLD Flame.csv",
+  "investigationId": "PSI-21",
+  "tableId": "ACME-CLD",
+  "mappingVersion": "1.0.0",
+  "granularity": "test-day",
+  "comment": "CLD = Coflow Laminar Diffusion flame, hence coflow. Fuel bottle cells CH5..CH14 and C2H5..C2H11 are spreadsheet auto-increment artifacts of CH4 and C2H4 (confidence low).",
+  "label": {
+    "column": "Test Day"
+  },
+  "date": {
+    "column": "Test Day",
+    "format": "yyddd"
+  },
+  "fuel": {
+    "column": "Fuel Bottle",
+    "parser": "gas",
+    "geometry": "burner",
+    "fixAutoIncrement": true
+  },
+  "flowDirection": {
+    "value": "coflow"
+  },
+  "ignited": {
+    "rule": "countPositive",
+    "column": "Flames ignited"
+  },
+  "notes": {
+    "templates": [
+      "{Flames ignited} flames ignited that day.",
+      "Test type: {Test Type}.",
+      "Fuel concentration range {Fuel conc. Range} (diluted with nitrogen).",
+      "Fuel MFC {Fuel MFC} slpm, N2 MFC {N2 MFC} slpm (maximum controller flow, nitrogen basis)."
+    ],
+    "static": [
+      "Oxygen and pressure are not in the source table."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

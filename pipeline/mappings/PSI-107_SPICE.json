@@ -1,0 +1,40 @@
+{
+  "tableFile": "PSI-107_Experimental table_Spice.csv",
+  "investigationId": "PSI-107",
+  "tableId": "SPICE",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "comment": "SPICE = Smoke Point In Co-flow Experiment, hence coflow. The source repeats some rows; each keeps its own row number.",
+  "idFrom": "row",
+  "fuel": {
+    "column": "Fuel",
+    "parser": "gas",
+    "geometry": "burner"
+  },
+  "fields": {
+    "flowCmS": {
+      "column": "Air Rate (cm/s)",
+      "unit": "cm/s"
+    },
+    "diameterMm": {
+      "column": "Nozzle (mm)",
+      "unit": "mm"
+    }
+  },
+  "flowDirection": {
+    "value": "coflow"
+  },
+  "notes": {
+    "templates": [
+      "GMT day {GMT date} (year not given), ignition {GMT ignition}, flame off {GMT  Flame Off }.",
+      "Fuel rate {Fuel Rate (mg/s)} mg/s ({Fuel Rate (sccm)} sccm)."
+    ],
+    "static": [
+      "diameterMm is the burner nozzle diameter."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

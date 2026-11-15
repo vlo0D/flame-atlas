@@ -1,0 +1,64 @@
+{
+  "tableFile": "PSI-98_Experimental table_SAFFIRE-1.csv",
+  "investigationId": "PSI-98",
+  "tableId": "SAFFIRE-1",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "label": {
+    "column": "Sample Number "
+  },
+  "skipRows": [
+    {
+      "column": "Material",
+      "regex": "(?i)flow visulation",
+      "reason": "pre-test flow visualization video, not a burn"
+    }
+  ],
+  "fuel": {
+    "column": "Material",
+    "parser": "plain",
+    "state": "solid"
+  },
+  "fields": {
+    "thicknessMm": {
+      "column": "Sample Thickness (cm)",
+      "unit": "cm"
+    },
+    "widthMm": {
+      "column": "Sample Width (cm)",
+      "unit": "cm"
+    },
+    "flowCmS": {
+      "column": "Air Flow (cm/s)",
+      "unit": "cm/s"
+    },
+    "o2Pct": {
+      "column": "Percent O2",
+      "unit": "%"
+    },
+    "burnTimeS": {
+      "column": "Burn Time (s)",
+      "unit": "s"
+    }
+  },
+  "flowDirection": {
+    "column": "Flow Direction ",
+    "map": {
+      "concurrent": "concurrent",
+      "opposed": "opposed"
+    }
+  },
+  "ignited": {
+    "rule": "burnTime"
+  },
+  "notes": {
+    "templates": [
+      "Sample length {Sample Length (cm)} cm.",
+      "Ignition power {Ignition Power (W)} W for {Ignition Time (s)} s."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "tableFile": "PSI-10_Experimental table_Flame Design_Inverse Flame.csv",
+  "investigationId": "PSI-10",
+  "tableId": "FlameDesign-Inverse",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "label": {
+    "column": "Test"
+  },
+  "fuel": {
+    "value": "C2H4",
+    "parser": "gas",
+    "geometry": "burner",
+    "note": "Fuel C2H4 taken from the column header 'XC2H4 initial'."
+  },
+  "fields": {
+    "pressureKpa": {
+      "column": "pinit (atm)",
+      "unit": "atm"
+    }
+  },
+  "notes": {
+    "templates": [
+      "Burner oxidizer O2 mole fraction {XO2}; ambient C2H4 mole fraction {XC2H4 initial} at the start.",
+      "Test day {Day}."
+    ],
+    "static": [
+      "Inverse flame: oxygen issues from the burner into a fuel/diluent ambient, so the ambient O2 fields are null."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

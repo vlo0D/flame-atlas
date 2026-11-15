@@ -1,0 +1,52 @@
+{
+  "tableFile": "PSI-68_Experimental table_Flex2.csv",
+  "investigationId": "PSI-68",
+  "tableId": "FLEX-2",
+  "mappingVersion": "1.0.0",
+  "granularity": "matrix-row",
+  "label": {
+    "column": "Sample (Fuel Type)"
+  },
+  "idFrom": "row",
+  "fuel": {
+    "column": "Sample (Fuel Type)",
+    "parser": "liquid",
+    "geometry": "droplet"
+  },
+  "fields": {
+    "o2Pct": {
+      "column": "Oxygen Mole Fraction",
+      "unit": "fraction"
+    },
+    "pressureKpa": {
+      "column": "Ambient Pressure (atm)",
+      "unit": "atm"
+    },
+    "flowCmS": {
+      "column": "Flow Velocity (cm/s)",
+      "unit": "cm/s"
+    },
+    "diameterMm": {
+      "column": "Initial Droplet Diameter (mm)",
+      "unit": "mm"
+    }
+  },
+  "diluent": {
+    "column": "Ambient Gas Mixture ",
+    "regex": "O2/(\\w+)",
+    "findall": true
+  },
+  "notes": {
+    "templates": [
+      "Initial droplet diameter {Initial Droplet Diameter (mm)} mm.",
+      "Ambient temperature { Ambient Temperature (C)} C."
+    ],
+    "static": [
+      "Test-matrix row: the ranges and lists of conditions for this fuel, not a single test."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

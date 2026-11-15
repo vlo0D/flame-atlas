@@ -1,0 +1,126 @@
+[
+  {
+    "id": "iss",
+    "name": "ISS cabin",
+    "description": "Sea-level air in microgravity with forced ventilation.",
+    "o2Pct": 21,
+    "pressureKpa": 101.3,
+    "gravityG": 0,
+    "flowCmSMin": 5,
+    "flowCmSMax": 20,
+    "fuelStates": [
+      "solid"
+    ],
+    "focus": "all",
+    "sources": [
+      {
+        "label": "Flame in Freefall challenge page, Potential Considerations",
+        "url": "https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/",
+        "quote": null
+      }
+    ],
+    "assumptions": [
+      "Ventilation flow range 5-20 cm/s is a placeholder until confirmed against a NASA source."
+    ]
+  },
+  {
+    "id": "lunar-habitat",
+    "name": "Lunar habitat",
+    "description": "Oxygen-enriched, reduced-pressure exploration atmosphere at lunar gravity.",
+    "o2Pct": 34,
+    "pressureKpa": 56.5,
+    "gravityG": 0.165,
+    "flowCmSMin": 5,
+    "flowCmSMax": 20,
+    "fuelStates": [
+      "solid"
+    ],
+    "focus": "prevention",
+    "sources": [
+      {
+        "label": "Flame in Freefall challenge page, Potential Considerations",
+        "url": "https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/",
+        "quote": null
+      }
+    ],
+    "assumptions": [
+      "The challenge page gives bounds (at least 30% O2, at most 10.2 psi). 34% O2 at 8.2 psi (56.5 kPa) is a point inside those bounds, to be confirmed against a NASA exploration-atmosphere reference.",
+      "Ventilation flow range 5-20 cm/s is a placeholder until confirmed against a NASA source."
+    ]
+  },
+  {
+    "id": "mars-habitat",
+    "name": "Mars habitat",
+    "description": "Same exploration atmosphere at Mars gravity.",
+    "o2Pct": 34,
+    "pressureKpa": 56.5,
+    "gravityG": 0.38,
+    "flowCmSMin": 5,
+    "flowCmSMax": 20,
+    "fuelStates": [
+      "solid"
+    ],
+    "focus": "prevention",
+    "sources": [
+      {
+        "label": "Flame in Freefall challenge page, Potential Considerations",
+        "url": "https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/",
+        "quote": null
+      }
+    ],
+    "assumptions": [
+      "Assumes the same atmosphere as the lunar habitat preset.",
+      "Ventilation flow range 5-20 cm/s is a placeholder until confirmed against a NASA source."
+    ]
+  },
+  {
+    "id": "rover",
+    "name": "Pressurized rover",
+    "description": "Small crewed cabin with the exploration atmosphere at lunar gravity.",
+    "o2Pct": 34,
+    "pressureKpa": 56.5,
+    "gravityG": 0.165,
+    "flowCmSMin": 5,
+    "flowCmSMax": 20,
+    "fuelStates": [
+      "solid",
+      "liquid"
+    ],
+    "focus": "suppression",
+    "sources": [
+      {
+        "label": "Flame in Freefall challenge page, Potential Considerations",
+        "url": "https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/",
+        "quote": null
+      }
+    ],
+    "assumptions": [
+      "Assumes the same atmosphere as the lunar habitat preset.",
+      "Ventilation flow range 5-20 cm/s is a placeholder until confirmed against a NASA source."
+    ]
+  },
+  {
+    "id": "eva-suit",
+    "name": "EVA spacesuit",
+    "description": "Pure oxygen at low pressure.",
+    "o2Pct": 100,
+    "pressureKpa": 29.6,
+    "gravityG": 0.165,
+    "flowCmSMin": null,
+    "flowCmSMax": null,
+    "fuelStates": [
+      "solid"
+    ],
+    "focus": "prevention",
+    "sources": [
+      {
+        "label": "Flame in Freefall challenge page, Potential Considerations",
+        "url": "https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/",
+        "quote": null
+      }
+    ],
+    "assumptions": [
+      "Gravity set to lunar surface; use 0 for an orbital spacewalk."
+    ]
+  }
+]

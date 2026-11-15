@@ -1,0 +1,48 @@
+{
+  "tableFile": "PSI-39_Experimental table_CFI.csv",
+  "investigationId": "PSI-39",
+  "tableId": "CFI",
+  "mappingVersion": "1.0.0",
+  "granularity": "test",
+  "label": {
+    "column": "CIR "
+  },
+  "date": {
+    "column": "Test Date",
+    "format": "d-mon-yy"
+  },
+  "fuel": {
+    "column": "Fuel ",
+    "parser": "liquid",
+    "geometry": "droplet"
+  },
+  "fields": {
+    "pressureKpa": {
+      "column": "Pressure",
+      "unit": "atm"
+    },
+    "o2Pct": {
+      "column": "Oxygen",
+      "unit": "fraction"
+    }
+  },
+  "diluent": {
+    "fractions": {
+      "N2": "Nitrogen",
+      "He": "Helium"
+    }
+  },
+  "flowDirection": {
+    "value": "quiescent"
+  },
+  "notes": {
+    "templates": [
+      "Fiber-supported droplet: {Fiber}.",
+      "FLEX number {Flex Number}, local time {Local Time}."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  }
+}

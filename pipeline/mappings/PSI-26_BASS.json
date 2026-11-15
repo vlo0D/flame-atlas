@@ -1,0 +1,86 @@
+{
+  "tableFile": "PSI-26_Experimental table_BASS.csv",
+  "investigationId": "PSI-26",
+  "tableId": "BASS",
+  "mappingVersion": "1.2.0",
+  "granularity": "test",
+  "comment": "Only date, sample and material are in the table. Oxygen, pressure and airflow come from the As Run Test Matrix of the same investigation, joined on the as-run test number.",
+  "label": {
+    "column": "Test #"
+  },
+  "date": {
+    "column": "Date",
+    "format": "m/d/y"
+  },
+  "fuel": {
+    "column": "Fuel Sample Material",
+    "parser": "solid"
+  },
+  "join": {
+    "file": "Science Documents/PSI-26_Science Documents_As Run_Test Matrix.xlsx",
+    "label": "the BASS As Run Test Matrix (PSI-26 Science Documents, sheet 'as run matrix')",
+    "sheet": "as run matrix",
+    "headerRow": 3,
+    "key": {
+      "table": [
+        "As Run Test #",
+        "Test #"
+      ],
+      "source": [
+        "As run test no.",
+        "Test no."
+      ]
+    },
+    "confidence": "medium"
+  },
+  "fields": {
+    "o2Pct": {
+      "column": "@O2 % by volume",
+      "unit": "fraction"
+    },
+    "pressureKpa": {
+      "column": "@pressure, atm",
+      "unit": "atm"
+    },
+    "flowCmS": {
+      "column": "@Air display",
+      "unit": "cm/s",
+      "multi": true,
+      "allowText": true
+    }
+  },
+  "skipRows": [
+    {
+      "column": "Fuel Sample Material",
+      "regex": "(?i)soot cleaning",
+      "reason": "soot cleaning run, not a burn"
+    }
+  ],
+  "notes": {
+    "templates": [
+      "As-run test {As Run Test #}, sample {Sample #}."
+    ],
+    "static": [
+      "Air display is the flow speed measured in the duct, in cm/s (as in BASS-II); several values mean the flow was changed during the test."
+    ]
+  },
+  "gravity": {
+    "value": "micro",
+    "source": "ISS flight experiment"
+  },
+  "overrides": [
+    {
+      "column": "Fuel Sample Material",
+      "regex": "(?i)^\\s*\\d\\s*cm\\s+(wake\\s+)?sphere",
+      "set": {
+        "fuelName": "PMMA",
+        "fuelState": "solid"
+      },
+      "inferred": [
+        "fuelName"
+      ],
+      "confidence": "medium",
+      "note": "Material PMMA taken from the BASS System Acceptance Review (p. 33): \"SPHERE & HEMISPHERE SAMPLE ASSEMBLY (1 CM & 2 CM DIAMETER PMMA)\"."
+    }
+  ]
+}

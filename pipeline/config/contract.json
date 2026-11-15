@@ -1,0 +1,208 @@
+{
+  "contractVersionFrom": "contracts/types.ts",
+  "source": {
+    "name": "NASA Physical Sciences Informatics (PSI), Combustion Science",
+    "url": "https://psi.nasa.gov/physci/repo/search?q=combustion",
+    "license": "CC0-1.0"
+  },
+  "dataNotes": [
+    "No partial-gravity combustion tests exist in PSI. E-FIELD Flames only simulates partial gravity with an electric field.",
+    "Rows are not always individual tests: some tables list test days, test-matrix ranges or figure references. See the granularity field.",
+    "Pressure and flow speed are not reported in several source tables; those fields are null.",
+    "Inverse-flame tables (ACME Flame Design Inverse, CFI-G Inverse) feed oxygen through the burner into a fuel ambient, so their ambient O2 fields are null; the burner O2 fraction is in notes.",
+    "BASS and BASS-II tables do not report the test outcome; the field is null."
+  ],
+  "quality": {
+    "checkedValues": null,
+    "correctValues": null,
+    "notes": "Automated checks only. The mapping engine reproduces the 7 hand-normalized fixture rows exactly (tests/pipeline/test_normalize.py), and a script compared over 2,100 oxygen, pressure and airflow values in 8 tables with their source cells after unit conversion: all match within 2 %. A person has not yet checked the 40-value sample in data/review/sample-40.csv."
+  },
+  "investigationsSource": "docs/03-data-sources.md, section 3 (working hypothesis, to be confirmed by a domain reviewer)",
+  "investigations": {
+    "PSI-10": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "ACME"
+    },
+    "PSI-20": {
+      "pillarPrimary": "prevention",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "ACME"
+    },
+    "PSI-21": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "ACME"
+    },
+    "PSI-22": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "ACME"
+    },
+    "PSI-23": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "ACME"
+    },
+    "PSI-25": {
+      "pillarPrimary": "prevention",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "MSG",
+      "insert": "SPICE flow duct"
+    },
+    "PSI-26": {
+      "pillarPrimary": "prevention",
+      "pillarsSecondary": [
+        "suppression"
+      ],
+      "platform": "ISS",
+      "facility": "MSG",
+      "insert": null
+    },
+    "PSI-39": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "MDCA"
+    },
+    "PSI-47": {
+      "pillarPrimary": "detection",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": null,
+      "insert": null
+    },
+    "PSI-60": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": null,
+      "facility": null,
+      "insert": null
+    },
+    "PSI-62": {
+      "pillarPrimary": "prevention",
+      "pillarsSecondary": [],
+      "platform": null,
+      "facility": null,
+      "insert": null
+    },
+    "PSI-68": {
+      "pillarPrimary": "suppression",
+      "pillarsSecondary": [
+        "fundamentals"
+      ],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "MDCA"
+    },
+    "PSI-69": {
+      "pillarPrimary": "suppression",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "MDCA"
+    },
+    "PSI-98": {
+      "pillarPrimary": "prevention",
+      "pillarsSecondary": [],
+      "platform": "Cygnus",
+      "facility": null,
+      "insert": null
+    },
+    "PSI-99": {
+      "pillarPrimary": "prevention",
+      "pillarsSecondary": [],
+      "platform": "Cygnus",
+      "facility": null,
+      "insert": null
+    },
+    "PSI-100": {
+      "pillarPrimary": "prevention",
+      "pillarsSecondary": [],
+      "platform": "Cygnus",
+      "facility": null,
+      "insert": null
+    },
+    "PSI-101": {
+      "pillarPrimary": "detection",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": null,
+      "insert": "Comparative Soot Diagnostic"
+    },
+    "PSI-102": {
+      "pillarPrimary": "detection",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": null,
+      "insert": "Comparative Soot Diagnostic"
+    },
+    "PSI-106": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "MSG",
+      "insert": "SPICE"
+    },
+    "PSI-107": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "MSG",
+      "insert": null
+    },
+    "PSI-115": {
+      "pillarPrimary": "detection",
+      "pillarsSecondary": [],
+      "platform": null,
+      "facility": null,
+      "insert": null
+    },
+    "PSI-117": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": null,
+      "facility": null,
+      "insert": null
+    },
+    "PSI-142": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": null,
+      "facility": null,
+      "insert": null
+    },
+    "PSI-159": {
+      "pillarPrimary": "fundamentals",
+      "pillarsSecondary": [],
+      "platform": "ISS",
+      "facility": "CIR",
+      "insert": "ACME"
+    }
+  },
+  "fuelAnalogOf": {
+    "_comment": "Investigations that burn one fuel to stand in for fuels of another state (contract 1.1.0). The quote must be found verbatim in the named PSI metadata field, or the build fails. Not found elsewhere: PSI-62 and PSI-117 'simulate'/'mimic' refer to numerical models, PSI-68 surrogates are liquids standing in for liquids.",
+    "PSI-20": {
+      "states": [
+        "solid",
+        "liquid"
+      ],
+      "text": "Burns gas on a porous burner to emulate solid and liquid (condensed) fuels.",
+      "field": "objective",
+      "quote": "Emphasize fuel conditions that can be related to a diverse range of condensed fuels.",
+      "url": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-20"
+    }
+  }
+}

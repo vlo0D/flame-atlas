@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "extracted-index.schema.json",
+  "title": "data/extracted/index.json: investigations (contract-style fields) and their extracted documents",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "source", "counts", "investigations"],
+  "$defs": {
+    "strOrNull": { "type": ["string", "null"] },
+    "intOrNull": { "type": ["integer", "null"] },
+    "Document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fileName", "folder", "format", "path", "status", "textBlocks", "tables", "tableRows", "warnings"],
+      "properties": {
+        "fileName": { "type": "string" },
+        "folder": { "type": "string" },
+        "format": { "type": "string" },
+        "path": { "type": "string", "description": "repo-relative path of the extracted JSON" },
+        "status": { "enum": ["ok", "partial", "failed"] },
+        "textBlocks": { "type": "integer", "minimum": 0 },
+        "tables": { "type": "integer", "minimum": 0 },
+        "tableRows": { "type": "integer", "minimum": 0 },
+        "warnings": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "Investigation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "acronym", "title", "doi", "url", "psiUrl", "kind", "platform", "facility", "yearStart", "yearEnd",
+                   "researchArea", "subResearchArea", "managingCenter", "license", "version", "texts", "publications",
+                   "derived", "files", "documents"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^PSI-[0-9]+$" },
+        "acronym": { "$ref": "#/$defs/strOrNull" },
+        "title": { "type": "string", "minLength": 1 },
+        "doi": { "$ref": "#/$defs/strOrNull" },
+        "url": { "type": "string", "pattern": "^https?://" },
+        "psiUrl": { "type": "string", "pattern": "^https?://" },
+        "kind": { "enum": ["flight", "ground", null] },
+        "platform": { "$ref": "#/$defs/strOrNull" },
+        "facility": { "$ref": "#/$defs/strOrNull" },
+        "yearStart": { "$ref": "#/$defs/intOrNull" },
+        "yearEnd": { "$ref": "#/$defs/intOrNull" },
+        "researchArea": { "$ref": "#/$defs/strOrNull" },
+        "subResearchArea": { "$ref": "#/$defs/strOrNull" },
+        "managingCenter": { "$ref": "#/$defs/strOrNull" },
+        "license": { "$ref": "#/$defs/strOrNull" },
+        "version": { "$ref": "#/$defs/intOrNull" },
+        "texts": { "type": "object", "additionalProperties": { "$ref": "#/$defs/strOrNull" } },
+        "publications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "year", "doi"],
+            "properties": {
+              "title": { "type": "string" },
+              "year": { "$ref": "#/$defs/intOrNull" },
+              "doi": { "$ref": "#/$defs/strOrNull" }
+            }
+          }
+        },
+        "derived": { "type": "array", "items": { "type": "string" } },
+        "files": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["listed", "selected", "skippedByReason"],
+          "properties": {
+            "listed": { "type": "integer", "minimum": 0 },
+            "selected": { "type": "integer", "minimum": 0 },
+            "skippedByReason": { "type": "object", "additionalProperties": { "type": "integer" } }
+          }
+        },
+        "documents": { "type": "array", "items": { "$ref": "#/$defs/Document" } }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "generatedAt": { "type": "string" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "license"],
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "type": "string", "pattern": "^https?://" },
+        "license": { "type": "string" }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["investigations", "documents", "documentsFailed", "tables", "tableRows"],
+      "properties": {
+        "investigations": { "type": "integer", "minimum": 0 },
+        "documents": { "type": "integer", "minimum": 0 },
+        "documentsFailed": { "type": "integer", "minimum": 0 },
+        "tables": { "type": "integer", "minimum": 0 },
+        "tableRows": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "investigations": { "type": "array", "items": { "$ref": "#/$defs/Investigation" } }
+  }
+}
