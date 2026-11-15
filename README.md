@@ -10,7 +10,9 @@ shows where the data has gaps. A language model (SI) reads NASA's tables, test m
 notes into that table and writes a short brief for each preset environment; code checks every value it
 reads and every number it writes against the NASA source.
 
-**Live app:** <https://vlo0d.github.io/flame-atlas/>
+**Live app:** <https://vlo0d.github.io/flame-atlas/> · **Demo (7 slides):** <https://vlo0d.github.io/flame-atlas/demo/flame-atlas-demo.pdf>
+
+![Scenario screen: a lunar habitat set beside what NASA tested, with the SI brief](submission/screenshots/scenario-lunar-habitat.png)
 
 ## What it does
 
@@ -33,6 +35,10 @@ at 70.3 kPa (10.2 psi) or less. In the PSI data:
 - No test was run at real partial gravity. E-FIELD Flames only simulates it with an electric field.
 
 For the ISS cabin itself, 154 solid-fuel tests sit within 5 points of oxygen and 15 kPa of pressure.
+
+| Coverage: solid fuels only | Tests: a row opened to its NASA source |
+|---|---|
+| ![Coverage grid of oxygen against pressure for solid fuels; the exploration atmosphere is empty](submission/screenshots/coverage-solid-fuel.png) | ![Tests table with a BASS row opened to its NASA file, original cells and the operator's note read by SI](submission/screenshots/tests-bass-si-row.png) |
 
 ## How it works
 
@@ -97,8 +103,8 @@ python3 contracts/validate.py data/processed    # check the data against the con
 | `data/processed/` | the four files the site reads |
 | `data/raw/` | the 22 NASA tables and investigation metadata (documents are downloaded, not committed) |
 | `data/derived/` | per-test summaries of sensor telemetry, built by `pipeline/telemetry.py` |
-| `data/review/` | samples for checking the data by hand |
-| `submission/` | project page text and references |
+| `data/review/` | samples drawn from the data, and the SI readings that code rejected |
+| `submission/` | project page text, references, screenshots and the demo slides (`demo/slides.html`, built by `demo/build.sh`) |
 | `docs/` | team documents, in Ukrainian; start with [docs/kit-readme.md](docs/kit-readme.md) |
 
 ## Data and credits
@@ -107,3 +113,5 @@ All data comes from [NASA Physical Sciences Informatics, Combustion Science](htt
 published under CC0-1.0. Libraries, tools and other references are listed in
 [submission/references.md](submission/references.md). How SI (AI) is used in the product and in building
 it is described on the Methodology screen and in [docs/si-usage-log.md](docs/si-usage-log.md).
+Most of the code, the table mappings and the demo slides were written with an AI coding assistant (Claude Code)
+and checked with tests and contract validation.

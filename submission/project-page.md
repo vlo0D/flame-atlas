@@ -1,7 +1,30 @@
-# Project page (English only)
+# Project page: text for the submission form (English only)
 
-Field names match the Space Apps project form. Numbers come from `data/processed` as of the last build;
-re-check them on the Methodology screen before submitting. Fields marked TODO need a person.
+Each block is the text of the form field of the same name. The numbers come from `data/processed`
+(build of 15 November 2026) and match the Methodology screen. The places for images are marked `[Image: ...]`;
+the files are in `submission/screenshots/` and go in through Insert → Inline Image in the editor of the
+Project Details field.
+
+The live form of 2026 differs from the guide in three fields:
+
+- **Summary** takes at most 1,500 characters; the text below has 1,088.
+- **Use of Super Intelligence (SI)** is a list of options, not a text. Ticked: Research or Information
+  Gathering; Data Analysis and Interpretation; Building SI/ML Into the Project; Coding, Debugging, or
+  Troubleshooting; Writing, Editing, or Translation; Visual Design or Image Creation; Presentation, Video,
+  or Audio. The text of that section stays here for the README and for questions from the organisers.
+- **NASA Data** and **Space Agency Partner & Other Data** are lists of links, each with a name. The links
+  entered are listed at the end of those two sections.
+
+| Field of the Space Apps form | Name in the local checklist |
+|---|---|
+| Project Name | Project Title |
+| High-Level Project Summary | High-Level Project Summary |
+| Link to Project Demo | Project Demo |
+| Link to Final Project | Final Project Link |
+| Detailed Project Description | Detailed Project Description |
+| Use of Super Intelligence (SI) | AI Tools |
+| NASA Data | NASA Data & References |
+| Space Agency Partner Data and Other References | NASA Data & References |
 
 ## Project Name
 
@@ -13,25 +36,39 @@ Flame Atlas turns NASA's microgravity combustion research into a fire-safety too
 It reads all 24 combustion investigations in NASA Physical Sciences Informatics (PSI), merges their 22
 experiment tables into one table of 1,872 individual tests in common units, and lets an engineer describe
 a crew environment (oxygen, pressure, gravity, airflow, fuel) to see which investigations tested
-conditions closest to it, with a transparent score and a source for every value. It also makes the
-gaps visible: of all those tests, only 20 were run in the oxygen-enriched, low-pressure atmosphere planned
-for lunar and Mars habitats, all of them gas-burner flames, and no solid material was tested above
-22.7 % oxygen. Knowing what has not been tested is as important for fire safety as knowing what has.
+conditions closest to it, with an open score and a source for every value. It also makes the gaps visible:
+of all those tests, only 20 were run in the oxygen-enriched, low-pressure atmosphere planned for lunar and
+Mars habitats, all of them gas-burner flames, and no solid material was tested above 22.7 % oxygen.
+Knowing what has not been tested matters for fire safety as much as knowing what has.
 SI (a language model) reads NASA's tables, test matrices and operator notes into that one table and writes
 a short brief that interprets each preset environment; code checks every value it reads and every number
 it writes against the NASA source, and shows the source next to it.
 
 ## Link to Project Demo
 
-TODO: public link to the slides (7 at most) or the video (30 seconds at most). Must open without a login.
+https://vlo0d.github.io/flame-atlas/demo/flame-atlas-demo.pdf
+
+Seven slides, PDF. The same file on GitHub, if the first link is blocked:
+https://github.com/vlo0D/flame-atlas/blob/main/apps/web/public/demo/flame-atlas-demo.pdf
 
 ## Link to Final Project
 
-https://github.com/vlo0D/flame-atlas (the README links to the live app: https://vlo0d.github.io/flame-atlas/)
+https://github.com/vlo0D/flame-atlas
+
+The README opens with the link to the live app: https://vlo0d.github.io/flame-atlas/
 
 ## Detailed Project Description
 
+### The problem
+
+Lunar and Mars habitat concepts plan an oxygen-enriched, reduced-pressure atmosphere: at least 30 % oxygen at
+70.3 kPa (10.2 psi) or less, in partial gravity. Materials burn differently there than in an ISS cabin, and
+a crew cannot leave. NASA has run 24 combustion investigations that bear on this, but their results sit in
+22 tables with different columns and units and in hundreds of documents. Nobody can ask them one question.
+
 ### What it does
+
+[Image: scenario-lunar-habitat.png]
 
 - **Scenario.** Choose a preset (ISS cabin, lunar or Mars habitat, pressurized rover, EVA suit) or enter your
   own oxygen, pressure, gravity, airflow, fuel state and fire-safety focus. The screen shows how many tests
@@ -51,6 +88,20 @@ https://github.com/vlo0D/flame-atlas (the README links to the live app: https://
   what varied between its tests. Every statement carries a word-for-word quote and a link to its source.
 - **Methodology.** How complete each condition and result is, where each value came from, how the numbers
   are computed, how the data was checked, how SI powers the dashboard, and its limits.
+
+[Image: tests-bass-si-row.png]
+
+### What the data shows
+
+[Image: coverage-solid-fuel.png]
+
+- Of 1,872 individual tests, 20 were run inside the exploration atmosphere, and all 20 are gas-burner flames
+  (ACME CFI-G).
+- No solid material, which is what actually burns in a habitat, was tested above 22.7 % oxygen. Every
+  solid-fuel test that reports pressure was run at ISS cabin pressure, 98–104 kPa.
+- No test was run at real partial gravity. E-FIELD Flames only simulates it with an electric field.
+- For the ISS cabin, 154 of the 379 solid-fuel tests sit within 5 points of oxygen and 15 kPa of pressure.
+  For a lunar or Mars habitat, none do.
 
 ### How it works
 
@@ -73,34 +124,71 @@ https://github.com/vlo0D/flame-atlas (the README links to the live app: https://
    Each sentence lists the facts it rests on; the app re-checks every number and name against the data in
    the browser and does not show a sentence that fails. No model is called at run time.
 
+### How SI powers it, and how it is checked
+
+[Image: scenario-si-brief-checked.png]
+
+SI reads and writes; ordinary code checks each result against its NASA source before it reaches a screen.
+
+- **One table from 22.** SI proposed how each NASA table maps onto the common fields and found conditions
+  a table leaves out in other NASA files. A script compared over 2,100 converted oxygen, pressure and airflow
+  values in 8 tables with their source cells: all match within 2 %.
+- **Operator notes.** SI read the 121 notes of the BASS operators and found the ignition of 113 tests, the
+  outcome of 75 and the burn time of 17. A value is kept only when the quoted words are in the NASA cell:
+  205 kept, none rejected. The quote is shown beside the value.
+- **SI brief.** For each of the five preset environments SI wrote a short interpretation. Code checks every
+  number and investigation name in it, in a unit test and again in the browser: 26 of 26 sentences pass, with
+  98 numbers and 24 names checked.
+- SI does not set or adjust a score, does not fill a value that no NASA file reports, and does not draw
+  conclusions about how materials burn.
+- Everything SI produced is marked: an SI badge in the app, the model's name in the brief file and in the
+  notes of each row it read, and a line in the footer of every demo slide.
+
+### What is creative about it
+
+- It answers with a scenario, not a search. The user describes an environment, and the tool brings the
+  evidence to it and says how far each investigation is from it, part by part.
+- It treats "nobody tested this" as a result. The gaps are counted and drawn on the same grid as the tests,
+  and every count opens the rows behind it.
+- SI works only where it can be checked. Every value it reads carries a word-for-word NASA quote, and every
+  number it writes is checked again by code in the browser.
+
 ### Benefits
 
-- Engineers and researchers get, in a minute, an answer that otherwise takes days of reading 24 data pages
+- Engineers and researchers get, in a minute, an answer that otherwise means reading 24 data pages
   and 352 publication records: which experiments are relevant to their environment, and which are not.
 - Modellers get one clean, documented table with units converted and the source of every value.
 - Mission planners see the gaps (oxygen-enriched low pressure, solid materials, partial gravity) before
   a habitat is designed around assumptions that were never tested.
 
-### What we hope to achieve
+### Intended impact
 
 Make the limits of existing microgravity fire data visible, so that the next flight experiments target the
 conditions crews will actually live in, and give modellers a trustworthy starting dataset.
 
+### What we considered
+
+- The users are researchers and engineers: a simple screen is fine, a wrong number is not. A value NASA
+  does not report stays "not reported" and earns no points in the ranking.
+- Traceability: every value leads to its NASA file, row and original cell.
+- A table row is not always a test: rows that sum up a test day or a test-matrix range are marked and are
+  not counted as tests.
+- Reproducibility: a static site with no server, no key and no model call at run time gives the same answer
+  every time, and the code, the mappings and the data contract are open.
+
 ### Tools, languages, software
 
 Python (data pipeline: requests, openpyxl, python-docx, pdfplumber), TypeScript, Next.js with static export,
-React, Tailwind CSS, Vitest, GitHub Actions and GitHub Pages. Details in the References field.
+React, Tailwind CSS, Vitest, ESLint, GitHub Actions and GitHub Pages; Claude Code as the SI assistant.
+Details in the References field.
 
 ### Data quality and limits
 
 - 1,989 rows from 22 tables; 1,872 are individual tests. Oxygen is reported for 1,479 tests, pressure for
   1,258, airflow for 793, the outcome for 623. Missing values are shown as "not reported", never as zero.
 - Automated checks: over 2,100 oxygen, pressure and airflow values in 8 tables were compared with their
-  source cells after unit conversion and all matched. TODO: result of the 40-value hand check in
-  `data/review/sample-40.csv`.
-- The ranking weights and the rules SI followed when reading the operators' notes are a first version and
-  have not been reviewed by a combustion specialist. TODO: result of the 20-value hand check of the note
-  readings in `data/review/si-notes-sample.csv`.
+  source cells after unit conversion, and all match within 2 %. The site has 179 unit tests and the pipeline 44.
+- The ranking weights and the rules SI followed when reading the operators' notes are a first version.
 - The score compares test conditions; it is not a safety rating.
 
 ## Use of Super Intelligence (SI)
@@ -126,27 +214,110 @@ a file in the repository, so the dashboard runs without a key or a server and gi
   applies it to every row and keeps the original cells, and a script compared over 2,100 converted values
   with their source cells.
 - **Writing code.** Claude Code (models Claude Fable 5.2 and Claude Opus 5.5) helped write the web app, the
-  data pipeline and their tests, working from architecture rules and a data contract the team wrote first.
-  The team read the changes and checked them with unit tests (169 for the site, 44 for the pipeline), type
-  checks, linting, contract validation and manual testing in the browser.
+  data pipeline and their tests, working from architecture rules and a data contract the team agreed on first.
+  The changes were checked with unit tests (179 for the site, 44 for the pipeline), type checks, linting,
+  contract validation and testing in the browser.
+- **Planning and documents.** An AI assistant helped research approaches and draft the work plan, the team
+  documents, the text of this page and the layout of the demo slides.
 
 What SI does not do: it does not set or adjust a score, it does not fill a value that no NASA file reports,
 and it does not draw conclusions about how materials burn. Ranking, coverage and gaps are computed by open,
 tested code in the browser. Investigation cards quote NASA metadata word for word, and no model writes them.
 The briefs and the note readings were written in a Claude Code session, not through an API; the instructions
 the model followed are in the repository (`apps/web/src/content/briefs.prompt.md`,
-`pipeline/mappings/si/README.md`). TODO: a person checks the 20-value sample of the note readings.
+`pipeline/mappings/si/README.md`).
+
+How SI output is marked: an SI badge next to the brief and next to every value read from a note; the model's
+name in `apps/web/src/content/briefs.json` and in the notes of each row; a footer line on every demo slide.
+No image, video or audio was generated: every picture is a screenshot of the app.
 
 ## NASA Data
 
-- NASA Physical Sciences Informatics (PSI), Combustion Science: metadata, experiment tables and documents of
-  24 investigations: ACME Flame Design, ACME BRE, ACME CLD Flame, ACME E-FIELD Flames, ACME s-Flame,
-  ACME CFI-G, BASS, BASS-II, CFI, DAFT / DAFT-2, FLEX, FLEX-2, SAFFIRE-I, SAFFIRE-II, SAFFIRE-III, SAME,
-  SAME-R, SPICE, SLICE, and ground investigations PSI-60, PSI-62, PSI-115, PSI-117 and PSI-142.
-  https://psi.nasa.gov (CC0-1.0)
-- Habitat atmosphere values used in the presets: the "Potential Considerations" section of the Flame in Freefall
-  challenge page.
+- **NASA Physical Sciences Informatics (PSI) data repository, Combustion Science** (https://psi.nasa.gov,
+  CC0-1.0). This is the only data source of the project. Through the PSI API we used the metadata, the 22
+  experiment tables and the science documents of all 24 combustion investigations:
+  ACME Flame Design (PSI-10), ACME BRE (PSI-20), ACME CLD Flame (PSI-21), ACME E-FIELD Flames (PSI-22),
+  ACME s-Flame (PSI-23), BASS-II (PSI-25), BASS (PSI-26), CFI (PSI-39), DAFT / DAFT-2 (PSI-47), FLEX-2 (PSI-68),
+  FLEX (PSI-69), SAFFIRE-I (PSI-98), SAFFIRE-II (PSI-99), SAFFIRE-III (PSI-100), SAME-R (PSI-101), SAME (PSI-102),
+  SLICE (PSI-106), SPICE (PSI-107), ACME CFI-G (PSI-159), and the ground investigations PSI-60, PSI-62, PSI-115,
+  PSI-117 and PSI-142.
+- **Science documents inside PSI** that supply values the tables leave out: the BASS As Run Test Matrix
+  (oxygen, pressure, airflow and the operators' notes of 121 tests), the sensor telemetry of SAFFIRE-I, -II,
+  -III and SAME-R (pressure of 95 tests), and the SPICE final report.
+- **NASA Space Apps Challenge 2026, "Flame in Freefall" challenge page**, section "Potential Considerations":
+  the atmosphere of the preset environments (at least 30 % oxygen at 10.2 psi or less for habitats and rovers,
+  100 % oxygen at 4.3 psi for a spacesuit).
+  https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/
+- **NASA background pages** used for the problem statement: Combustion Science at NASA Glenn Research Center,
+  "A Researcher's Guide to International Space Station Combustion Science", the Apollo 1 mission page, and "25 Years Ago: Fire Aboard
+  Space Station Mir". Links are in the References field.
+
+Links entered in the form (name, then address):
+
+1. NASA Physical Sciences Informatics (PSI), Combustion Science: metadata, 22 experiment tables and science documents of 24 investigations (CC0-1.0) — https://psi.nasa.gov/physci/repo/search?q=combustion
+2. PSI-26 BASS (Burning and Suppression of Solids): experiment table and As Run Test Matrix — https://doi.org/10.60555/58h4-dy80
+3. PSI-159 ACME CFI-G: experiment tables, the only tests run in the exploration atmosphere — https://doi.org/10.60555/cyt1-kh64
+4. PSI-101 SAME-R: experiment table and sensor telemetry — https://doi.org/10.60555/2np7-jv14
+5. PSI-107 SPICE: experiment table and final report — https://doi.org/10.60555/9kbh-e962
+6. NASA Space Apps Challenge 2026: Flame in Freefall challenge page (habitat and spacesuit atmospheres) — https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/
+7. NASA Glenn Research Center: Combustion Science — https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/
+8. NASA: A Researcher's Guide to International Space Station Combustion Science — https://www.nasa.gov/missions/station/a-researchers-guide-to-combustion-science/
+9. NASA: Apollo 1 — https://www.nasa.gov/mission/apollo-1/
+10. NASA History: 25 Years Ago: Fire Aboard Space Station Mir — https://www.nasa.gov/history/25-years-ago-fire-aboard-space-station-mir/
 
 ## Space Agency Partner Data and Other References
 
-See `submission/references.md`.
+No Space Agency Partner data was used. Everything else the project uses:
+
+NASA resources
+- NASA Physical Sciences Informatics (PSI), Combustion Science: https://psi.nasa.gov/physci/repo/search?q=combustion (CC0-1.0)
+- NASA Glenn Research Center, Combustion Science: https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/
+- A Researcher's Guide to International Space Station Combustion Science: https://www.nasa.gov/missions/station/a-researchers-guide-to-combustion-science/
+- Flame in Freefall challenge page: https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/
+- Apollo 1: https://www.nasa.gov/mission/apollo-1/
+- 25 Years Ago: Fire Aboard Space Station Mir: https://www.nasa.gov/history/25-years-ago-fire-aboard-space-station-mir/
+
+Software libraries (all open source)
+- requests (Apache-2.0), openpyxl (MIT), python-docx (MIT), pdfplumber with pdfminer.six (MIT): the Python data pipeline
+- Next.js 16 (MIT), React 19 (MIT), TypeScript 5 (Apache-2.0), Tailwind CSS 4 (MIT): the web app
+- Vitest 4 (MIT), ESLint 9 (MIT): tests and code checks
+- Geist and Geist Mono typefaces by Vercel (SIL Open Font License 1.1), from Google Fonts: the app and the slides
+
+Services
+- GitHub, GitHub Actions and GitHub Pages: code hosting, checks, the live app and the demo slides
+
+SI tools
+- Claude Code with Claude Fable 5.2 and Claude Opus 5.5 (Anthropic): code, table mappings, tests, documents, slide layout
+- Claude Fable 5.2 in a Claude Code session: the SI briefs and the reading of the BASS operators' notes
+- BMAD Method 6.12.4 and Spec Kit: document structure for the architecture and the pipeline specification
+
+Images and media
+- Every image in the app, the README and the slides is a screenshot of Flame Atlas itself. No third-party
+  image, video or music is used, and none was generated.
+
+The same list with links to every library is in `submission/references.md` in the repository.
+
+Links entered in the form (name, then address):
+
+1. Next.js 16 (MIT): web app framework, static export — https://nextjs.org
+2. React 19 (MIT): user interface — https://react.dev
+3. TypeScript 5 (Apache-2.0) — https://www.typescriptlang.org
+4. Tailwind CSS 4 (MIT): styling — https://tailwindcss.com
+5. Vitest 4 (MIT): unit tests of the site — https://vitest.dev
+6. ESLint 9 (MIT): code checks — https://eslint.org
+7. requests (Apache-2.0): HTTP client for the PSI API — https://github.com/psf/requests
+8. openpyxl (MIT): reading .xlsx tables — https://foss.heptapod.net/openpyxl/openpyxl
+9. python-docx (MIT): reading .docx text and tables — https://github.com/python-openxml/python-docx
+10. pdfplumber (MIT): reading .pdf text and tables — https://github.com/jsvine/pdfplumber
+11. Geist and Geist Mono typefaces (SIL OFL 1.1): the app and the demo slides — https://vercel.com/font
+12. GitHub Pages and GitHub Actions: hosting of the app and the demo slides, automated checks — https://pages.github.com
+13. Claude Code with Claude Fable 5.2 and Claude Opus 5.5 (SI tool): code, table mappings, SI briefs, reading of operator notes, documents, slide layout — https://claude.com/claude-code
+14. BMAD Method 6.12.4: structure of the architecture document — https://github.com/bmad-code-org/BMAD-METHOD
+15. Spec Kit: structure of the pipeline specification — https://github.com/github/spec-kit
+16. Flame Atlas repository: the full list of references — https://github.com/vlo0D/flame-atlas/blob/main/submission/references.md
+
+## Before pressing Submit for Judging
+
+- Every member is visible on the Members tab of the team page, all at the same Local Event.
+- Open the demo link and the project link in a private browser window: both must open without a login.
+- Tick both consent boxes, press Submit for Judging, then open the project page from another device.
