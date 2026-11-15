@@ -15,7 +15,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from pipeline.extractors.base import TableRow
 from pipeline.normalize import values as V
 from pipeline.normalize.fuel import fix_autoincrement, parse_fuel
-from pipeline.normalize.join import make_key, match as join_match
+from pipeline.normalize.join import make_key, match as join_match, table_key
 
 CONTRACT_FIELDS = [
     "id", "investigationId", "tableFile", "sourceRow", "granularity", "label", "date",
@@ -103,9 +103,12 @@ def _numeric(row: Row, name: str, spec: Dict[str, Any]) -> None:
     targets, dim, kind = NUMERIC[name]
     if "value" in spec:  # value from a document, not from the table
         vals = spec["value"] if isinstance(spec["value"], list) else [spec["value"]]
-        _assign(row, name, targets, kind, [float(v) for v in vals], approx=bool(spec.get("approx")), is_range=False)
+        _assign(row, name, targets, kind, [float(v) for v in vals], approx=bool(spec.get("approx")),
+                is_range=bool(spec.get("range")))  # "range": the two values are the ends of an interval
         row.infer(*targets)
         row.note(spec.get("note"))
+        if spec.get("confidence"):
+            row.lower(spec["confidence"])
         return
     raw = row.cell(spec["column"])
     if V.is_null_word(raw):
@@ -131,6 +134,8 @@ def _numeric(row: Row, name: str, spec: Dict[str, Any]) -> None:
         row.note(f"{spec['column'].strip()}: {raw.strip()!r} is outside the valid range; left null.")
         row.lower("low")
         return
+    if spec.get("approx"):  # the mapping knows the source value is not exact
+        q.approx = True
     if q.approx:
         row.lower("medium")
         if kind == "range" and name != "o2Pct":
@@ -364,11 +369,11 @@ def _normalize_row(mapping: Dict[str, Any], src: TableRow, footnotes: Dict[str, 
     row.confidence = mapping.get("confidence", "high")
     join = mapping.get("join")
     if join:
-        cells = [src.raw.get(name) for name in join["key"]["table"]]
+        cells = table_key(join, (src.raw.get(name) for name in join["key"]["table"]))
         row.joined = join_match(joined, make_key(cells))
         join_key = ", ".join(f"{s.strip()} {(c or '').strip()}" for s, c in zip(join["key"]["source"], cells))
         if row.joined is None:
-            row.note(f"No row with {join_key} in {join['label']}.")
+            row.note(f"No row with {join_key} in {join.get('shortLabel') or join['label']}.")
     if "date" in mapping:
         _date(row, mapping["date"])
     _label(row, mapping.get("label") or {})

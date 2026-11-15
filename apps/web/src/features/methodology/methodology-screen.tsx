@@ -87,8 +87,10 @@ export function MethodologyScreen() {
         <p>
           Where a table leaves a condition out but the same investigation records it elsewhere, the value is taken
           from that document: for example oxygen, pressure and airflow of the BASS tests come from its As Run Test
-          Matrix, and the pressure of some BASS-II tests from its summary report. Such values are marked in the
-          row&apos;s source on the Tests screen, and the document is quoted in the row&apos;s notes.
+          Matrix, the pressure of the SAFFIRE and SAME-R tests is the median reading of each test&apos;s own sensor
+          telemetry, and the oxygen of the SPICE tests is the range its final report gives for the cabin air. Such
+          values are marked in the row&apos;s source on the Tests screen, and the document is quoted in the
+          row&apos;s notes.
         </p>
       </Section>
 

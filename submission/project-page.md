@@ -53,7 +53,8 @@ https://github.com/vlo0D/flame-atlas (the README links to the live app: https://
    Code applies the mapping to every row the same way and keeps the original cells and row number.
 3. When a table leaves a condition out but the same investigation records it in another NASA document,
    the value is taken from there, marked as such, and the document is quoted in the row's notes. Oxygen,
-   pressure and airflow of the 121 BASS tests come from its As Run Test Matrix this way.
+   pressure and airflow of the 121 BASS tests come from its As Run Test Matrix this way, and the pressure of
+   95 SAFFIRE and SAME-R tests is the median reading of each test's own sensor telemetry.
 4. Investigation cards are built from PSI metadata; code checks that every quote exists in the source text.
 5. The pipeline writes four JSON files that follow a published data contract and validates them.
 6. A static web app (Next.js, TypeScript) reads those files. Ranking, coverage and gaps are pure functions
@@ -79,8 +80,8 @@ React, Tailwind CSS, Vitest, GitHub Actions and GitHub Pages. Details in the Ref
 
 ### Data quality and limits
 
-- 1,989 rows from 22 tables; 1,872 are individual tests. Oxygen is reported for 1,008 tests, pressure for
-  1,163, airflow for 793. Missing values are shown as "not reported", never as zero.
+- 1,989 rows from 22 tables; 1,872 are individual tests. Oxygen is reported for 1,479 tests, pressure for
+  1,258, airflow for 793. Missing values are shown as "not reported", never as zero.
 - Automated checks: over 2,100 oxygen, pressure and airflow values in 8 tables were compared with their
   source cells after unit conversion and all matched. TODO: result of the 40-value hand check in
   `data/review/sample-40.csv`.
@@ -93,7 +94,7 @@ We used AI coding assistants to build the product, and kept AI out of every numb
 
 - **Writing code.** Claude Code (models Claude Fable 5.2 and Claude Opus 5.5) helped write the web app, the
   data pipeline, the table mappings and their tests, working from architecture rules and a data contract the
-  team wrote first. The team read the changes and checked them with unit tests (142 for the site, 31 for the
+  team wrote first. The team read the changes and checked them with unit tests (142 for the site, 33 for the
   pipeline), type checks, linting, contract validation and manual testing in the browser.
 - **Preparing data.** The AI assistant proposed how each NASA table maps onto the common fields. Each
   mapping is a readable JSON file; deterministic code applies it to every row, keeps the original cells,

@@ -2,10 +2,26 @@
   "tableFile": "PSI-98_Experimental table_SAFFIRE-1.csv",
   "investigationId": "PSI-98",
   "tableId": "SAFFIRE-1",
-  "mappingVersion": "1.0.0",
+  "mappingVersion": "1.1.0",
   "granularity": "test",
   "label": {
     "column": "Sample Number "
+  },
+  "join": {
+    "root": "derived",
+    "file": "PSI-98_telemetry.csv",
+    "label": "the Saffire-I sensor telemetry (PSI-98 Raw Data, 'Sample N Sensor Data Complete TM graphs.xlsx', sheet 'Calibrated Data', column 'Ambient Pressure' in PSIA; median of all readings in the sample's file, summarised in data/derived/PSI-98_telemetry.csv)",
+    "shortLabel": "the Saffire-I sensor telemetry",
+    "headerRow": 1,
+    "key": {
+      "table": [
+        "Sample Number "
+      ],
+      "source": [
+        "test"
+      ]
+    },
+    "confidence": "high"
   },
   "skipRows": [
     {
@@ -39,6 +55,10 @@
     "burnTimeS": {
       "column": "Burn Time (s)",
       "unit": "s"
+    },
+    "pressureKpa": {
+      "column": "@pressure psia median",
+      "unit": "psi"
     }
   },
   "flowDirection": {

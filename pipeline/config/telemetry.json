@@ -1,0 +1,55 @@
+{
+  "comment": "Telemetry files reduced to one line per test by pipeline/telemetry.py. `files` is a regex on the PSI file name; `keyFromFile` builds the test label from its groups; `keyColumn` splits a file by test. `valid` drops filler readings of a sensor that is off.",
+  "sources": [
+    {
+      "investigationId": "PSI-98",
+      "output": "PSI-98_telemetry.csv",
+      "files": "_Raw Data_Saffire-I Sample (\\d) Sensor Data Complete TM graphs\\.xlsx$",
+      "keyFromFile": "S{0}",
+      "sheet": "Calibrated Data",
+      "headerRow": 1,
+      "columns": {
+        "pressure psia": {"column": "Ambient Pressure", "valid": [5, 20]},
+        "oxygen pct": {"column": "O2", "valid": [5, 60]},
+        "airflow cm/s": {"column": "Anemometer 1", "valid": [0, 200]}
+      }
+    },
+    {
+      "investigationId": "PSI-99",
+      "output": "PSI-99_telemetry.csv",
+      "files": "_Raw Data_Saffire Sensor Data Sample (\\d)\\.xlsx$",
+      "keyFromFile": "2-{0}",
+      "sheet": "Calibrated Data",
+      "headerRow": 1,
+      "columns": {
+        "pressure psia": {"column": "Ambient Pressure", "valid": [5, 20]},
+        "oxygen pct": {"column": "O2", "valid": [5, 60]},
+        "airflow cm/s": {"column": "Anemometer 1", "valid": [0, 200]}
+      }
+    },
+    {
+      "investigationId": "PSI-100",
+      "output": "PSI-100_telemetry.csv",
+      "files": "_Raw Data_Saffire III Sample (\\d) Sensors\\.xlsx$",
+      "keyFromFile": "S{0}",
+      "sheet": "Calibrated Data",
+      "headerRow": 1,
+      "columns": {
+        "pressure psia": {"column": "Ambient Pressure", "valid": [5, 20]},
+        "oxygen pct": {"column": "O2", "valid": [5, 60]},
+        "airflow cm/s": {"column": "Anemometer 1", "valid": [0, 200]}
+      }
+    },
+    {
+      "investigationId": "PSI-101",
+      "output": "PSI-101_telemetry.csv",
+      "files": "_Raw Data_HKPData_.*\\.csv$",
+      "keyColumn": "TestNumber",
+      "skipKeys": ["0", "TestNumber"],
+      "headerRow": 1,
+      "columns": {
+        "sample side pressure psia": {"column": "SampleSidePressure[AT20](PSIA)", "valid": [5, 20]}
+      }
+    }
+  ]
+}

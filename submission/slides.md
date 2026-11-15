@@ -32,7 +32,7 @@ Use the dark or light theme consistently. Do not add images or music without a l
 
 - Of 1,872 tests, **20** were run in the exploration atmosphere, all gas-burner flames (ACME CFI-G).
 - **No solid material was tested above 22.7 % oxygen**; every solid-fuel test with a pressure was at
-  ISS cabin pressure (98–102 kPa).
+  ISS cabin pressure (98–104 kPa).
 - No real partial-gravity test exists.
 - Screenshot: Coverage grid, oxygen against pressure, exploration atmosphere marked.
 
