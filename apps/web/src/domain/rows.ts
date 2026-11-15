@@ -29,3 +29,33 @@ export function countRows(rows: readonly Pick<TestRecord, "granularity">[]): Row
   }
   return counts;
 }
+
+/** The conditions the Methodology screen accounts for, with the field that holds each. */
+export const CONDITION_FIELDS = {
+  oxygen: "o2PctMin",
+  pressure: "pressureKpaMin",
+  airflow: "flowCmSMin",
+} as const satisfies Record<string, keyof TestRecord>;
+
+export type Condition = keyof typeof CONDITION_FIELDS;
+
+export interface ConditionReporting {
+  /** Individual tests. */
+  tests: number;
+  /** For each condition: tests that report it, and how many of those values came from a document, not the table. */
+  conditions: Record<Condition, { reported: number; fromDocuments: number }>;
+}
+
+/** How complete the conditions of the individual tests are, and where the values came from. */
+export function conditionReporting(rows: readonly TestRecord[]): ConditionReporting {
+  const tests = rows.filter(isTestRow);
+  const conditions = {} as ConditionReporting["conditions"];
+  for (const [name, field] of Object.entries(CONDITION_FIELDS) as [Condition, keyof TestRecord][]) {
+    const reported = tests.filter((row) => row[field] !== null);
+    conditions[name] = {
+      reported: reported.length,
+      fromDocuments: reported.filter((row) => row.inferred.includes(field)).length,
+    };
+  }
+  return { tests: tests.length, conditions };
+}
